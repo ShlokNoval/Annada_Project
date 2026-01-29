@@ -28,11 +28,27 @@ dependencies:
   cloud_firestore: ^5.6.5
   flutter_local_notifications: ^19.0.0
   timezone: ^0.10.0
+  provider: ^6.0.5
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+  translator: ^1.0.4+1
+
+
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/annadalogo.png"
+  adaptive_icon_background: "#2E7D32" # optional (green background)
+  adaptive_icon_foreground: "assets/annadalogo.png"
 
 flutter:
   uses-material-design: true
@@ -54,3 +70,4 @@ flutter:
     - assets/map_nearby_market.png
     - assets/map_ngos.png
     - assets/map_fertilizer_shops.png
+

@@ -1,74 +1,116 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
-import 'package:flutter/foundation.dart'; // Required for debugPrint()
+import 'package:flutter/foundation.dart';
 
 class WeatherService {
-  final String apiKey = "c5ca84df187e5713e0c1fa8ad725b5e0"; // 🔹 Replace with your actual API Key
-  final String baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+  static const String apiKey = "c5ca84df187e5713e0c1fa8ad725b5e0";
+  static const String baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+
+  // ✅ FALLBACK LOCATION - Mountain View
+  static const double fallbackLat = 37.4219;
+  static const double fallbackLon = -122.0840;
+
+  /// ✅ NEW: Explicit permission request (THIS triggers the dialog)
+  Future<bool> ensureLocationPermission() async {
+    bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      if (kDebugMode) debugPrint("📍 Location services disabled");
+      await Geolocator.openLocationSettings();
+      return false;
+    }
+
+    LocationPermission permission = await Geolocator.checkPermission();
+
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission(); // 🔥 DIALOG HERE
+      if (permission == LocationPermission.denied) {
+        if (kDebugMode) debugPrint("🚫 Location permission denied");
+        return false;
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      if (kDebugMode) debugPrint("⛔ Location permission denied forever");
+      await Geolocator.openAppSettings();
+      return false;
+    }
+
+    return true;
+  }
 
   Future<Map<String, dynamic>> fetchWeather() async {
     try {
-      // ✅ Get Live Location
-      Position position = await getCurrentLocation();
-      double latitude = position.latitude;
-      double longitude = position.longitude;
+      // 🔑 Ask permission ONCE before accessing GPS
+      await ensureLocationPermission();
 
-      debugPrint("📍 Fetching weather for: $latitude, $longitude");
-
-      // ✅ Fetch Weather Data from OpenWeather API
-      final response = await http.get(
-        Uri.parse("$baseUrl?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric"),
+      final position = await _getLocationSafely().timeout(
+        const Duration(seconds: 8),
+        onTimeout: () {
+          if (kDebugMode) debugPrint("⏰ GPS timeout - using fallback");
+          return _fallbackPosition();
+        },
       );
 
-      debugPrint("🌤 API Response: ${response.body}"); // ✅ Debug log
+      final latitude = position.latitude;
+      final longitude = position.longitude;
+
+      if (kDebugMode) {
+        debugPrint("📍 Using location: $latitude, $longitude");
+      }
+
+      final response = await http.get(
+        Uri.parse(
+          "$baseUrl?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric&lang=en",
+        ),
+      ).timeout(
+        const Duration(seconds: 8),
+        onTimeout: () => http.Response('{"error":"timeout"}', 408),
+      );
 
       if (response.statusCode == 200) {
-        Map<String, dynamic> data = jsonDecode(response.body);
-        debugPrint("✅ Weather Updated: ${data['main']['temp']}°C, ${data['weather'][0]['description']}, ${data['name']}");
-        return data;
-      } else {
-        debugPrint("❌ API Error: ${response.statusCode}");
-        return {"error": "Failed to fetch weather data"};
+        return jsonDecode(response.body);
       }
+
+      return {"error": "Weather service unavailable"};
     } catch (e) {
-      debugPrint("❌ Fetch Error: $e");
-      return {"error": "Error fetching weather"};
+      if (kDebugMode) debugPrint("❌ Weather Error: $e");
+      return {
+        "name": "Mountain View",
+        "main": {"temp": 15.0},
+        "weather": [{"description": "clear sky"}],
+      };
     }
   }
 
-  // ✅ Get User's Live Location (Latest Geolocator API)
-  Future<Position> getCurrentLocation() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    // ✅ Check if GPS is enabled
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      debugPrint("❌ Location services are disabled.");
-      return Future.error("Location services are disabled.");
+  Future<Position> _getLocationSafely() async {
+    try {
+      return await Geolocator.getCurrentPosition(
+        locationSettings: const LocationSettings(
+          accuracy: LocationAccuracy.medium,
+          distanceFilter: 500,
+        ),
+      );
+    } catch (e) {
+      if (kDebugMode) debugPrint("📍 Location failed: $e");
+      return _fallbackPosition();
     }
+  }
 
-    // ✅ Check & Request Permission
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        debugPrint("❌ Location permission denied.");
-        return Future.error("Location permission denied.");
-      }
-    }
-    if (permission == LocationPermission.deniedForever) {
-      debugPrint("❌ Location permission permanently denied.");
-      return Future.error("Location permissions are permanently denied.");
-    }
-
-    // ✅ Get Location with Updated API
-    return await Geolocator.getCurrentPosition(
-      locationSettings: LocationSettings(
-        accuracy: LocationAccuracy.best,
-        distanceFilter: 100,
-      ),
+  Position _fallbackPosition() {
+    return Position(
+      latitude: fallbackLat,
+      longitude: fallbackLon,
+      timestamp: DateTime.now(),
+      accuracy: 1000,
+      altitude: 0,
+      heading: 0,
+      speed: 0,
+      speedAccuracy: 0,
+      altitudeAccuracy: 0,
+      headingAccuracy: 0,
+      floor: 0,
     );
   }
 }

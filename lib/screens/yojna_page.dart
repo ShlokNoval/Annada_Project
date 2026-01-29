@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class YojnaPage extends StatelessWidget {
-  final List<Map<String, String>> schemes = [
+  const YojnaPage({Key? key}) : super(key: key);  // made const
+
+  final List<Map<String, String>> schemes = const [  // made const for list literal
     {
       "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
       "description": "Provides ₹6,000 per year in three installments to small and marginal farmers to support their financial needs.",
@@ -60,7 +62,7 @@ class YojnaPage extends StatelessWidget {
   ];
 
   Future<void> _launchURL(String url) async {
-    final Uri uri = Uri.parse(url);
+    final uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       throw 'Could not launch $url';
     }
@@ -70,19 +72,21 @@ class YojnaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Government Schemes"),
+        title: const Text("Government Schemes"),
         backgroundColor: Colors.green.shade700,
       ),
       body: ListView.builder(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         itemCount: schemes.length,
         itemBuilder: (context, index) {
+          final scheme = schemes[index];
           return Card(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12)),
             elevation: 5,
-            margin: EdgeInsets.symmetric(vertical: 8),
+            margin: const EdgeInsets.symmetric(vertical: 8),
             child: Padding(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -91,37 +95,49 @@ class YojnaPage extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          schemes[index]['logo']!,
+                          scheme['logo']!,
                           width: 60,
                           height: 60,
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(width: 12),
+                      const SizedBox(width: 12),
                       Expanded(
                         child: Text(
-                          schemes[index]['name']!,
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.green.shade900),
+                          scheme['name']!,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green.shade900,
+                          ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
-                    schemes[index]['description']!,
-                    style: TextStyle(fontSize: 14, color: Colors.black87),
+                    scheme['description']!,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black87,
+                    ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Align(
                     alignment: Alignment.centerRight,
                     child: ElevatedButton.icon(
-                      onPressed: () => _launchURL(schemes[index]['url']!),
+                      onPressed: () => _launchURL(scheme['url']!),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green.shade700,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
                       ),
-                      icon: Icon(Icons.open_in_new, color: Colors.white, size: 18),
-                      label: Text("Apply Now", style: TextStyle(color: Colors.white)),
+                      icon:
+                      const Icon(Icons.open_in_new, color: Colors.white),
+                      label: const Text(
+                        "Apply Now",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],

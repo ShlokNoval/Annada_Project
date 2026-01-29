@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'auth_service.dart';
 
 class RegisterUserScreen extends StatefulWidget {
   const RegisterUserScreen({Key? key}) : super(key: key);
 
   @override
-  _RegisterUserScreenState createState() => _RegisterUserScreenState();
+  State<RegisterUserScreen> createState() => _RegisterUserScreenState();
 }
 
 class _RegisterUserScreenState extends State<RegisterUserScreen> {
+  final AuthService _authService = AuthService();
+
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -16,45 +18,24 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
   bool isLoading = false;
 
   Future<void> registerUser() async {
+    if (!_formKey.currentState!.validate()) return;
+
     setState(() => isLoading = true);
     try {
-      final email = emailController.text.trim();
-      final password = passwordController.text.trim();
-
-      if (email.isEmpty || password.isEmpty) {
-        throw Exception("Email and password cannot be empty.");
-      }
-
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: email,
-        password: password,
+      await _authService.registerWithEmail(
+        emailController.text.trim(),
+        passwordController.text.trim(),
       );
+
+      // ✅ DO NOT NAVIGATE
+      // AuthWrapper will automatically redirect to HomePage
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('✅ User registered successfully!')),
       );
-    } on FirebaseAuthException catch (e) {
-      debugPrint("🔥 FirebaseAuthException: ${e.code} - ${e.message}");
-      String errorMessage = "Registration failed.";
-      if (e.code == 'email-already-in-use') {
-        errorMessage = 'This email is already in use.';
-      } else if (e.code == 'invalid-email') {
-        errorMessage = 'The email address is not valid.';
-      } else if (e.code == 'weak-password') {
-        errorMessage = 'The password is too weak.';
-      } else if (e.code.contains("network-request-failed")) {
-        errorMessage = 'Network error. Please check your internet.';
-      } else if (e.message != null) {
-        errorMessage = e.message!;
-      }
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('⚠️ $errorMessage')),
-      );
     } catch (e) {
-      debugPrint("🚨 Error: $e");
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Something went wrong. Try again.')),
+        SnackBar(content: Text('⚠️ ${e.toString()}')),
       );
     } finally {
       setState(() => isLoading = false);
@@ -75,12 +56,18 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
                 controller: emailController,
                 decoration: const InputDecoration(labelText: 'Email'),
                 keyboardType: TextInputType.emailAddress,
+                validator: (value) =>
+                value == null || value.isEmpty ? 'Email required' : null,
               ),
               const SizedBox(height: 10),
               TextFormField(
                 controller: passwordController,
                 decoration: const InputDecoration(labelText: 'Password'),
                 obscureText: true,
+                validator: (value) =>
+                value == null || value.length < 6
+                    ? 'Password must be at least 6 characters'
+                    : null,
               ),
               const SizedBox(height: 20),
               isLoading

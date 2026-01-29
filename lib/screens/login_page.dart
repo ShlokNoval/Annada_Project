@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'register_page.dart';
 import 'auth_service.dart';
-import 'home_page.dart';
+import 'register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -16,93 +14,99 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  // ✅ Login with Email & Password
-  void _loginWithEmail() async {
-    UserCredential? user = await _authService.signInWithEmail(
-      emailController.text.trim(),
-      passwordController.text.trim(),
-    );
+  bool loading = false;
 
-    if (user != null) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
-    } else {
-      _showError("Invalid email or password.");
+  Future<void> _loginEmail() async {
+    setState(() => loading = true);
+    try {
+      await _authService.signInWithEmail(
+        emailController.text.trim(),
+        passwordController.text.trim(),
+      );
+    } catch (e) {
+      _showError(e.toString());
+    } finally {
+      if (mounted) setState(() => loading = false);
     }
   }
 
-  // ✅ Login with Google
-  void _loginWithGoogle() async {
-    UserCredential? user = await _authService.signInWithGoogle();
-    if (user != null) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
-    } else {
-      _showError("Google Sign-In failed.");
+  Future<void> _loginGoogle() async {
+    setState(() => loading = true);
+    try {
+      await _authService.signInWithGoogle();
+    } catch (e) {
+      _showError(e.toString());
+    } finally {
+      if (mounted) setState(() => loading = false);
     }
   }
 
-  // ✅ Error Alert
-  void _showError(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+  void _showError(String msg) {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(msg)));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5DC), // Farming Theme
+      backgroundColor: const Color(0xFFF5F5DC),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // 🌾 Logo with Shadow + Rounded Corners
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 10,
-                      offset: Offset(0, 5),
-                    ),
-                  ],
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/annadalogo.png',
-                    width: 150,
-                    height: 150,
-                    fit: BoxFit.cover,
-                  ),
+              Image.asset('assets/annadalogo.png', height: 140),
+              const SizedBox(height: 25),
+
+              TextField(
+                controller: emailController,
+                decoration: const InputDecoration(labelText: "Email"),
+              ),
+              const SizedBox(height: 10),
+
+              TextField(
+                controller: passwordController,
+                obscureText: true,
+                decoration: const InputDecoration(labelText: "Password"),
+              ),
+              const SizedBox(height: 20),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: loading ? null : _loginEmail,
+                  child: const Text("Login"),
                 ),
               ),
-              SizedBox(height: 20),
 
-              // Email Field
-              TextField(controller: emailController, decoration: InputDecoration(labelText: "Email")),
+              const SizedBox(height: 10),
+              const Text("OR"),
 
-              // Password Field
-              TextField(controller: passwordController, decoration: InputDecoration(labelText: "Password"), obscureText: true),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: loading ? null : _loginGoogle,
+                  child: const Text("Sign in with Google"),
+                ),
+              ),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-              // Login Button
-              ElevatedButton(onPressed: _loginWithEmail, child: Text("Login")),
-
-              // Sign-Up Button
               TextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterUserScreen()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const RegisterUserScreen(),
+                    ),
+                  );
                 },
-                child: Text("Don't have an account? Sign up"),
+                child: const Text(
+                  "Don't have an account? Register",
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
               ),
-
-              // OR Divider
-              Text("OR"),
-
-              // Google Sign-In
-              ElevatedButton(onPressed: _loginWithGoogle, child: Text("Sign in with Google")),
             ],
           ),
         ),

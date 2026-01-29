@@ -2,10 +2,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'auth_service.dart';
+
 
 class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
 class _ProfilePageState extends State<ProfilePage> {
@@ -20,11 +24,11 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Future<void> _loadProfileData() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final prefs = await SharedPreferences.getInstance();
     setState(() {
-      _nameController.text = prefs.getString('username') ?? '';
-      _phoneController.text = prefs.getString('phone') ?? '';
-      String? imagePath = prefs.getString('profilePhoto');
+      _nameController.text = prefs.getString('userName') ?? '';
+      _phoneController.text = prefs.getString('phoneNumber') ?? '';
+      final imagePath = prefs.getString('profilePhoto');
       if (imagePath != null && File(imagePath).existsSync()) {
         _image = File(imagePath);
       }
@@ -32,73 +36,81 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Future<void> _saveProfileData() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('username', _nameController.text);
-    await prefs.setString('phone', _phoneController.text);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('userName', _nameController.text);
+    await prefs.setString('phoneNumber', _phoneController.text);
     if (_image != null) {
       await prefs.setString('profilePhoto', _image!.path);
     }
-    Navigator.pop(context, true); // Return 'true' to indicate changes
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Profile saved successfully!')),
+      );
+      Navigator.pop(context);
+    }
   }
 
   Future<void> _pickImage() async {
-    final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
-    if (pickedFile != null) {
-      setState(() {
-        _image = File(pickedFile.path);
-      });
+    final picked =
+    await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (picked != null) {
+      setState(() => _image = File(picked.path));
     }
   }
 
   Future<void> _logout() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.clear(); // Clear all saved user data
-    Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+    await AuthService().signOut();
+    if (!mounted) return;
+
+    Navigator.of(context).popUntil((route) => route.isFirst);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Edit Profile"), backgroundColor: Colors.green),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      appBar: AppBar(title: const Text('Edit Profile')),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             GestureDetector(
               onTap: _pickImage,
               child: CircleAvatar(
-                radius: 50,
+                radius: 60,
                 backgroundImage: _image != null ? FileImage(_image!) : null,
-                child: _image == null ? Icon(Icons.camera_alt, size: 50, color: Colors.grey) : null,
+                child: _image == null
+                    ? const Icon(Icons.camera_alt, size: 40)
+                    : null,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 20),
+
             TextField(
               controller: _nameController,
-              decoration: InputDecoration(labelText: "Name"),
+              decoration: const InputDecoration(labelText: 'Name'),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 12),
+
             TextField(
               controller: _phoneController,
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(labelText: "Phone Number"),
+              decoration: const InputDecoration(labelText: 'Phone'),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
+            const SizedBox(height: 20),
+
+            ElevatedButton.icon(
               onPressed: _saveProfileData,
-              child: Text("Save Profile"),
+              icon: const Icon(Icons.save),
+              label: const Text("Save Profile"),
             ),
-            SizedBox(height: 20),
-            Divider(), // A separator line
-            SizedBox(height: 10),
+
+            const SizedBox(height: 30),
+
             ElevatedButton.icon(
               onPressed: _logout,
-              icon: Icon(Icons.logout, color: Colors.white),
-              label: Text("Logout"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.redAccent,
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-              ),
+              icon: const Icon(Icons.logout),
+              label: const Text("Logout"),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
             ),
           ],
         ),

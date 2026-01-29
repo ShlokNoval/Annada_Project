@@ -15,9 +15,9 @@ class _GeminiPageState extends State<GeminiPage> {
   ChatUser currentUser = ChatUser(id: "0", firstName: "User");
   ChatUser geminiUser = ChatUser(id: "1", firstName: "Gemini");
 
-  static const String apiKey = "AIzaSyAaUHVkMo8rDqd9gAUpDvJnrSaU3Fmf5bM"; // Replace with actual API key
+  static const String apiKey = "AIzaSyCrn-feXL3CmjbI3bMhLoANEfvu8CH229Q"; // Replace with actual API key
   static const String apiUrl =
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent";
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
   @override
   Widget build(BuildContext context) {
