@@ -43,3 +43,17 @@ Annada is a Flutter-based mobile application designed to empower marginal and sm
 To avoid a lengthy build and setup process, the **APK file link has been uploaded in the project PPT**, allowing direct access to the application for testing and evaluation purposes.
 
 ---
+
+## 🔗 Links
+
+- **APK (MVP Link):**  
+https://drive.google.com/drive/folders/1puWVRWYtlIQsQPFgeXJ1HrG0KYhUsvp1?usp=sharing
+
+- **GitHub Repository:**  
+https://github.com/ShlokNoval/Annada_Project
+
+- **Demo Video:**  
+https://youtu.be/rvHalUdrzH8
+
+---
+
