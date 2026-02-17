@@ -13,8 +13,6 @@ import '../screens/image_detection.dart';
 import '../screens/nearnessofmarket.dart';
 import '../screens/news_service.dart';
 
-
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -22,7 +20,8 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   late Future<Map<String, dynamic>> weatherFuture;
   late Future<List<Map<String, dynamic>>> newsFuture;
 
@@ -30,15 +29,27 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   String _phoneNumber = "";
   String? _profilePhoto;
   bool _showWelcome = false;
+  bool _showWeatherUpdated = false;
+  bool _showNewsUpdated = false;
 
-  PageController _newsPageController = PageController();
+
+
+  final PageController _newsPageController = PageController();
   int _currentNewsIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    _initLocationAndWeather(); // ✅ ONLY weather initializer
+
+    weatherFuture = Future.value({
+      "location": "Loading...",
+      "temp": "--",
+      "desc": "Fetching weather..."
+    });
+
     newsFuture = _getNews();
+
+    _initLocationAndWeather();
     _loadProfileData();
     _startNewsAutoSlide();
   }
@@ -49,8 +60,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     super.dispose();
   }
 
-
-  /// ✅ NEW – handles permission + weather safely
   Future<void> _initLocationAndWeather() async {
     final weatherService = WeatherService();
     final hasPermission = await weatherService.ensureLocationPermission();
@@ -148,7 +157,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       }
     }
   }
-  Future<void> _refreshWeatherAndNews() async {
+  Future<void> _refreshWeather() async {
     final weatherService = WeatherService();
     final hasPermission = await weatherService.ensureLocationPermission();
 
@@ -161,13 +170,33 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         "desc": "Enable location to get weather info",
       });
 
-      newsFuture = _getNews();
+      _showWeatherUpdated = true;
     });
+
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (mounted) {
+      setState(() => _showWeatherUpdated = false);
+    }
+  }
+
+  Future<void> _refreshNews() async {
+    setState(() {
+      newsFuture = _getNews();
+      _showNewsUpdated = true;
+    });
+
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (mounted) {
+      setState(() => _showNewsUpdated = false);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     return Scaffold(
       backgroundColor: Colors.green.shade50,
       appBar: AppBar(
@@ -178,7 +207,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
-          // 🔽 Profile
           GestureDetector(
             onTap: () async {
               await Navigator.push(
@@ -199,145 +227,118 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               ),
             ),
           ),
-
-          // 🔽 Logout menu
-
         ],
       ),
 
-      // 🔻 BODY REMAINS 100% UNCHANGED BELOW
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        child: Column(
-          children: [
-            if (_showWelcome)
-              Dismissible(
-                key: const Key('welcome_banner'),
-                direction: DismissDirection.up,
-                onDismissed: (_) => _dismissWelcome(),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                  margin: const EdgeInsets.only(bottom: 14),
-                  decoration: BoxDecoration(
-                    color: Colors.green.shade600,
-                    borderRadius: BorderRadius.circular(14),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.shade800.withOpacity(0.4),
-                        blurRadius: 7,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.eco, color: Colors.white),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: Text(
-                          "Welcome, $_userName!",
-                          style: const TextStyle(
+      // ✅ UPDATED BODY (FULL PAGE SCROLL)
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Padding(
+          padding:
+          const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (_showWelcome)
+                Dismissible(
+                  key: const Key('welcome_banner'),
+                  direction: DismissDirection.up,
+                  onDismissed: (_) => _dismissWelcome(),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 14),
+                    margin: const EdgeInsets.only(bottom: 14),
+                    decoration: BoxDecoration(
+                      color: Colors.green.shade600,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.eco, color: Colors.white),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Text(
+                            "Welcome, $_userName!",
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 19,
-                              fontWeight: FontWeight.w600),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: _dismissWelcome,
-                        child: const Icon(Icons.close, color: Colors.white),
-                      ),
-                    ],
+                        GestureDetector(
+                          onTap: _dismissWelcome,
+                          child: const Icon(Icons.close,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
+
+              FutureBuilder<List<Map<String, dynamic>>>(
+                future: newsFuture,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState ==
+                      ConnectionState.waiting) {
+                    return _buildNewsLoading();
+                  } else if (snapshot.hasError ||
+                      !snapshot.hasData ||
+                      snapshot.data!.isEmpty) {
+                    return const SizedBox.shrink();
+                  } else {
+                    return _buildNewsCarousel(snapshot.data!);
+                  }
+                },
               ),
 
-            // 🔻 EVERYTHING ELSE BELOW IS UNCHANGED
-            // (news, weather, features, etc.)
-            // ⬇️ your existing code continues as-is
+              const SizedBox(height: 16),
 
-
-            // News Carousel
-            FutureBuilder<List<Map<String, dynamic>>>(
-              future: newsFuture,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return _buildNewsLoading();
-                } else if (snapshot.hasError || !snapshot.hasData || snapshot.data!.isEmpty) {
-                  return const SizedBox.shrink();
-                } else {
-                  return _buildNewsCarousel(snapshot.data!);
-                }
-              },
-            ),
-
-            const SizedBox(height: 16),
-
-            FutureBuilder<Map<String, dynamic>>(
-              future: weatherFuture,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return _buildWeatherBox(
-                      "Fetching location...", "Loading...", "Please wait...");
-                } else if (snapshot.hasError) {
-                  return _buildWeatherBox(
-                      "Error", "❌", "Could not load weather");
-                } else {
-                  var data = snapshot.data ?? {};
-                  return _buildWeatherBox(
-                      data["location"], data["temp"], data["desc"]);
-                }
-              },
-            ),
-            const SizedBox(height: 12),
-            ElevatedButton.icon(
-              onPressed: () async {
-                final weatherService = WeatherService();
-                final hasPermission = await weatherService.ensureLocationPermission();
-
-                setState(() {
-                  weatherFuture = hasPermission
-                      ? _getWeather()
-                      : Future.value({
-                    "location": "Permission Required",
-                    "temp": "❌",
-                    "desc": "Enable location to get weather info",
-                  });
-
-                  newsFuture = _getNews();
-                });
-              },
-              icon: const Icon(Icons.refresh),
-              label: const Text("Refresh Weather & News"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green.shade400,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                elevation: 6,
+              FutureBuilder<Map<String, dynamic>>(
+                future: weatherFuture,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState ==
+                      ConnectionState.waiting) {
+                    return _buildWeatherBox(
+                        "Fetching location...",
+                        "Loading...",
+                        "Please wait...");
+                  } else if (snapshot.hasError) {
+                    return _buildWeatherBox(
+                        "Error", "❌", "Could not load weather");
+                  } else {
+                    var data = snapshot.data ?? {};
+                    return _buildWeatherBox(
+                        data["location"],
+                        data["temp"],
+                        data["desc"]);
+                  }
+                },
               ),
-            ),
 
-            const SizedBox(height: 22),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
+              const SizedBox(height: 12),
+
+
+
+              const SizedBox(height: 22),
+
+              Text(
                 "Features",
-                style: theme.textTheme.titleLarge!
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.green[700]),
+                style: theme.textTheme.titleLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green[700]),
               ),
-            ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: GridView.count(
+
+              const SizedBox(height: 10),
+
+              GridView.count(
                 crossAxisCount: 2,
                 crossAxisSpacing: 18,
                 mainAxisSpacing: 18,
                 childAspectRatio: 1,
-                physics: const BouncingScrollPhysics(),
+                shrinkWrap: true,
+                physics:
+                const NeverScrollableScrollPhysics(),
                 children: [
                   _buildFeatureBox(
                     "Fertilizer Calculator",
@@ -357,7 +358,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ImageDetectionPage()));
+                              builder: (context) =>
+                              const ImageDetectionPage()));
                     },
                   ),
                   _buildFeatureBox(
@@ -367,7 +369,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NearnessOfMarketPage()));
+                              builder: (context) =>
+                              const NearnessOfMarketPage()));
                     },
                   ),
                   _buildFeatureBox(
@@ -377,7 +380,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TutorialPage()));
+                              builder: (context) =>
+                              const TutorialPage()));
                     },
                   ),
                   _buildFeatureBox(
@@ -387,7 +391,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => YojnaPage()));
+                              builder: (context) =>
+                                  YojnaPage()));
                     },
                   ),
                   _buildFeatureBox(
@@ -397,17 +402,23 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const GeminiPage()));
+                              builder: (context) =>
+                              const GeminiPage()));
                     },
                   ),
                 ],
               ),
-            ),
-          ],
+
+              const SizedBox(height: 40),
+            ],
+          ),
         ),
       ),
     );
   }
+
+  // Remaining helper widgets unchanged...
+
 
   Widget _buildNewsLoading() {
     return Container(
@@ -424,91 +435,128 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   Widget _buildNewsCarousel(List<Map<String, dynamic>> articles) {
     return Container(
-      height: 150,
+      height: 170,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 8,
             offset: const Offset(0, 4),
           ),
         ],
       ),
-      child: PageView.builder(
-        controller: _newsPageController,
-        onPageChanged: (index) {
-          setState(() {
-            _currentNewsIndex = index;
-          });
-        },
-        itemCount: articles.length,
-        itemBuilder: (context, index) {
-          final article = articles[index];
-          return GestureDetector(
-            onTap: () => _launchUrl(article['url']),
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 4),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: DecorationImage(
-                  image: NetworkImage(article['imageUrl']),
-                  fit: BoxFit.cover,
-                  onError: (error, stackTrace) {},
-                ),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent,
-                      Colors.black.withOpacity(0.7),
+      child: Stack(
+        children: [
+          /// 🔹 News PageView
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: PageView.builder(
+              controller: _newsPageController,
+              onPageChanged: (index) {
+                setState(() {
+                  _currentNewsIndex = index;
+                });
+              },
+              itemCount: articles.length,
+              itemBuilder: (context, index) {
+                final article = articles[index];
+
+                return GestureDetector(
+                  onTap: () => _launchUrl(article['url']),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.network(
+                        article['imageUrl'],
+                        fit: BoxFit.cover,
+                      ),
+
+                      /// 🔹 Dark gradient overlay
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Colors.transparent,
+                              Colors.black.withValues(alpha: 0.7),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      /// 🔹 Title
+                      Positioned(
+                        left: 16,
+                        right: 16,
+                        bottom: 16,
+                        child: Text(
+                          article['title'],
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      article['title'],
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 4),
-                    Row(
-                      children: [
-                        const Icon(Icons.article, color: Colors.white70, size: 16),
-                        const SizedBox(width: 4),
-                        const Text(
-                          "Farming News",
-                          style: TextStyle(color: Colors.white70, fontSize: 12),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+                );
+              },
             ),
-          );
-        },
+          ),
+
+          /// 🔄 Refresh button (TOP RIGHT INSIDE CARD)
+          Positioned(
+            top: 10,
+            right: 10,
+            child: Column(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black.withValues(alpha: 0.35),
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.refresh, color: Colors.white, size: 20),
+                    onPressed: _refreshNews,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                AnimatedOpacity(
+                  opacity: _showNewsUpdated ? 1.0 : 0.0,
+                  duration: const Duration(milliseconds: 400),
+                  child: const Text(
+                    "Updated",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 11,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+        ],
       ),
     );
   }
 
-  Widget _buildWeatherBox(String location, String temperature, String description) {
+
+
+
+  Widget _buildWeatherBox(
+      String location,
+      String temperature,
+      String description,
+      ) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.green.shade600, Colors.green.shade900],
@@ -518,54 +566,89 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.green.shade900.withOpacity(0.6),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          )
+            color: Colors.green.shade900.withValues(alpha: 0.5),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
         ],
       ),
-      child: Row(
+      child: Column(
         children: [
-          const Icon(Icons.wb_sunny, size: 60, color: Colors.yellowAccent),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  location,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    shadows: [Shadow(blurRadius: 3, color: Colors.black38)],
-                  ),
+          Row(
+            children: [
+              const Icon(Icons.wb_sunny,
+                  size: 48, color: Colors.yellowAccent),
+              const SizedBox(width: 14),
+
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      location,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      temperature,
+                      style: const TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      description,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Colors.white70,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ],
                 ),
-                Text(
-                  temperature,
-                  style: const TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
-                    shadows: [Shadow(blurRadius: 5, color: Colors.black45)],
+              ),
+
+              Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.2),
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.refresh, color: Colors.white, size: 20),
+                      onPressed: _refreshWeather,
+                    ),
                   ),
-                ),
-                Text(
-                  description,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white70,
-                    fontStyle: FontStyle.italic,
+                  const SizedBox(height: 4),
+                  AnimatedOpacity(
+                    opacity: _showWeatherUpdated ? 1.0 : 0.0,
+                    duration: const Duration(milliseconds: 400),
+                    child: const Text(
+                      "Updated",
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 11,
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
+                ],
+              ),
+
+
+            ],
           ),
+
+
         ],
       ),
     );
   }
+
 
   Widget _buildFeatureBox(String title, IconData icon, {required VoidCallback onTap}) {
     return Material(

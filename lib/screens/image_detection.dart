@@ -1,8 +1,11 @@
+
+
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'dart:convert';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_markdown/flutter_markdown.dart'; // ✅ NEW: Import for Markdown rendering
 
 class ImageDetectionPage extends StatefulWidget {
   const ImageDetectionPage({super.key});
@@ -62,7 +65,7 @@ class _ImageDetectionPageState extends State<ImageDetectionPage> {
     }
 
     final String cropType = _cropController.text;
-    const String apiKey = "AIzaSyCrn-feXL3CmjbI3bMhLoANEfvu8CH229Q";
+    const String apiKey = "AIzaSyB9nAw3WGcDgTourM3GTyqtrb1poNW9IWA";
     final String apiUrl =
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=$apiKey";
 
@@ -229,9 +232,12 @@ class _ImageDetectionPageState extends State<ImageDetectionPage> {
                       color: Colors.white,
                     ),
                     child: SingleChildScrollView(
-                      child: SelectableText(
-                        _resultText!,
-                        style: const TextStyle(fontSize: 16, height: 1.4),
+                      child: MarkdownBody( // ✅ CHANGED: Use MarkdownBody instead of SelectableText
+                        data: _resultText!,
+                        selectable: true, // Allow text selection
+                        styleSheet: MarkdownStyleSheet( // Optional: Customize styles if needed
+                          p: const TextStyle(fontSize: 16, height: 1.4),
+                        ),
                       ),
                     ),
                   ),
