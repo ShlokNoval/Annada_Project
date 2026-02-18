@@ -27,7 +27,7 @@ class _GeminiPageState extends State<GeminiPage> {
   String _loadingText = "Uploading";
   Timer? _loadingTimer;
 
-  static const String apiKey = "AIzaSyB9nAw3WGcDgTourM3GTyqtrb1poNW9IWA";
+  static const String apiKey = "AIzaSyDCoz0g0u1tlqYE6eVxlYcgdbVsXPbhHf4";
   static const String apiUrl =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
