@@ -164,7 +164,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
       TextField(
         controller: _nameController,
-        textAlign: TextAlign.center,
+
         decoration: InputDecoration(
           prefixIcon: const Icon(Icons.person),
           labelText: 'Full Name',
@@ -181,7 +181,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
       TextField(
         controller: _phoneController,
-        textAlign: TextAlign.center,
+
         keyboardType: TextInputType.phone,
         decoration: InputDecoration(
           prefixIcon: const Icon(Icons.phone),
