@@ -1,5 +1,4 @@
 
-
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -27,7 +26,7 @@ class _GeminiPageState extends State<GeminiPage> {
   String _loadingText = "Uploading";
   Timer? _loadingTimer;
 
-  static const String apiKey = "AIzaSyDCoz0g0u1tlqYE6eVxlYcgdbVsXPbhHf4";
+  static const String apiKey = "AIzaSyBBzqoE5Mf48a2OSqUvE1eLKHhFaZ7LDI8";
   static const String apiUrl =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
@@ -366,7 +365,13 @@ class _GeminiPageState extends State<GeminiPage> {
       final data = jsonDecode(response.body);
       return data["candidates"]?[0]["content"]["parts"]?[0]["text"];
     } else {
-      return "⚠️ Error: ${response.statusCode}";
+      try {
+        final errorData = jsonDecode(response.body);
+        String errorMessage = errorData['error']?['message'] ?? "Unknown error";
+        return "⚠️ Error: ${response.statusCode} - $errorMessage";
+      } catch (_) {
+        return "⚠️ Error: ${response.statusCode}";
+      }
     }
   }
 }

@@ -15,28 +15,29 @@ class _SplashScreenState extends State<SplashScreen>
   late Animation<double> _scaleAnimation;
   late Animation<double> _fadeAnimation;
 
+
   @override
   void initState() {
     super.initState();
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 4), // Grow duration
     );
 
-    // Subtle breathing animation
-    _scaleAnimation = Tween<double>(begin: 0.95, end: 1.05).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    _scaleAnimation = Tween<double>(begin: 0.8, end: 1.1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeOut),
     );
 
-    _fadeAnimation = Tween<double>(begin: 0.7, end: 1.0).animate(
+    _fadeAnimation = Tween<double>(begin: 0.6, end: 1.0).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeIn),
     );
 
-    _controller.repeat(reverse: true);
+    // Play animation once
+    _controller.forward();
 
-    // Navigate after 5 seconds
-    Future.delayed(const Duration(seconds: 5), () {
+    // Navigate after animation completes
+    Future.delayed(const Duration(seconds: 4), () {
       if (!mounted) return;
 
       Navigator.pushReplacement(

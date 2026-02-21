@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/annadalogo.png', height: 140),
+              Image.asset('assets/Annadalogocrop.png', height: 140),
               const SizedBox(height: 25),
 
               TextField(
