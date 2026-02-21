@@ -15,6 +15,7 @@ import '../screens/news_service.dart';
 import 'dart:async';
 import 'auth_service.dart';
 import 'login_page.dart';
+import 'todo_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -368,8 +369,44 @@ class _HomePageState extends State<HomePage>
 
                 ],
               ),
+              const SizedBox(height: 24),
+
+// ── To-Do List Button ─────────────────────────────────────
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green.shade700,
+                    padding: const EdgeInsets.symmetric(vertical: 18),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    elevation: 6,
+                  ),
+                  icon: const Icon(Icons.check_circle_outline, color: Colors.white),
+                  label: const Text(
+                    "To-Do List",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const TodoPage(),
+                      ),
+                    );
+                  },
+                ),
+              ),
 
               const SizedBox(height: 40),
+
+
+
             ],
           ),
         ),

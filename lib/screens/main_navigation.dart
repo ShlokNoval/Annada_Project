@@ -6,6 +6,7 @@ import 'gemini_page.dart';
 import 'login_page.dart';
 import 'auth_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'community_feed_page.dart';
 
 
 class MainNavigationPage extends StatefulWidget {
@@ -37,13 +38,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
   final List<Widget> _pages = const [
     HomePage(),
     NearnessOfMarketPage(),
-    Center(
-      child: Text(
-        "Global Community\nComing Soon",
-        textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-      ),
-    ),
+  CommunityFeedPage(), // 🔥 REAL GLOBAL CHAT
     ProfilePage(),
   ];
 
@@ -113,7 +108,9 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
           const Divider(),
 
           Padding(
-            padding: const EdgeInsets.only(bottom: 35), // 👈 adjust 30–50 if needed
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).padding.bottom + 20,
+            ),
             child: ListTile(
               leading: const Icon(Icons.logout, color: Colors.red),
               title: const Text("Logout"),
@@ -182,25 +179,19 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
         ],
       ),
 
-      body: _pages[_selectedIndex],
+      body: Stack(
+        children: [
 
-      // 🤖 Floating Gemini Button
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green.shade100,
-        child: Image.asset(
-          'assets/gemini.png',
-          width: 32,
-          height: 32,
-        ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const GeminiPage()),
-          );
-        },
+          // Main Page
+          _pages[_selectedIndex],
+
+          // 🔥 Draggable Gemini Button
+          DraggableFloatingButton(),
+        ],
       ),
-      floatingActionButtonLocation:
-      FloatingActionButtonLocation.endFloat,
+
+
+
 
       // 🔻 Bottom Navigation
       bottomNavigationBar: BottomNavigationBar(
@@ -227,6 +218,73 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
             label: "Profile",
           ),
         ],
+      ),
+    );
+  }
+
+}
+
+class DraggableFloatingButton extends StatefulWidget {
+  const DraggableFloatingButton({super.key});
+
+  @override
+  State<DraggableFloatingButton> createState() =>
+      _DraggableFloatingButtonState();
+}
+
+class _DraggableFloatingButtonState
+    extends State<DraggableFloatingButton> {
+
+  double top = 500;
+  double left = 300;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: top,
+      left: left,
+      child: Draggable(
+        feedback: _buildButton(context),
+        childWhenDragging: const SizedBox(),
+        onDragEnd: (details) {
+          setState(() {
+            top = details.offset.dy;
+            left = details.offset.dx;
+          });
+        },
+        child: _buildButton(context),
+      ),
+    );
+  }
+
+  Widget _buildButton(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const GeminiPage()),
+        );
+      },
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          color: Colors.green.shade100,
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            )
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Image.asset(
+            'assets/gemini.png',
+          ),
+        ),
       ),
     );
   }
