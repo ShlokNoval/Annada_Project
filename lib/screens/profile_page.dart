@@ -47,7 +47,7 @@ class _ProfilePageState extends State<ProfilePage> {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Profile saved successfully!')),
       );
-      Navigator.pop(context);
+
     }
   }
 
@@ -69,52 +69,202 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Edit Profile')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFF4CAF50),
+              Color(0xFF2E7D32),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: SafeArea(
+        child: Center(
+        child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
-          children: [
-            GestureDetector(
-              onTap: _pickImage,
-              child: CircleAvatar(
-                radius: 60,
-                backgroundImage: _image != null ? FileImage(_image!) : null,
-                child: _image == null
-                    ? const Icon(Icons.camera_alt, size: 40)
-                    : null,
-              ),
-            ),
-            const SizedBox(height: 20),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
 
-            TextField(
-              controller: _nameController,
-              decoration: const InputDecoration(labelText: 'Name'),
-            ),
-            const SizedBox(height: 12),
 
-            TextField(
-              controller: _phoneController,
-              decoration: const InputDecoration(labelText: 'Phone'),
-            ),
-            const SizedBox(height: 20),
 
-            ElevatedButton.icon(
-              onPressed: _saveProfileData,
-              icon: const Icon(Icons.save),
-              label: const Text("Save Profile"),
-            ),
 
-            const SizedBox(height: 30),
+        const SizedBox(height: 20),
 
-            ElevatedButton.icon(
-              onPressed: _logout,
-              icon: const Icon(Icons.logout),
-              label: const Text("Logout"),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-            ),
-          ],
+    const Text(
+    "Your Profile",
+    textAlign: TextAlign.center,
+    style: TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    ),
+    ),
+
+                const SizedBox(height: 30),
+
+                // 🧾 White Card Container
+    Container(
+    width: double.infinity,
+    padding: const EdgeInsets.all(25),
+    decoration: BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.circular(25),
+    boxShadow: [
+    BoxShadow(
+    color: Colors.black.withOpacity(0.2),
+    blurRadius: 15,
+    offset: const Offset(0, 8),
+    ),
+    ],
+    ),
+    child: Column(
+    children: [
+
+                      // 👤 Profile Image
+    GestureDetector(
+    onTap: _pickImage,
+    child: Stack(
+    alignment: Alignment.center,
+    children: [
+    CircleAvatar(
+    radius: 65,
+    backgroundColor: Colors.green.shade100,
+    backgroundImage:
+    _image != null ? FileImage(_image!) : null,
+    child: _image == null
+    ? const Icon(Icons.person,
+    size: 60, color: Colors.green)
+        : null,
+    ),
+    Positioned(
+    bottom: 5,
+    right: 5,
+    child: CircleAvatar(
+    radius: 18,
+    backgroundColor: Colors.green,
+    child: const Icon(
+    Icons.edit,
+    size: 16,
+    color: Colors.white,
+    ),
+    ),
+    )
+    ],
+    ),
+    ),
+
+                      const SizedBox(height: 30),
+
+                      // 📝 Name Field
+
+      TextField(
+        controller: _nameController,
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          prefixIcon: const Icon(Icons.person),
+          labelText: 'Full Name',
+          filled: true,
+          fillColor: Colors.grey.shade100,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+            borderSide: BorderSide.none,
+          ),
         ),
       ),
+
+      const SizedBox(height: 20),
+
+      TextField(
+        controller: _phoneController,
+        textAlign: TextAlign.center,
+        keyboardType: TextInputType.phone,
+        decoration: InputDecoration(
+          prefixIcon: const Icon(Icons.phone),
+          labelText: 'Phone Number',
+          filled: true,
+          fillColor: Colors.grey.shade100,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+            borderSide: BorderSide.none,
+          ),
+        ),
+      ),
+
+      const SizedBox(height: 30),
+
+      SizedBox(
+        width: double.infinity,
+        height: 55,
+        child: ElevatedButton.icon(
+          onPressed: _saveProfileData,
+          icon: const Icon(Icons.save, color: Colors.white),
+          label: const Text(
+            "Save Profile",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF2E7D32),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+            elevation: 5,
+          ),
+        ),
+      ),
+
+      const SizedBox(height: 20),
+
+      SizedBox(
+        width: double.infinity,
+        height: 50,
+        child: ElevatedButton.icon(
+          onPressed: _logout,
+          icon: const Icon(Icons.logout, color: Colors.white),
+          label: const Text(
+            "Logout",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.red.shade600,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+        ),
+      ),
+    ],
+    ),
+    ),
+
+          const SizedBox(height: 30),
+
+          const Text(
+            "🌾 Annada - Harvesting the Future",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 14,
+
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      )
     );
   }
 }

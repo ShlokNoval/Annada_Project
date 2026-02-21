@@ -26,7 +26,7 @@ class _GeminiPageState extends State<GeminiPage> {
   String _loadingText = "Uploading";
   Timer? _loadingTimer;
 
-  static const String apiKey = "AIzaSyBBzqoE5Mf48a2OSqUvE1eLKHhFaZ7LDI8";
+  static const String apiKey = "AIzaSyBnUpC8zzoLoq4JalwXbFPjzXFgczOSyWs";
   static const String apiUrl =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
@@ -57,137 +57,172 @@ class _GeminiPageState extends State<GeminiPage> {
       "What is the ideal soil pH for rice cultivation?",
     ];
 
-    return Column(
+    return Stack(
       children: [
-        // FAQ Section
-        Container(
-          padding: const EdgeInsets.all(12),
-          alignment: Alignment.centerLeft,
-          child: const Text(
-            "💬 Farmer FAQs:",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+
+        // 🌿 Background Image
+        Positioned.fill(
+          child: Image.asset(
+            "assets/gemini_background.jpeg",
+            fit: BoxFit.cover,
           ),
         ),
 
-        SizedBox(
-          height: 100,
-          child: ListView.separated(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            scrollDirection: Axis.horizontal,
-            itemCount: faqs.length,
-            separatorBuilder: (_, __) => const SizedBox(width: 8),
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  ChatMessage msg = ChatMessage(
-                    user: currentUser,
-                    createdAt: DateTime.now(),
-                    text: faqs[index],
-                  );
-                  _sendMessage(msg);
-                },
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16, vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.green.shade100,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.green),
-                  ),
-                  child: Center(
-                    child: Text(
-                      faqs[index],
-                      style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w500),
-                    ),
-                  ),
+        // 🌫 Optional dark overlay for readability
+        Positioned.fill(
+          child: Container(
+            color: Colors.black.withOpacity(0.3),
+          ),
+        ),
+
+        // 💬 Main Chat UI
+        Column(
+          children: [
+
+            // FAQ Section
+            Container(
+              padding: const EdgeInsets.all(12),
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                "💬 Farmer FAQs:",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white, // Make text visible
                 ),
-              );
-            },
-          ),
-        ),
+              ),
+            ),
 
-        const SizedBox(height: 8),
-
-        // WhatsApp Style Preview
-        if (selectedImage != null)
-          Container(
-            margin:
-            const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-            height: 160,
-            child: Stack(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(14),
-                  child: _imageLoading
-                      ? Center(
-                    child: Text(
-                      "$_loadingText...",
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+            SizedBox(
+              height: 100,
+              child: ListView.separated(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                scrollDirection: Axis.horizontal,
+                itemCount: faqs.length,
+                separatorBuilder: (_, __) => const SizedBox(width: 8),
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      ChatMessage msg = ChatMessage(
+                        user: currentUser,
+                        createdAt: DateTime.now(),
+                        text: faqs[index],
+                      );
+                      _sendMessage(msg);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.green.shade200.withOpacity(0.9),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: Colors.green),
                       ),
-                    ),
-                  )
-                      : Image.file(
-                    selectedImage!,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-
-                // Close Button
-                if (!_imageLoading)
-                  Positioned(
-                    top: 6,
-                    right: 6,
-                    child: GestureDetector(
-                      onTap: () {
-                        if (!_isSending) {
-                          setState(() {
-                            selectedImage = null;
-                          });
-                        }
-                      },
-                      child: const CircleAvatar(
-                        radius: 14,
-                        backgroundColor: Colors.white,
-                        child: Icon(
-                          Icons.close,
-                          size: 16,
-                          color: Colors.red,
+                      child: Center(
+                        child: Text(
+                          faqs[index],
+                          style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black),
                         ),
                       ),
                     ),
-                  ),
-              ],
+                  );
+                },
+              ),
             ),
-          ),
 
-        Expanded(
-          child: DashChat(
-            currentUser: currentUser,
-            messages: messages,
-            onSend: (ChatMessage chatMessage) async {
-              await _sendMessage(chatMessage);
-            },
-            inputOptions: InputOptions(
-              trailing: [
-                IconButton(
-                  icon: const Icon(Icons.image, color: Colors.green),
-                  onPressed: _pickImage,
+            const SizedBox(height: 8),
+
+            if (selectedImage != null)
+              Container(
+                margin:
+                const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                height: 160,
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(14),
+                      child: _imageLoading
+                          ? Center(
+                        child: Text(
+                          "$_loadingText...",
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                          : Image.file(
+                        selectedImage!,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    if (!_imageLoading)
+                      Positioned(
+                        top: 6,
+                        right: 6,
+                        child: GestureDetector(
+                          onTap: () {
+                            if (!_isSending) {
+                              setState(() {
+                                selectedImage = null;
+                              });
+                            }
+                          },
+                          child: const CircleAvatar(
+                            radius: 14,
+                            backgroundColor: Colors.white,
+                            child: Icon(
+                              Icons.close,
+                              size: 16,
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
                 ),
-              ],
+              ),
+
+            Expanded(
+              child: DashChat(
+                currentUser: currentUser,
+                messages: messages,
+                onSend: (ChatMessage chatMessage) async {
+                  await _sendMessage(chatMessage);
+                },
+                inputOptions: InputOptions(
+                  trailing: [
+                    IconButton(
+                      icon: const Icon(Icons.image, color: Colors.green),
+                      onPressed: _pickImage,
+                    ),
+                  ],
+                ),
+                messageOptions: MessageOptions(
+                  messageTextBuilder:
+                      (ChatMessage msg, ChatMessage? prev, ChatMessage? next) {
+
+                    bool isUser = msg.user.id == currentUser.id;
+
+                    return MarkdownBody(
+                      data: msg.text,
+                      selectable: true,
+                      styleSheet: MarkdownStyleSheet(
+                        p: TextStyle(
+                          color: isUser ? Colors.white : Colors.black,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
-            messageOptions: MessageOptions( // ✅ NEW: Add messageOptions for Markdown
-              messageTextBuilder: (ChatMessage msg, ChatMessage? prev, ChatMessage? next) {
-                return MarkdownBody(
-                  data: msg.text,
-                  selectable: true, // Optional: Allow text selection
-                );
-              },
-            ),
-          ),
+          ],
         ),
       ],
     );

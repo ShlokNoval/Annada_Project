@@ -13,6 +13,8 @@ import '../screens/image_detection.dart';
 import '../screens/nearnessofmarket.dart';
 import '../screens/news_service.dart';
 import 'dart:async';
+import 'auth_service.dart';
+import 'login_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -209,37 +211,9 @@ class _HomePageState extends State<HomePage>
     final theme = Theme.of(context);
 
     return Scaffold(
+
       backgroundColor: Colors.green.shade50,
-      appBar: AppBar(
-        backgroundColor: Colors.green.shade700,
-        elevation: 2,
-        title: const Text(
-          "Your Dashboard",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        actions: [
-          GestureDetector(
-            onTap: () async {
-              await Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),
-              );
-              _loadProfileData();
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                backgroundImage:
-                _profilePhoto != null ? NetworkImage(_profilePhoto!) : null,
-                child: _profilePhoto == null
-                    ? const Icon(Icons.person, size: 30, color: Colors.green)
-                    : null,
-              ),
-            ),
-          ),
-        ],
-      ),
+
 
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -286,7 +260,9 @@ class _HomePageState extends State<HomePage>
                   ),
                 ),
 
-              // ── News carousel ───────────────────────────────────────────
+
+
+// 📰 News AFTER Weather
               FutureBuilder<List<Map<String, dynamic>>>(
                 future: newsFuture,
                 builder: (context, snapshot) {
@@ -301,10 +277,8 @@ class _HomePageState extends State<HomePage>
                   }
                 },
               ),
-
               const SizedBox(height: 16),
-
-              // ── Weather box (tap → forecast) ────────────────────────────
+              // 🌦 Weather FIRST
               FutureBuilder<Map<String, dynamic>>(
                 future: weatherFuture,
                 builder: (context, snapshot) {
@@ -331,13 +305,21 @@ class _HomePageState extends State<HomePage>
                 },
               ),
 
-              const SizedBox(height: 22),
+              const SizedBox(height: 16),
 
               // ── Feature grid ────────────────────────────────────────────
-              Text(
-                "Features",
-                style: theme.textTheme.titleLarge!.copyWith(
-                    fontWeight: FontWeight.bold, color: Colors.green[700]),
+              Padding(
+                padding: const EdgeInsets.only(top: 28, bottom: 12),
+                child: Center(
+                  child: Text(
+                    "Features",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green.shade800,
+                    ),
+                  ),
+                ),
               ),
 
               const SizedBox(height: 10),
@@ -367,14 +349,7 @@ class _HomePageState extends State<HomePage>
                         MaterialPageRoute(
                             builder: (_) => const ImageDetectionPage())),
                   ),
-                  _buildFeatureBox(
-                    "Market Connectivity",
-                    FontAwesomeIcons.mapLocationDot,
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const NearnessOfMarketPage())),
-                  ),
+
                   _buildFeatureBox(
                     "Tutorial",
                     FontAwesomeIcons.bookOpen,
@@ -390,14 +365,7 @@ class _HomePageState extends State<HomePage>
                         context,
                         MaterialPageRoute(builder: (_) => YojnaPage())),
                   ),
-                  _buildFeatureBox(
-                    "Annada Assistant",
-                    FontAwesomeIcons.robot,
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const GeminiPage())),
-                  ),
+
                 ],
               ),
 
@@ -410,6 +378,99 @@ class _HomePageState extends State<HomePage>
   }
 
   // ─── Widgets ─────────────────────────────────────────────────────────────────
+
+
+  Widget _buildWeatherBox(
+      String location, String temperature, String description) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.green.shade600, Colors.green.shade900],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.green.shade900.withValues(alpha: 0.5),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.wb_sunny, size: 48, color: Colors.yellowAccent),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(location,
+                        style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                    Text(temperature,
+                        style: const TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white)),
+                    Text(description,
+                        style: const TextStyle(
+                            fontSize: 14,
+                            color: Colors.white70,
+                            fontStyle: FontStyle.italic)),
+                  ],
+                ),
+              ),
+              Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.2),
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.refresh,
+                          color: Colors.white, size: 20),
+                      onPressed: _refreshWeather,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  AnimatedOpacity(
+                    opacity: _showWeatherUpdated ? 1.0 : 0.0,
+                    duration: const Duration(milliseconds: 400),
+                    child: const Text("Updated",
+                        style:
+                        TextStyle(color: Colors.white70, fontSize: 11)),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          // ── Hint to tap for forecast ──────────────────────────────────
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.touch_app, color: Colors.white54, size: 14),
+              const SizedBox(width: 4),
+              const Text(
+                "Tap for 5-day forecast",
+                style: TextStyle(color: Colors.white54, fontSize: 12),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
 
   Widget _buildNewsLoading() {
     return Container(
@@ -519,97 +580,6 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-  Widget _buildWeatherBox(
-      String location, String temperature, String description) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.green.shade600, Colors.green.shade900],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.green.shade900.withValues(alpha: 0.5),
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              const Icon(Icons.wb_sunny, size: 48, color: Colors.yellowAccent),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(location,
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)),
-                    Text(temperature,
-                        style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white)),
-                    Text(description,
-                        style: const TextStyle(
-                            fontSize: 14,
-                            color: Colors.white70,
-                            fontStyle: FontStyle.italic)),
-                  ],
-                ),
-              ),
-              Column(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.2),
-                      shape: BoxShape.circle,
-                    ),
-                    child: IconButton(
-                      icon: const Icon(Icons.refresh,
-                          color: Colors.white, size: 20),
-                      onPressed: _refreshWeather,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  AnimatedOpacity(
-                    opacity: _showWeatherUpdated ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 400),
-                    child: const Text("Updated",
-                        style:
-                        TextStyle(color: Colors.white70, fontSize: 11)),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          // ── Hint to tap for forecast ──────────────────────────────────
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.touch_app, color: Colors.white54, size: 14),
-              const SizedBox(width: 4),
-              const Text(
-                "Tap for 5-day forecast",
-                style: TextStyle(color: Colors.white54, fontSize: 12),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildFeatureBox(String title, IconData icon,
       {required VoidCallback onTap}) {
     return Material(
@@ -643,6 +613,7 @@ class _HomePageState extends State<HomePage>
     );
   }
 }
+
 
 // ─── Forecast Bottom Sheet Widget ────────────────────────────────────────────
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_markdown/flutter_markdown.dart'; // Add this import
 
 class TutorialPage extends StatefulWidget {
   const TutorialPage({super.key});
@@ -12,7 +13,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
   TextEditingController searchController = TextEditingController();
   List<Map<String, dynamic>> allTutorials = [];
   List<Map<String, dynamic>> filteredTutorials = [];
-
   late TabController _tabController;
 
   @override
@@ -67,7 +67,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
         "content": "Connect with local markets:\n\n1. **Open Market Finder**: Tap 'Market Connectivity'\n2. **Allow Location**: Grant location permission for accurate results\n3. **Browse Markets**: View nearby agricultural markets\n4. **Check Details**: See contact info and market timings\n5. **Plan Visits**: Use integrated maps for directions",
         "icon": Icons.location_on
       },
-
       // Comprehensive Farming Guides
       {
         "title": "🌱 Complete Guide to Organic Farming",
@@ -125,7 +124,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
         "content": "**Seasonal Planning:**\n\n**Kharif Season (June-October):**\n• Monsoon-dependent crops\n• Rice, cotton, sugarcane\n• Drainage systems important\n\n**Rabi Season (November-April):**\n• Winter crops\n• Wheat, mustard, peas\n• Irrigation planning crucial\n\n**Zaid Season (April-June):**\n• Summer crops\n• Watermelon, fodder crops\n• High water requirement\n\n**Weather Monitoring:**\n• Use weather apps daily\n• Understand IMD forecasts\n• Plan operations accordingly\n• Have contingency plans\n\n**Climate Adaptation:**\n• Drought-resistant varieties\n• Water storage systems\n• Crop diversification\n• Insurance coverage",
         "icon": Icons.wb_sunny
       },
-
       // Video Tutorials
       {
         "title": "📽️ Modern Wheat Cultivation Techniques",
@@ -148,7 +146,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
         "url": "https://www.youtube.com/watch?v=VcnzXJZxajQ",
         "icon": Icons.play_circle
       },
-
       // Visual Guides
       {
         "title": "📷 Pest Identification Chart",
@@ -230,16 +227,19 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
                     ],
                   ),
                   const SizedBox(height: 12),
-                  Text(
-                    tutorial["content"],
-                    style: const TextStyle(fontSize: 14, height: 1.5),
+                  // UPDATED: Using MarkdownBody instead of Text
+                  MarkdownBody(
+                    data: tutorial["content"],
+                    styleSheet: MarkdownStyleSheet(
+                      p: const TextStyle(fontSize: 14, height: 1.5),
+                      listBullet: const TextStyle(fontSize: 14, height: 1.5),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
         );
-
       case "text":
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
@@ -264,15 +264,18 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
                   ],
                 ),
                 const SizedBox(height: 12),
-                Text(
-                  tutorial["content"],
-                  style: const TextStyle(fontSize: 14, height: 1.5),
+                // UPDATED: Using MarkdownBody instead of Text
+                MarkdownBody(
+                  data: tutorial["content"],
+                  styleSheet: MarkdownStyleSheet(
+                    p: const TextStyle(fontSize: 14, height: 1.5),
+                    listBullet: const TextStyle(fontSize: 14, height: 1.5),
+                  ),
                 ),
               ],
             ),
           ),
         );
-
       case "video":
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
@@ -297,7 +300,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
             onTap: () => _launchURL(tutorial["url"]),
           ),
         );
-
       case "image":
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
@@ -342,7 +344,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
             ],
           ),
         );
-
       default:
         return const SizedBox.shrink();
     }
@@ -452,7 +453,6 @@ class _TutorialPageState extends State<TutorialPage> with SingleTickerProviderSt
         ),
       );
     }
-
     return ListView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       itemCount: tutorials.length,

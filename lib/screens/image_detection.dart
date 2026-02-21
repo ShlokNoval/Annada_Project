@@ -69,7 +69,7 @@ class _ImageDetectionPageState extends State<ImageDetectionPage> {
     }
 
     final String cropType = _cropController.text;
-    const String apiKey = "AIzaSyBBzqoE5Mf48a2OSqUvE1eLKHhFaZ7LDI8";
+    const String apiKey = "AIzaSyBnUpC8zzoLoq4JalwXbFPjzXFgczOSyWs";
 
     final String apiUrl =
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=$apiKey";
