@@ -47,13 +47,12 @@ To avoid a lengthy build and setup process, the **APK file link has been uploade
 ## 🔗 Links
 
 - **APK (MVP Link):**  
-https://drive.google.com/drive/folders/1puWVRWYtlIQsQPFgeXJ1HrG0KYhUsvp1?usp=sharing
+https://drive.google.com/drive/folders/119B6rpHBXSqV3Cq8U6X_DXlwO6ao7vnc?usp=sharing
 
 - **GitHub Repository:**  
 https://github.com/ShlokNoval/Annada_Project
 
-- **Demo Video:**  
-https://youtu.be/rvHalUdrzH8
 
 ---
+
 
