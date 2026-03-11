@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'auth_service.dart';
 
 class RegisterUserScreen extends StatefulWidget {
@@ -18,6 +19,8 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
   bool isLoading = false;
 
   Future<void> registerUser() async {
+    final l10n = AppLocalizations.of(context)!;
+
     if (!_formKey.currentState!.validate()) return;
 
     setState(() => isLoading = true);
@@ -27,15 +30,12 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
         passwordController.text.trim(),
       );
 
-      // ✅ DO NOT NAVIGATE
-      // AuthWrapper will automatically redirect to HomePage
-
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('✅ User registered successfully!')),
+        SnackBar(content: Text(l10n.userRegisteredSuccess)),
       );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('⚠️ ${e.toString()}')),
+        SnackBar(content: Text("${l10n.errorPrefix} ${e.toString()}")),
       );
     } finally {
       setState(() => isLoading = false);
@@ -44,6 +44,8 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -78,9 +80,9 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
 
                   const SizedBox(height: 8),
 
-                  const Text(
-                    "Create Your Farmer Account",
-                    style: TextStyle(
+                  Text(
+                    l10n.createFarmerAccount,
+                    style: const TextStyle(
                       fontSize: 16,
                       color: Colors.white70,
                     ),
@@ -112,7 +114,7 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
                             controller: emailController,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(Icons.email),
-                              labelText: 'Email',
+                              labelText: l10n.email,
                               filled: true,
                               fillColor: Colors.grey.shade100,
                               border: OutlineInputBorder(
@@ -123,7 +125,7 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
                             keyboardType: TextInputType.emailAddress,
                             validator: (value) =>
                             value == null || value.isEmpty
-                                ? 'Email required'
+                                ? l10n.emailRequired
                                 : null,
                           ),
 
@@ -135,7 +137,7 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
                             obscureText: true,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(Icons.lock),
-                              labelText: 'Password',
+                              labelText: l10n.password,
                               filled: true,
                               fillColor: Colors.grey.shade100,
                               border: OutlineInputBorder(
@@ -145,7 +147,7 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
                             ),
                             validator: (value) =>
                             value == null || value.length < 6
-                                ? 'Password must be at least 6 characters'
+                                ? l10n.passwordMinLength
                                 : null,
                           ),
 
@@ -166,9 +168,9 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
                                 ),
                                 elevation: 5,
                               ),
-                              child: const Text(
-                                'Register',
-                                style: TextStyle(
+                              child: Text(
+                                l10n.register,
+                                style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
@@ -183,9 +185,9 @@ class _RegisterUserScreenState extends State<RegisterUserScreen> {
 
                   const SizedBox(height: 30),
 
-                  const Text(
-                    "🌾 Empowering Farmers with AI",
-                    style: TextStyle(
+                  Text(
+                    l10n.empoweringFarmers,
+                    style: const TextStyle(
                       color: Colors.white70,
                       fontSize: 14,
                     ),

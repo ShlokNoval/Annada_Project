@@ -3,18 +3,21 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class WeatherService {
-  static const String apiKey = "c5ca84df187e5713e0c1fa8ad725b5e0";
-  static const String baseUrl = "https://api.openweathermap.org/data/2.5/weather";
-  // ✅ Uses FREE 5-day/3-hour forecast endpoint (no paid plan needed)
-  static const String forecastUrl = "https://api.openweathermap.org/data/2.5/forecast";
+  late final String apiKey = dotenv.env['WEATHER_API_KEY']!;
+  static const String baseUrl =
+      "https://api.openweathermap.org/data/2.5/weather";
+  static const String forecastUrl =
+      "https://api.openweathermap.org/data/2.5/forecast";
 
-  // Fallback location - Mountain View
   static const double fallbackLat = 37.4219;
   static const double fallbackLon = -122.0840;
 
-  /// Explicit permission request (triggers the system dialog)
+  // ✅ STEP 3: Cached location
+  Position? _lastSuccessfulPosition;
+
   Future<bool> ensureLocationPermission() async {
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
@@ -42,7 +45,7 @@ class WeatherService {
     return true;
   }
 
-  Future<Map<String, dynamic>> fetchWeather() async {
+  Future<Map<String, dynamic>> fetchWeather(String languageCode) async {
     try {
       await ensureLocationPermission();
 
@@ -57,7 +60,7 @@ class WeatherService {
       final response = await http.get(
         Uri.parse(
           "$baseUrl?lat=${position.latitude}&lon=${position.longitude}"
-              "&appid=$apiKey&units=metric&lang=en",
+              "&appid=$apiKey&units=metric&lang=$languageCode",
         ),
       ).timeout(
         const Duration(seconds: 8),
@@ -74,14 +77,15 @@ class WeatherService {
       return {
         "name": "Mountain View",
         "main": {"temp": 15.0},
-        "weather": [{"description": "clear sky"}],
+        "weather": [
+          {"description": "clear sky"}
+        ],
       };
     }
   }
 
-  /// ✅ Fetches 5-day forecast using FREE /data/2.5/forecast API.
-  /// Returns a list of daily summaries (up to 5 days, skipping today).
-  Future<List<Map<String, dynamic>>> fetchDailyForecast() async {
+  Future<List<Map<String, dynamic>>> fetchDailyForecast(
+      String languageCode) async {
     try {
       await ensureLocationPermission();
 
@@ -93,7 +97,7 @@ class WeatherService {
       final response = await http.get(
         Uri.parse(
           "$forecastUrl?lat=${position.latitude}&lon=${position.longitude}"
-              "&appid=$apiKey&units=metric&lang=en&cnt=40",
+              "&appid=$apiKey&units=metric&lang=$languageCode&cnt=40",
         ),
       ).timeout(
         const Duration(seconds: 10),
@@ -107,15 +111,14 @@ class WeatherService {
       final data = jsonDecode(response.body) as Map<String, dynamic>;
       final List<dynamic> list = data['list'] ?? [];
 
-      // ── Aggregate 3-hour slots into daily buckets ──────────────────
       final Map<String, _DayAccumulator> buckets = {};
 
       for (final slot in list) {
         final dt = DateTime.fromMillisecondsSinceEpoch(
           (slot['dt'] as int) * 1000,
         );
-        final key = "${dt.year}-${dt.month.toString().padLeft(2, '0')}"
-            "-${dt.day.toString().padLeft(2, '0')}";
+        final key =
+            "${dt.year}-${dt.month.toString().padLeft(2, '0')}-${dt.day.toString().padLeft(2, '0')}";
 
         buckets.putIfAbsent(key, () => _DayAccumulator(dt));
         buckets[key]!.add(
@@ -127,16 +130,11 @@ class WeatherService {
         );
       }
 
-      // Sort keys and skip today
       final today = DateTime.now();
       final todayKey =
-          "${today.year}-${today.month.toString().padLeft(2, '0')}"
-          "-${today.day.toString().padLeft(2, '0')}";
+          "${today.year}-${today.month.toString().padLeft(2, '0')}-${today.day.toString().padLeft(2, '0')}";
 
-      final days = buckets.keys
-          .where((k) => k != todayKey)
-          .toList()
-        ..sort();
+      final days = buckets.keys.where((k) => k != todayKey).toList()..sort();
 
       return days.take(7).map((key) => buckets[key]!.toMap()).toList();
     } catch (e) {
@@ -145,16 +143,27 @@ class WeatherService {
     }
   }
 
+  // ✅ UPDATED: Uses cached location before fallback
   Future<Position> _getLocationSafely() async {
     try {
-      return await Geolocator.getCurrentPosition(
+      final position = await Geolocator.getCurrentPosition(
         locationSettings: const LocationSettings(
           accuracy: LocationAccuracy.medium,
           distanceFilter: 500,
         ),
       );
+
+      // Save last successful position
+      _lastSuccessfulPosition = position;
+
+      return position;
     } catch (e) {
-      if (kDebugMode) debugPrint("📍 Location failed: $e");
+      if (_lastSuccessfulPosition != null) {
+        if (kDebugMode) debugPrint("📍 Using cached location");
+        return _lastSuccessfulPosition!;
+      }
+
+      if (kDebugMode) debugPrint("📍 Using fallback location");
       return _fallbackPosition();
     }
   }
@@ -176,7 +185,6 @@ class WeatherService {
   }
 }
 
-// ── Helper to accumulate min/max/description per day ──────────────────────────
 class _DayAccumulator {
   final DateTime date;
   double minTemp = double.infinity;
@@ -193,7 +201,6 @@ class _DayAccumulator {
     if (max > maxTemp) maxTemp = max;
     totalPop += pop;
     count++;
-    // Use midday slot description when available, else last description
     description = desc;
     icon = ic;
   }

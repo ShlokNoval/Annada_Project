@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../main.dart';
+import 'language_selection_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,14 +17,13 @@ class _SplashScreenState extends State<SplashScreen>
   late Animation<double> _scaleAnimation;
   late Animation<double> _fadeAnimation;
 
-
   @override
   void initState() {
     super.initState();
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 4), // Grow duration
+      duration: const Duration(seconds: 4),
     );
 
     _scaleAnimation = Tween<double>(begin: 0.8, end: 1.1).animate(
@@ -33,18 +34,33 @@ class _SplashScreenState extends State<SplashScreen>
       CurvedAnimation(parent: _controller, curve: Curves.easeIn),
     );
 
-    // Play animation once
     _controller.forward();
+    _navigateNext();
+  }
 
-    // Navigate after animation completes
-    Future.delayed(const Duration(seconds: 4), () {
-      if (!mounted) return;
+  Future<void> _navigateNext() async {
+    await Future.delayed(const Duration(seconds: 4));
 
+    if (!mounted) return;
+
+    final prefs = await SharedPreferences.getInstance();
+    String? lang = prefs.getString('selected_language');
+
+    if (lang == null) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const AuthWrapper()),
+        MaterialPageRoute(
+          builder: (_) => const LanguageSelectionScreen(),
+        ),
       );
-    });
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const AuthWrapper(),
+        ),
+      );
+    }
   }
 
   @override
@@ -56,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Clean white background
+      backgroundColor: Colors.white,
       body: Center(
         child: FadeTransition(
           opacity: _fadeAnimation,

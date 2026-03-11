@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:annadaauth1/screens/map1.dart'; // For Locate Fertilizers Shops
-import 'package:annadaauth1/screens/map2.dart'; // For Search nearby Market
-import 'package:annadaauth1/screens/map3.dart'; // For Local NGOs
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:annadaauth1/screens/map1.dart';
+import 'package:annadaauth1/screens/map2.dart';
+import 'package:annadaauth1/screens/map3.dart';
 
 class NearnessOfMarketPage extends StatefulWidget {
   const NearnessOfMarketPage({super.key});
 
   @override
-  State<NearnessOfMarketPage> createState() => _NearnessOfMarketPageState();
+  State<NearnessOfMarketPage> createState() =>
+      _NearnessOfMarketPageState();
 }
 
-class _NearnessOfMarketPageState extends State<NearnessOfMarketPage> {
+class _NearnessOfMarketPageState
+    extends State<NearnessOfMarketPage> {
+
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Nearness Of Market"),
+        title: Text(loc.nearnessOfMarket),
         backgroundColor: Colors.green.shade700,
-        titleTextStyle: const TextStyle(
-          color: Colors.white,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-        ),
       ),
       body: SafeArea(
         child: Padding(
@@ -29,30 +30,40 @@ class _NearnessOfMarketPageState extends State<NearnessOfMarketPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "Nearby Markets",
-                style: TextStyle(
+
+              // ───── Nearby Markets ─────
+              Text(
+                loc.nearbyMarkets,
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
                 ),
               ),
               const SizedBox(height: 16),
+
               Expanded(
                 child: ListView(
                   children: [
+
                     MarketCard(
-                      marketName: "Locate Fertilizers Shops",
-                      onTap: () => _navigateToMap(context, const Map1Page()),
+                      marketName: loc.locateFertilizerShops,
+                      onTap: () =>
+                          _navigateToMap(context, const Map1Page()),
                     ),
+
                     MarketCard(
-                      marketName: "Search nearby Market",
-                      onTap: () => _navigateToMap(context, const Map2Page()),
+                      marketName: loc.searchNearbyMarket,
+                      onTap: () =>
+                          _navigateToMap(context, const Map2Page()),
                     ),
+
                     MarketCard(
-                      marketName: "Local recycling agencies",
-                      onTap: () => _navigateToMap(context, const Map3Page()),
+                      marketName: loc.localRecyclingAgencies,
+                      onTap: () =>
+                          _navigateToMap(context, const Map3Page()),
                     ),
+
                   ],
                 ),
               ),
@@ -72,12 +83,14 @@ class _NearnessOfMarketPageState extends State<NearnessOfMarketPage> {
         transitionsBuilder: (_, animation, __, child) {
           return SlideTransition(
             position: Tween<Offset>(
-              begin: const Offset(1.0, 0.0), // Slide in from right
+              begin: const Offset(1.0, 0.0),
               end: Offset.zero,
-            ).animate(CurvedAnimation(
-              parent: animation,
-              curve: Curves.easeInOut,
-            )),
+            ).animate(
+              CurvedAnimation(
+                parent: animation,
+                curve: Curves.easeInOut,
+              ),
+            ),
             child: child,
           );
         },
@@ -117,17 +130,12 @@ class MarketCard extends StatelessWidget {
               ),
               const SizedBox(width: 16),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      marketName,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+                child: Text(
+                  marketName,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],

@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+
   cupertino_icons: ^1.0.8
   firebase_core: ^3.12.1
   firebase_auth: ^5.4.2
@@ -35,6 +36,7 @@ dependencies:
   translator: ^1.0.4+1
   flutter_markdown: ^0.7.5
   firebase_storage: ^12.4.4
+  flutter_dotenv: ^6.0.0
 
 
 
@@ -52,6 +54,7 @@ flutter_icons:
   adaptive_icon_foreground: "assets/annadalogo.png"
 
 flutter:
+  generate: true
   uses-material-design: true
 
   assets:
@@ -79,3 +82,6 @@ flutter:
     - assets/gemini_background.jpeg
     - assets/profile.png
     - assets/profile_bg.webp
+    - assets/images/
+    - assets/news_multilingual.json
+    - .env

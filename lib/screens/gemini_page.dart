@@ -1,12 +1,13 @@
-
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart'; // ✅ NEW: Import for Markdown rendering
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class GeminiPage extends StatefulWidget {
   const GeminiPage({super.key});
@@ -26,7 +27,7 @@ class _GeminiPageState extends State<GeminiPage> {
   String _loadingText = "Uploading";
   Timer? _loadingTimer;
 
-  static const String apiKey = "AIzaSyBnUpC8zzoLoq4JalwXbFPjzXFgczOSyWs";
+  late final String apiKey = dotenv.env['GEMINI_API_KEY']!;
   static const String apiUrl =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
@@ -38,10 +39,12 @@ class _GeminiPageState extends State<GeminiPage> {
 
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Annada Assistance"),
+        title: Text(loc.annadaAssistance),
         backgroundColor: Colors.green,
       ),
       body: _buildUI(),
@@ -49,18 +52,19 @@ class _GeminiPageState extends State<GeminiPage> {
   }
 
   Widget _buildUI() {
+    final loc = AppLocalizations.of(context)!;
+
     List<String> faqs = [
-      "What is the best fertilizer for tomatoes?",
-      "How to prevent pest attacks on crops?",
-      "What crops are suitable for summer season?",
-      "How to conserve water in farming?",
-      "What is the ideal soil pH for rice cultivation?",
+      loc.faq1,
+      loc.faq2,
+      loc.faq3,
+      loc.faq4,
+      loc.faq5,
     ];
 
     return Stack(
       children: [
 
-        // 🌿 Background Image
         Positioned.fill(
           child: Image.asset(
             "assets/gemini_background.jpeg",
@@ -68,27 +72,24 @@ class _GeminiPageState extends State<GeminiPage> {
           ),
         ),
 
-        // 🌫 Optional dark overlay for readability
         Positioned.fill(
           child: Container(
             color: Colors.black.withOpacity(0.3),
           ),
         ),
 
-        // 💬 Main Chat UI
         Column(
           children: [
 
-            // FAQ Section
             Container(
               padding: const EdgeInsets.all(12),
               alignment: Alignment.centerLeft,
-              child: const Text(
-                "💬 Farmer FAQs:",
-                style: TextStyle(
+              child: Text(
+                loc.farmerFaqs,
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white, // Make text visible
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -228,8 +229,9 @@ class _GeminiPageState extends State<GeminiPage> {
     );
   }
 
-  // Pick Image
   Future<void> _pickImage() async {
+    final loc = AppLocalizations.of(context)!;
+
     final picker = ImagePicker();
     final XFile? image =
     await picker.pickImage(source: ImageSource.gallery);
@@ -238,31 +240,29 @@ class _GeminiPageState extends State<GeminiPage> {
       setState(() {
         selectedImage = File(image.path);
         _imageLoading = true;
-        _loadingText = "Uploading";
+        _loadingText = loc.uploading;
       });
 
-      // Start animation timer
       _loadingTimer?.cancel();
-      _loadingTimer = Timer.periodic(const Duration(milliseconds: 500), (timer) {
-        setState(() {
-          if (_loadingText == "Uploading...") {
-            _loadingText = "Uploading";
-          } else {
-            _loadingText += ".";
-          }
-        });
-      });
+      _loadingTimer =
+          Timer.periodic(const Duration(milliseconds: 500), (timer) {
+            setState(() {
+              if (_loadingText.endsWith("...")) {
+                _loadingText = loc.uploading;
+              } else {
+                _loadingText += ".";
+              }
+            });
+          });
 
-      // Precache the image to ensure it's loaded
       try {
         await precacheImage(FileImage(selectedImage!), context);
       } catch (e) {
-        // Handle error: optionally show a snackbar or remove the image
         setState(() {
           selectedImage = null;
         });
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Failed to load image: $e")),
+          SnackBar(content: Text("${loc.failedToLoadImage}: $e")),
         );
       } finally {
         _loadingTimer?.cancel();
@@ -276,16 +276,19 @@ class _GeminiPageState extends State<GeminiPage> {
   Future<void> _sendMessage(ChatMessage chatMessage) async {
     if (_isSending || _imageLoading) return;
 
+    final loc = AppLocalizations.of(context)!;
+
     setState(() {
       _isSending = true;
     });
 
-    // Move selectedImage to a temp variable and clear preview immediately
     File? imageToSend = selectedImage;
+
     setState(() {
       selectedImage = null;
-      _imageLoading = false; // Just in case
+      _imageLoading = false;
     });
+
     _loadingTimer?.cancel();
 
     ChatMessage userMessage = ChatMessage(
@@ -311,8 +314,8 @@ class _GeminiPageState extends State<GeminiPage> {
       user: geminiUser,
       createdAt: DateTime.now(),
       text: imageToSend != null
-          ? "Analyzing image..."
-          : "Thinking...",
+          ? loc.analyzingImage
+          : loc.thinking,
     );
 
     setState(() {
@@ -323,9 +326,10 @@ class _GeminiPageState extends State<GeminiPage> {
       final response =
       await _fetchGeminiResponse(chatMessage.text, imageToSend);
 
-      String reply = response ?? "⚠️ No response received.";
+      String reply = response ?? loc.noResponseReceived;
 
       int botIndex = messages.indexOf(botMessage);
+
       if (botIndex != -1) {
         setState(() {
           messages[botIndex] = ChatMessage(
@@ -342,7 +346,7 @@ class _GeminiPageState extends State<GeminiPage> {
           messages[botIndex] = ChatMessage(
             user: geminiUser,
             createdAt: botMessage.createdAt,
-            text: "⚠️ Error fetching response.",
+            text: loc.errorFetchingResponse,
           );
         });
       }
@@ -355,39 +359,53 @@ class _GeminiPageState extends State<GeminiPage> {
 
   Future<String?> _fetchGeminiResponse(
       String prompt, File? imageFile) async {
+
+    final langCode = Localizations.localeOf(context).languageCode;
+
+    String languageName;
+
+    switch (langCode) {
+      case 'hi': languageName = "Hindi"; break;
+      case 'mr': languageName = "Marathi"; break;
+      case 'ta': languageName = "Tamil"; break;
+      case 'te': languageName = "Telugu"; break;
+      case 'kn': languageName = "Kannada"; break;
+      case 'ml': languageName = "Malayalam"; break;
+      case 'gu': languageName = "Gujarati"; break;
+      case 'pa': languageName = "Punjabi"; break;
+      case 'bn': languageName = "Bengali"; break;
+      case 'or': languageName = "Odia"; break;
+      case 'as': languageName = "Assamese"; break;
+      case 'ur': languageName = "Urdu"; break;
+      case 'sa': languageName = "Sanskrit"; break;
+      default: languageName = "English";
+    }
+
+    final modifiedPrompt =
+        "Respond strictly in $languageName language.\n\n$prompt";
+
     final uri = Uri.parse("$apiUrl?key=$apiKey");
 
-    Map<String, dynamic> requestBody;
+    Map<String, dynamic> requestBody = {
+      "contents": [
+        {
+          "parts": [
+            {"text": modifiedPrompt}
+          ]
+        }
+      ]
+    };
 
     if (imageFile != null) {
       final bytes = await imageFile.readAsBytes();
       final base64Image = base64Encode(bytes);
 
-      requestBody = {
-        "contents": [
-          {
-            "parts": [
-              {"text": prompt},
-              {
-                "inlineData": {
-                  "mimeType": "image/jpeg",
-                  "data": base64Image
-                }
-              }
-            ]
-          }
-        ]
-      };
-    } else {
-      requestBody = {
-        "contents": [
-          {
-            "parts": [
-              {"text": prompt}
-            ]
-          }
-        ]
-      };
+      requestBody["contents"][0]["parts"].add({
+        "inlineData": {
+          "mimeType": "image/jpeg",
+          "data": base64Image
+        }
+      });
     }
 
     final response = await http.post(
@@ -400,13 +418,7 @@ class _GeminiPageState extends State<GeminiPage> {
       final data = jsonDecode(response.body);
       return data["candidates"]?[0]["content"]["parts"]?[0]["text"];
     } else {
-      try {
-        final errorData = jsonDecode(response.body);
-        String errorMessage = errorData['error']?['message'] ?? "Unknown error";
-        return "⚠️ Error: ${response.statusCode} - $errorMessage";
-      } catch (_) {
-        return "⚠️ Error: ${response.statusCode}";
-      }
+      return null;
     }
   }
 }

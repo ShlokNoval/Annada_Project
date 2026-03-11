@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TodoPage extends StatefulWidget {
   const TodoPage({super.key});
@@ -52,9 +53,11 @@ class _TodoPageState extends State<TodoPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("To-Do List"),
+        title: Text(l10n.todoTitle),
         backgroundColor: Colors.green.shade700,
       ),
       body: Padding(
@@ -68,9 +71,9 @@ class _TodoPageState extends State<TodoPage> {
                 Expanded(
                   child: TextField(
                     controller: _controller,
-                    decoration: const InputDecoration(
-                      hintText: "Add a new task...",
-                      border: OutlineInputBorder(),
+                    decoration: InputDecoration(
+                      hintText: l10n.addNewTask,
+                      border: const OutlineInputBorder(),
                     ),
                   ),
                 ),
@@ -102,10 +105,10 @@ class _TodoPageState extends State<TodoPage> {
                   }
 
                   if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                    return const Center(
+                    return Center(
                       child: Text(
-                        "No tasks yet. Add your first task.",
-                        style: TextStyle(color: Colors.grey),
+                        l10n.noTasksYet,
+                        style: const TextStyle(color: Colors.grey),
                       ),
                     );
                   }
@@ -124,9 +127,9 @@ class _TodoPageState extends State<TodoPage> {
                     children: [
 
                       // ================= UPCOMING =================
-                      const Text(
-                        "Upcoming Tasks",
-                        style: TextStyle(
+                      Text(
+                        l10n.upcomingTasks,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -153,9 +156,9 @@ class _TodoPageState extends State<TodoPage> {
 
                       // ================= COMPLETED =================
                       if (completed.isNotEmpty)
-                        const Text(
-                          "Completed Tasks",
-                          style: TextStyle(
+                        Text(
+                          l10n.completedTasks,
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),

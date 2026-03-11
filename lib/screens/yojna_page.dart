@@ -1,65 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class YojnaPage extends StatelessWidget {
-  const YojnaPage({Key? key}) : super(key: key);  // made const
-
-  final List<Map<String, String>> schemes = const [  // made const for list literal
-    {
-      "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
-      "description": "Provides ₹6,000 per year in three installments to small and marginal farmers to support their financial needs.",
-      "url": "https://pmkisan.gov.in/",
-      "logo": "assets/pm-kisan.png",
-    },
-    {
-      "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
-      "description": "Offers crop insurance to protect farmers against crop losses due to natural disasters, pests, and diseases.",
-      "url": "https://pmfby.gov.in/",
-      "logo": "assets/pmfby.png",
-    },
-    {
-      "name": "Kisan Credit Card (KCC) Scheme",
-      "description": "Provides short-term credit to farmers at low-interest rates to help them with agricultural expenses.",
-      "url": "https://www.pmkisan.gov.in/",
-      "logo": "assets/kcc.png",
-    },
-    {
-      "name": "Soil Health Card Scheme",
-      "description": "Offers free soil testing services to farmers to determine the nutrient content and health of their soil.",
-      "url": "https://soilhealth.dac.gov.in/",
-      "logo": "assets/soil-health.png",
-    },
-    {
-      "name": "PM Krishi Sinchayee Yojana (PMKSY)",
-      "description": "Aims to provide water access for irrigation through better water conservation and management techniques.",
-      "url": "https://pmksy.gov.in/",
-      "logo": "assets/pmsky.png",
-    },
-    {
-      "name": "e-NAM (National Agriculture Market)",
-      "description": "A digital platform that helps farmers sell their produce directly to buyers across India at competitive prices.",
-      "url": "https://enam.gov.in/",
-      "logo": "assets/enam.png",
-    },
-    {
-      "name": "Rashtriya Krishi Vikas Yojana (RKVY)",
-      "description": "Provides financial aid to farmers for various agricultural projects, including infrastructure and market development.",
-      "url": "https://rkvy.nic.in/",
-      "logo": "assets/rkvy.png",
-    },
-    {
-      "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
-      "description": "Encourages organic farming by providing training, financial assistance, and market access for organic produce.",
-      "url": "https://pgsindia-ncof.gov.in/",
-      "logo": "assets/pkvy.png",
-    },
-    {
-      "name": "Dairy Entrepreneurship Development Scheme (DEDS)",
-      "description": "Provides subsidies and financial support for setting up dairy farms, milk production, and processing units.",
-      "url": "https://nabard.org/",
-      "logo": "assets/deds.png",
-    },
-  ];
+  const YojnaPage({Key? key}) : super(key: key);
 
   Future<void> _launchURL(String url) async {
     final uri = Uri.parse(url);
@@ -70,9 +14,68 @@ class YojnaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
+
+    final List<Map<String, String>> schemes = [
+      {
+        "name": loc.pmKisanName,
+        "description": loc.pmKisanDesc,
+        "url": "https://pmkisan.gov.in/",
+        "logo": "assets/pm-kisan.png",
+      },
+      {
+        "name": loc.pmfbName,
+        "description": loc.pmfbDesc,
+        "url": "https://pmfby.gov.in/",
+        "logo": "assets/pmfby.png",
+      },
+      {
+        "name": loc.kccName,
+        "description": loc.kccDesc,
+        "url": "https://www.pmkisan.gov.in/",
+        "logo": "assets/kcc.png",
+      },
+      {
+        "name": loc.soilHealthName,
+        "description": loc.soilHealthDesc,
+        "url": "https://soilhealth.dac.gov.in/",
+        "logo": "assets/soil-health.png",
+      },
+      {
+        "name": loc.pmksyName,
+        "description": loc.pmksyDesc,
+        "url": "https://pmksy.gov.in/",
+        "logo": "assets/pmsky.png",
+      },
+      {
+        "name": loc.enamName,
+        "description": loc.enamDesc,
+        "url": "https://enam.gov.in/",
+        "logo": "assets/enam.png",
+      },
+      {
+        "name": loc.rkvyName,
+        "description": loc.rkvyDesc,
+        "url": "https://rkvy.nic.in/",
+        "logo": "assets/rkvy.png",
+      },
+      {
+        "name": loc.pkvyName,
+        "description": loc.pkvyDesc,
+        "url": "https://pgsindia-ncof.gov.in/",
+        "logo": "assets/pkvy.png",
+      },
+      {
+        "name": loc.dedsName,
+        "description": loc.dedsDesc,
+        "url": "https://nabard.org/",
+        "logo": "assets/deds.png",
+      },
+    ];
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Government Schemes"),
+        title: Text(loc.governmentSchemesTitle),
         backgroundColor: Colors.green.shade700,
       ),
       body: ListView.builder(
@@ -132,11 +135,12 @@ class YojnaPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8)),
                       ),
-                      icon:
-                      const Icon(Icons.open_in_new, color: Colors.white),
-                      label: const Text(
-                        "Apply Now",
-                        style: TextStyle(color: Colors.white),
+                      icon: const Icon(Icons.open_in_new,
+                          color: Colors.white),
+                      label: Text(
+                        loc.applyNow,
+                        style:
+                        const TextStyle(color: Colors.white),
                       ),
                     ),
                   ),

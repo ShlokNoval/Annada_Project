@@ -13,9 +13,19 @@ import '../screens/image_detection.dart';
 import '../screens/nearnessofmarket.dart';
 import '../screens/news_service.dart';
 import 'dart:async';
+import '../services/firestore_service.dart';
 import 'auth_service.dart';
 import 'login_page.dart';
 import 'todo_page.dart';
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../models/circle_data.dart';
+import '../screens/data_screen.dart';
+import '../screens/select_circle_screen.dart';
+
+
+
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,6 +36,56 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
+  final List<CircleData> availableCircles = [
+    CircleData(
+      name: "Tomato",
+      imageUrl: "assets/images/tomato.png",
+      description: "A red, juicy fruit used widely in salads.",
+    ),
+    CircleData(
+      name: "Potato",
+      imageUrl: "assets/images/potato.png",
+      description:
+      "A starchy root vegetable that is a staple food around the world.",
+    ),
+    CircleData(
+      name: "Wheat",
+      imageUrl: "assets/images/wheat.png",
+      description:
+      "A cereal grain used to make flour for bread, pasta, and pastries.",
+    ),
+    CircleData(
+      name: "Mango",
+      imageUrl: "assets/images/mango.png",
+      description:
+      "A sweet tropical fruit known as the 'king of fruits' in India.",
+    ),
+    CircleData(
+      name: "Rice",
+      imageUrl: "assets/images/rice.png",
+      description:
+      "A cereal grain that is a staple food for over half of the world’s population.",
+    ),
+    CircleData(
+      name: "Cabbage",
+      imageUrl: "assets/images/cabbage.png",
+      description: "A leafy green vegetable used in salads, soups, and pickles.",
+    ),
+    CircleData(
+      name: "Cauliflower",
+      imageUrl: "assets/images/Cauliflower.png",
+      description:
+      "A white flowering vegetable rich in vitamins and used in various dishes.",
+    ),
+    CircleData(
+      name: "Grapes",
+      imageUrl: "assets/images/grapes.png",
+      description:
+      "Small sweet or sour berries often eaten fresh or used to make wine.",
+    ),
+  ];
+
+  final FirestoreService _firestoreService = FirestoreService();
   late Future<Map<String, dynamic>> weatherFuture;
   late Future<List<Map<String, dynamic>>> newsFuture;
 
@@ -64,9 +124,9 @@ class _HomePageState extends State<HomePage>
       weatherFuture = hasPermission
           ? _getWeather()
           : Future.value({
-        "location": "Permission Required",
+        "location": AppLocalizations.of(context)!.permissionRequired,
         "temp": "❌",
-        "desc": "Enable location to get weather info",
+        "desc": AppLocalizations.of(context)!.enableLocationWeather,
       });
     });
   }
@@ -79,7 +139,8 @@ class _HomePageState extends State<HomePage>
   Future<Map<String, dynamic>> _getWeather() async {
     final weatherService = WeatherService();
     try {
-      final weatherData = await weatherService.fetchWeather();
+      final lang = Localizations.localeOf(context).languageCode;
+      final weatherData = await weatherService.fetchWeather(lang);
 
       if (weatherData.containsKey("main")) {
         double temp =
@@ -106,8 +167,8 @@ class _HomePageState extends State<HomePage>
     } catch (e) {
       return {
         "temp": "❌",
-        "desc": "Location/Weather issue",
-        "location": "Unavailable",
+        "desc": AppLocalizations.of(context)!.weatherError,
+        "location": AppLocalizations.of(context)!.locationUnavailable,
       };
     }
   }
@@ -173,9 +234,9 @@ class _HomePageState extends State<HomePage>
       weatherFuture = hasPermission
           ? _getWeather()
           : Future.value({
-        "location": "Permission Required",
+        "location": AppLocalizations.of(context)!.permissionRequired,
         "temp": "❌",
-        "desc": "Enable location to get weather info",
+        "desc": AppLocalizations.of(context)!.enableLocationWeather,
       });
       _showWeatherUpdated = true;
     });
@@ -195,13 +256,14 @@ class _HomePageState extends State<HomePage>
 
   // ─── UPDATED: 5-Day Forecast Bottom Sheet ───────────────────────────────────
   Future<void> _showForecast() async {
-    // Show the sheet immediately with a loading state
+    final lang = Localizations.localeOf(context).languageCode;
+
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
       builder: (ctx) => _ForecastSheet(
-        forecastFuture: WeatherService().fetchDailyForecast(),
+        forecastFuture: WeatherService().fetchDailyForecast(lang),
       ),
     );
   }
@@ -243,7 +305,7 @@ class _HomePageState extends State<HomePage>
                         const SizedBox(width: 10),
                         Expanded(
                           child: Text(
-                            "Welcome, $_userName!",
+                            "${AppLocalizations.of(context)!.welcome}, $_userName!",
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 19,
@@ -260,6 +322,109 @@ class _HomePageState extends State<HomePage>
                     ),
                   ),
                 ),
+        // ─── USER SELECTED CROPS ROW ─────────────────────────────
+        const SizedBox(height: 12),
+
+        StreamBuilder<List<String>>(
+            stream: _firestoreService.getUserCrops(),
+            builder: (context, snapshot) {
+
+              if (!snapshot.hasData) {
+                return const Center(child: CircularProgressIndicator());
+              }
+
+              List<String> cropNames = snapshot.data!;
+
+              List<CircleData> selectedCircles =
+              availableCircles.where((circle) {
+                return cropNames.contains(circle.name);
+              }).toList();
+
+              return SizedBox(
+                height: 85,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+
+                    // Selected Crops
+                    ...selectedCircles.map((circle) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Stack(
+                          clipBehavior: Clip.none,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => DataScreen(circle: circle),
+                                  ),
+                                );
+                              },
+                              child: CircleAvatar(
+                                radius: 30,
+                                backgroundImage: AssetImage(circle.imageUrl),
+                              ),
+                            ),
+
+                            // X Remove Button Top-Right
+                            Positioned(
+                              top: -5,
+                              right: -5,
+                              child: GestureDetector(
+                                onTap: () {
+                                  _firestoreService.removeCrop(circle.name);
+                                },
+                                child: Container(
+                                  decoration: const BoxDecoration(
+                                    color: Colors.red,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  padding: const EdgeInsets.all(4),
+                                  child: const Icon(
+                                    Icons.close,
+                                    size: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    }),
+// "+" Button
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => SelectCircleScreen(
+                                    availableCircles: availableCircles,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: const CircleAvatar(
+                              radius: 30,
+                              backgroundColor: Colors.green,
+                              child: Icon(Icons.add, color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+        ),
 
 
 
@@ -313,7 +478,7 @@ class _HomePageState extends State<HomePage>
                 padding: const EdgeInsets.only(top: 28, bottom: 12),
                 child: Center(
                   child: Text(
-                    "Features",
+                    AppLocalizations.of(context)!.features,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -334,7 +499,7 @@ class _HomePageState extends State<HomePage>
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   _buildFeatureBox(
-                    "Fertilizer Calculator",
+                    AppLocalizations.of(context)!.fertilizerCalculator,
                     FontAwesomeIcons.seedling,
                     onTap: () => Navigator.push(
                         context,
@@ -343,7 +508,7 @@ class _HomePageState extends State<HomePage>
                             const FertilizerCalculatorPage())),
                   ),
                   _buildFeatureBox(
-                    "Crop Detection",
+                    AppLocalizations.of(context)!.cropDetection,
                     FontAwesomeIcons.camera,
                     onTap: () => Navigator.push(
                         context,
@@ -352,7 +517,7 @@ class _HomePageState extends State<HomePage>
                   ),
 
                   _buildFeatureBox(
-                    "Tutorial",
+                    AppLocalizations.of(context)!.tutorials,
                     FontAwesomeIcons.bookOpen,
                     onTap: () => Navigator.push(
                         context,
@@ -360,7 +525,7 @@ class _HomePageState extends State<HomePage>
                             builder: (_) => const TutorialPage())),
                   ),
                   _buildFeatureBox(
-                    "Yojna",
+                    AppLocalizations.of(context)!.yojna,
                     FontAwesomeIcons.handshake,
                     onTap: () => Navigator.push(
                         context,
@@ -384,9 +549,9 @@ class _HomePageState extends State<HomePage>
                     elevation: 6,
                   ),
                   icon: const Icon(Icons.check_circle_outline, color: Colors.white),
-                  label: const Text(
-                    "To-Do List",
-                    style: TextStyle(
+                  label: Text(
+                    AppLocalizations.of(context)!.toDoList,
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -482,7 +647,8 @@ class _HomePageState extends State<HomePage>
                   AnimatedOpacity(
                     opacity: _showWeatherUpdated ? 1.0 : 0.0,
                     duration: const Duration(milliseconds: 400),
-                    child: const Text("Updated",
+                    child: Text(
+                        AppLocalizations.of(context)!.updated,
                         style:
                         TextStyle(color: Colors.white70, fontSize: 11)),
                   ),
@@ -497,8 +663,8 @@ class _HomePageState extends State<HomePage>
             children: [
               const Icon(Icons.touch_app, color: Colors.white54, size: 14),
               const SizedBox(width: 4),
-              const Text(
-                "Tap for 5-day forecast",
+              Text(
+                AppLocalizations.of(context)!.tapForecast,
                 style: TextStyle(color: Colors.white54, fontSize: 12),
               ),
             ],
@@ -731,7 +897,7 @@ class _ForecastSheet extends StatelessWidget {
                         color: Colors.green.shade700, size: 22),
                     const SizedBox(width: 8),
                     Text(
-                      "5-Day Weather Forecast",
+                      AppLocalizations.of(context)!.forecastTitle,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -745,7 +911,7 @@ class _ForecastSheet extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
-                  "Annada ensures error-free weather forecasts for any location.",
+                    AppLocalizations.of(context)!.forecastSubtitle,
                   style: TextStyle(
                       fontSize: 11, color: Colors.grey.shade500),
                 ),
@@ -760,14 +926,16 @@ class _ForecastSheet extends StatelessWidget {
                   future: forecastFuture,
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Center(
+                      return Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CircularProgressIndicator(color: Colors.green),
-                            SizedBox(height: 12),
-                            Text("Fetching forecast...",
-                                style: TextStyle(color: Colors.grey)),
+                            const CircularProgressIndicator(color: Colors.green),
+                            const SizedBox(height: 12),
+                            Text(
+                              AppLocalizations.of(context)!.fetchingForecast,
+                              style: const TextStyle(color: Colors.grey),
+                            ),
                           ],
                         ),
                       );
@@ -784,7 +952,7 @@ class _ForecastSheet extends StatelessWidget {
                                 size: 48, color: Colors.grey.shade400),
                             const SizedBox(height: 12),
                             Text(
-                              "Forecast unavailable.\nCheck internet or location access.",
+                              AppLocalizations.of(context)!.forecastUnavailable,
                               textAlign: TextAlign.center,
                               style: TextStyle(color: Colors.grey.shade600),
                             ),

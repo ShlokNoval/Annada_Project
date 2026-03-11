@@ -1,6 +1,10 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'location_helper.dart'; // Import location & API helper from your setup
+import 'package:url_launcher/url_launcher.dart';
+import 'location_helper.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Map2Page extends StatefulWidget {
   const Map2Page({super.key});
@@ -14,7 +18,7 @@ class _Map2PageState extends State<Map2Page> {
   bool isLoading = true;
   String? error;
 
-  final String googleApiKey = 'AIzaSyCrn-feXL3CmjbI3bMhLoANEfvu8CH229Q'; // Replace with your API key
+  late final String googleApiKey = dotenv.env['PLACES_MAPS_API_KEY']!;
 
   @override
   void initState() {
@@ -29,7 +33,7 @@ class _Map2PageState extends State<Map2Page> {
       final results = await fetchNearbyPlaces(
         lat: pos.latitude,
         lng: pos.longitude,
-        type: 'market',  // or 'grocery_or_supermarket' or 'shopping_mall'
+        type: 'market',
         apiKey: googleApiKey,
       );
 
@@ -45,6 +49,17 @@ class _Map2PageState extends State<Map2Page> {
     }
   }
 
+  Future<void> openGoogleMaps(double lat, double lng) async {
+    final Uri googleUrl = Uri.parse(
+      "https://www.google.com/maps/search/?api=1&query=$lat,$lng",
+    );
+
+    if (await canLaunchUrl(googleUrl)) {
+      await launchUrl(googleUrl,
+          mode: LaunchMode.externalApplication);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,15 +72,29 @@ class _Map2PageState extends State<Map2Page> {
         itemCount: markets.length,
         itemBuilder: (context, index) {
           final market = markets[index];
+          final lat =
+          market['geometry']['location']['lat'];
+          final lng =
+          market['geometry']['location']['lng'];
+
           return Card(
             margin: const EdgeInsets.all(8),
             child: ListTile(
-              leading: const Icon(Icons.storefront, color: Colors.green),
+              onTap: () => openGoogleMaps(lat, lng),
+              leading: const Icon(Icons.storefront,
+                  color: Colors.green),
               title: Text(market['name'] ?? 'No name'),
-              subtitle: Text(market['vicinity'] ?? 'No address'),
-              trailing: market['opening_hours']?['open_now'] == true
-                  ? const Text('Open', style: TextStyle(color: Colors.green))
-                  : const Text('Closed', style: TextStyle(color: Colors.red)),
+              subtitle:
+              Text(market['vicinity'] ?? 'No address'),
+              trailing: market['opening_hours']
+              ?['open_now'] ==
+                  true
+                  ? const Text('Open',
+                  style: TextStyle(
+                      color: Colors.green))
+                  : const Text('Closed',
+                  style:
+                  TextStyle(color: Colors.red)),
             ),
           );
         },

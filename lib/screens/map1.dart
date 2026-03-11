@@ -1,6 +1,10 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'location_helper.dart'; // The helper file created above
+import 'package:url_launcher/url_launcher.dart';
+import 'location_helper.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Map1Page extends StatefulWidget {
   const Map1Page({super.key});
@@ -14,7 +18,7 @@ class _Map1PageState extends State<Map1Page> {
   bool isLoading = true;
   String? error;
 
-  final String googleApiKey = 'AIzaSyCrn-feXL3CmjbI3bMhLoANEfvu8CH229Q'; // Replace with your API key
+  late final String googleApiKey = dotenv.env['PLACES_MAPS_API_KEY']!;
 
   @override
   void initState() {
@@ -29,9 +33,9 @@ class _Map1PageState extends State<Map1Page> {
       final results = await fetchNearbyPlaces(
         lat: pos.latitude,
         lng: pos.longitude,
-        type: 'hardware_store',  // hardware_store often covers fertilizer stores
+        type: 'hardware_store',
         apiKey: googleApiKey,
-        keyword: 'fertilizer',  // filter with fertilizer keyword
+        keyword: 'fertilizer',
       );
 
       setState(() {
@@ -43,6 +47,17 @@ class _Map1PageState extends State<Map1Page> {
         error = e.toString();
         isLoading = false;
       });
+    }
+  }
+
+  Future<void> openGoogleMaps(double lat, double lng) async {
+    final Uri googleUrl = Uri.parse(
+      "https://www.google.com/maps/search/?api=1&query=$lat,$lng",
+    );
+
+    if (await canLaunchUrl(googleUrl)) {
+      await launchUrl(googleUrl,
+          mode: LaunchMode.externalApplication);
     }
   }
 
@@ -58,15 +73,29 @@ class _Map1PageState extends State<Map1Page> {
         itemCount: shops.length,
         itemBuilder: (context, index) {
           final shop = shops[index];
+          final lat =
+          shop['geometry']['location']['lat'];
+          final lng =
+          shop['geometry']['location']['lng'];
+
           return Card(
             margin: const EdgeInsets.all(8),
             child: ListTile(
-              leading: const Icon(Icons.store, color: Colors.green),
+              onTap: () => openGoogleMaps(lat, lng),
+              leading: const Icon(Icons.store,
+                  color: Colors.green),
               title: Text(shop['name'] ?? 'No name'),
-              subtitle: Text(shop['vicinity'] ?? 'No address'),
-              trailing: shop['opening_hours']?['open_now'] == true
-                  ? const Text('Open', style: TextStyle(color: Colors.green))
-                  : const Text('Closed', style: TextStyle(color: Colors.red)),
+              subtitle:
+              Text(shop['vicinity'] ?? 'No address'),
+              trailing: shop['opening_hours']
+              ?['open_now'] ==
+                  true
+                  ? const Text('Open',
+                  style: TextStyle(
+                      color: Colors.green))
+                  : const Text('Closed',
+                  style:
+                  TextStyle(color: Colors.red)),
             ),
           );
         },

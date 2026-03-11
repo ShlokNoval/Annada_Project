@@ -1,6 +1,10 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'location_helper.dart'; // Import your helper functions
+import 'package:url_launcher/url_launcher.dart';
+import 'location_helper.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Map3Page extends StatefulWidget {
   const Map3Page({super.key});
@@ -14,7 +18,7 @@ class _Map3PageState extends State<Map3Page> {
   bool isLoading = true;
   String? error;
 
-  final String googleApiKey = 'AIzaSyCrn-feXL3CmjbI3bMhLoANEfvu8CH229Q'; // Replace with your API key
+  late final String googleApiKey = dotenv.env['PLACES_MAPS_API_KEY']!; // Replace with your API key
 
   @override
   void initState() {
@@ -29,7 +33,7 @@ class _Map3PageState extends State<Map3Page> {
       final results = await fetchNearbyPlaces(
         lat: pos.latitude,
         lng: pos.longitude,
-        type: 'point_of_interest', // generic type for NGOs/recycling
+        type: 'point_of_interest',
         apiKey: googleApiKey,
         keyword: 'recycling ngo',
       );
@@ -46,10 +50,25 @@ class _Map3PageState extends State<Map3Page> {
     }
   }
 
+  Future<void> openGoogleMaps(double lat, double lng) async {
+    final Uri googleUrl = Uri.parse(
+      "https://www.google.com/maps/search/?api=1&query=$lat,$lng",
+    );
+
+    if (await canLaunchUrl(googleUrl)) {
+      await launchUrl(
+        googleUrl,
+        mode: LaunchMode.externalApplication,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Nearby NGOs / Recycling Agencies')),
+      appBar: AppBar(
+        title: const Text('Nearby NGOs / Recycling Agencies'),
+      ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : error != null
@@ -58,15 +77,37 @@ class _Map3PageState extends State<Map3Page> {
         itemCount: agencies.length,
         itemBuilder: (context, index) {
           final agency = agencies[index];
+
+          final lat =
+          agency['geometry']['location']['lat'];
+          final lng =
+          agency['geometry']['location']['lng'];
+
           return Card(
             margin: const EdgeInsets.all(8),
             child: ListTile(
-              leading: const Icon(Icons.recycling, color: Colors.green),
-              title: Text(agency['name'] ?? 'No name'),
-              subtitle: Text(agency['vicinity'] ?? 'No address'),
-              trailing: agency['opening_hours']?['open_now'] == true
-                  ? const Text('Open', style: TextStyle(color: Colors.green))
-                  : const Text('Closed', style: TextStyle(color: Colors.red)),
+              onTap: () => openGoogleMaps(lat, lng),
+              leading: const Icon(
+                Icons.recycling,
+                color: Colors.green,
+              ),
+              title:
+              Text(agency['name'] ?? 'No name'),
+              subtitle: Text(
+                  agency['vicinity'] ?? 'No address'),
+              trailing: agency['opening_hours']
+              ?['open_now'] ==
+                  true
+                  ? const Text(
+                'Open',
+                style: TextStyle(
+                    color: Colors.green),
+              )
+                  : const Text(
+                'Closed',
+                style:
+                TextStyle(color: Colors.red),
+              ),
             ),
           );
         },

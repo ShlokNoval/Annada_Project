@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'auth_service.dart';
 import 'register_page.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -61,14 +63,18 @@ class _LoginPageState extends State<LoginPage> {
 
               TextField(
                 controller: emailController,
-                decoration: const InputDecoration(labelText: "Email"),
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.email,
+                ),
               ),
               const SizedBox(height: 10),
 
               TextField(
                 controller: passwordController,
                 obscureText: true,
-                decoration: const InputDecoration(labelText: "Password"),
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.password,
+                ),
               ),
               const SizedBox(height: 20),
 
@@ -76,18 +82,18 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: loading ? null : _loginEmail,
-                  child: const Text("Login"),
+                  child: Text(AppLocalizations.of(context)!.login),
                 ),
               ),
 
               const SizedBox(height: 10),
-              const Text("OR"),
+              Text(AppLocalizations.of(context)!.or),
 
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: loading ? null : _loginGoogle,
-                  child: const Text("Sign in with Google"),
+                  child: Text(AppLocalizations.of(context)!.signInWithGoogle),
                 ),
               ),
 
@@ -102,9 +108,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   );
                 },
-                child: const Text(
-                  "Don't have an account? Register",
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                child: Text(
+                  AppLocalizations.of(context)!.noAccountRegister,
+                  style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
               ),
             ],
