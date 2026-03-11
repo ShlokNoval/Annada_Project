@@ -1,0 +1,271 @@
+{
+  "appTitle": "அன்னதா",
+  "selectLanguage": "உங்கள் மொழியை தேர்வு செய்யவும்",
+  "continueButton": "தொடரவும்",
+  "login": "உள்நுழைவு",
+  "email": "மின்னஞ்சல்",
+  "password": "கடவுச்சொல்",
+  "or": "அல்லது",
+  "signInWithGoogle": "கூகுளில் உள்நுழையவும்",
+  "noAccountRegister": "கணக்கு இல்லையா? பதிவு செய்யவும்",
+  "chatbot": "அரட்டைபாடி",
+  "fertilizerCalculator": "உர கணிப்பான்",
+  "cropDetection": "பயிர் கண்டறிதல்",
+  "weather": "வானிலை",
+  "yojna": "அரசுத் திட்டங்கள்",
+  "tutorials": "வழிகாட்டிகள்",
+  "home": "முகப்பு",
+  "market": "சந்தை",
+  "community": "சமூகம்",
+  "profile": "சுயவிவரம்",
+  "welcome": "வரவேற்கிறோம்",
+  "weatherTitle": "வானிலை",
+  "logout": "வெளியேறு",
+  "features": "அம்சங்கள்",
+  "toDoList": "செய்யவேண்டிய பட்டியல்",
+  "updated": "புதுப்பிக்கப்பட்டது",
+  "tapForecast": "5 நாள் முன்னறிவிப்பிற்கு தட்டவும்",
+  "forecastTitle": "5 நாள் வானிலை முன்னறிவிப்பு",
+  "forecastSubtitle": "அன்னதா எந்த இடத்திற்கும் துல்லியமான வானிலை முன்னறிவிப்பை வழங்குகிறது.",
+  "fetchingForecast": "முன்னறிவிப்பு பெறப்படுகிறது...",
+  "forecastUnavailable": "முன்னறிவிப்பு இல்லை.\nஇணையம் அல்லது இருப்பிட அனுமதி சரிபார்க்கவும்.",
+  "permissionRequired": "அனுமதி தேவை",
+  "enableLocationWeather": "வானிலை தகவலுக்கு இருப்பிடத்தை செயல்படுத்தவும்",
+  "locationUnavailable": "கிடைக்கவில்லை",
+  "weatherError": "வானிலை ஏற்ற முடியவில்லை",
+
+
+    "fertilizerCalculatorTitle": "உர கணிப்பான்",
+    "landArea": "நில பரப்பளவு",
+    "enterArea": "பரப்பளவை உள்ளிடவும்",
+    "acre": "ஏக்கர்",
+    "hectare": "ஹெக்டேர்",
+    "selectCropSoil": "பயிர் மற்றும் மண் தேர்வு",
+    "selectCrop": "பயிரை தேர்வு செய்யவும்",
+    "selectSoilType": "மண் வகையை தேர்வு செய்யவும்",
+    "growthStage": "வளர்ச்சி நிலை",
+    "calculateFertilizer": "உர கணக்கிடு",
+    "fertilizerRequirements": "உர தேவைகள்",
+    "cropType": "பயிர் வகை",
+    "soilType": "மண் வகை",
+    "growthStageLabel": "வளர்ச்சி நிலை",
+    "nitrogenNeeded": "நைட்ரஜன் தேவை",
+    "phosphorusNeeded": "பாஸ்பரஸ் தேவை",
+    "potassiumNeeded": "பொட்டாசியம் தேவை",
+    "recommendedFertilizers": "பரிந்துரைக்கப்பட்ட உரங்கள்",
+    "noFertilizerNeeded": "கூடுதல் உரம் தேவையில்லை",
+
+    "crop_wheat": "கோதுமை",
+    "crop_rice": "அரிசி",
+    "crop_corn": "மக்காச்சோளம்",
+    "crop_soybean": "சோயாபீன்",
+    "crop_tomato": "தக்காளி",
+    "crop_potato": "உருளைக்கிழங்கு",
+    "crop_carrot": "கேரட்",
+    "crop_onion": "வெங்காயம்",
+    "crop_cabbage": "முட்டைகோஸ்",
+    "crop_chili": "மிளகாய்",
+    "crop_banana": "வாழை",
+    "crop_apple": "ஆப்பிள்",
+
+    "soil_sandy": "மணல் மண்",
+    "soil_clay": "களிமண்",
+    "soil_loam": "சேற்று மண்",
+    "soil_silty": "மண் தூள் மண்",
+    "soil_peaty": "பீட் மண்",
+    "soil_chalky": "சுண்ணாம்பு மண்",
+    "soil_saline": "உப்பு மண்",
+    "soil_red": "சிவப்பு மண்",
+    "soil_black": "கருப்பு மண்",
+
+    "stage_seedling": "முளை நிலை",
+    "stage_vegetative": "இலை வளர்ச்சி",
+    "stage_flowering": "மலர்ச்சி",
+    "stage_fruiting": "கனி நிலை",
+    "stage_maturity": "முதிர்ச்சி",
+    "stage_harvesting": "அறுவடை",
+
+
+      "cropDetectionTitle": "பயிர் கண்டறிதல்",
+      "tapToSelectImage": "படத்தை தேர்வு செய்ய தட்டவும்",
+      "uploadImage": "படத்தை பதிவேற்றவும்",
+      "takePhoto": "புகைப்படம் எடுக்கவும்",
+      "enterCropType": "பயிர் வகையை உள்ளிடவும்",
+      "uploadAndAnalyze": "பதிவேற்றி பகுப்பாய்வு செய்யவும்",
+      "analyzing": "பகுப்பாய்வு நடைபெற்று வருகிறது...",
+      "noImageSelected": "படம் எதுவும் தேர்வு செய்யப்படவில்லை.",
+      "analysisError": "பட பகுப்பாய்வில் பிழை",
+
+
+        "annadaAssistance": "அன்னதா உதவி",
+        "farmerFaqs": "💬 விவசாயிகள் அடிக்கடி கேட்கும் கேள்விகள்:",
+        "faq1": "தக்காளிக்கு சிறந்த உரம் எது?",
+        "faq2": "பயிர்களில் பூச்சி தாக்குதலை எவ்வாறு தடுப்பது?",
+        "faq3": "கோடை காலத்திற்கு ஏற்ற பயிர்கள் எவை?",
+        "faq4": "விவசாயத்தில் நீரை எவ்வாறு சேமிப்பது?",
+        "faq5": "நெல் சாகுபடிக்கு உகந்த மண் pH அளவு என்ன?",
+        "analyzingImage": "படம் பகுப்பாய்வு செய்யப்படுகிறது...",
+        "thinking": "யோசிக்கிறது...",
+        "noResponseReceived": "⚠️ பதில் பெறப்படவில்லை.",
+        "errorFetchingResponse": "⚠️ பதிலை பெறுவதில் பிழை.",
+        "failedToLoadImage": "படத்தை ஏற்ற முடியவில்லை",
+        "uploading": "பதிவேற்றப்படுகிறது",
+
+        
+          "governmentSchemesTitle": "அரசு திட்டங்கள்",
+          "applyNow": "இப்போது விண்ணப்பிக்கவும்",
+
+          "pmKisanName": "பிரதான் மந்திரி கிசான் சம்மான் நிதி (PM-KISAN)",
+          "pmKisanDesc": "சிறு மற்றும் குறைந்த நில விவசாயிகளுக்கு வருடத்திற்கு ₹6,000 மூன்று தவணைகளில் வழங்கப்படுகிறது.",
+
+          "pmfbName": "பிரதான் மந்திரி பயிர் காப்பீட்டு திட்டம் (PMFBY)",
+          "pmfbDesc": "இயற்கை பேரிடர் மற்றும் பூச்சி தாக்குதலால் ஏற்பட்ட இழப்புக்கு காப்பீடு வழங்குகிறது.",
+
+          "kccName": "கிசான் கிரெடிட் கார்டு (KCC) திட்டம்",
+          "kccDesc": "விவசாய செலவுகளுக்கு குறைந்த வட்டி விகிதத்தில் கடன் வழங்குகிறது.",
+
+          "soilHealthName": "மண் ஆரோக்கிய அட்டை திட்டம்",
+          "soilHealthDesc": "மண் ஊட்டச்சத்து பரிசோதனைக்கு இலவச சேவை வழங்குகிறது.",
+
+          "pmksyName": "பிரதான் மந்திரி கிரிஷி சிஞ்சாய் திட்டம் (PMKSY)",
+          "pmksyDesc": "நீர் பாதுகாப்பு மற்றும் மேலாண்மை மூலம் பாசன வசதி அளிக்கிறது.",
+
+          "enamName": "இ-நாம் (தேசிய வேளாண்மை சந்தை)",
+          "enamDesc": "விவசாயிகள் தங்கள் உற்பத்தியை நாடு முழுவதும் விற்க உதவும் டிஜிட்டல் தளம்.",
+
+          "rkvyName": "ராஷ்ட்ரிய கிரிஷி விகாஸ் திட்டம் (RKVY)",
+          "rkvyDesc": "வேளாண்மை திட்டங்களுக்கு நிதி உதவி வழங்குகிறது.",
+
+          "pkvyName": "பரம்பராகத் கிரிஷி விகாஸ் திட்டம் (PKVY)",
+          "pkvyDesc": "ஆர்கானிக் விவசாயத்தை ஊக்குவிக்கிறது.",
+
+          "dedsName": "பால் தொழில் முனைவோர் மேம்பாட்டு திட்டம் (DEDS)",
+          "dedsDesc": "பால் பண்ணைகள் அமைப்பதற்கு மானியம் வழங்குகிறது.",
+
+
+  "farmersGuideTitle": "விவசாயி வழிகாட்டி",
+  "allGuides": "அனைத்து வழிகாட்டிகள்",
+  "appHelp": "ஆப் உதவி",
+  "farmingTips": "விவசாய குறிப்புகள்",
+  "searchTutorialHint": "விவசாய வழிகாட்டிகளை தேடுங்கள்...",
+  "noTutorialsFound": "வழிகாட்டி எதுவும் கிடைக்கவில்லை",
+  "tryDifferentSearch": "வேறு சொற்களை முயற்சிக்கவும்",
+  "tapToWatchVideo": "வீடியோ பார்க்க தட்டவும்",
+  "linkError": "இணைப்பை திறக்க முடியவில்லை",
+
+  "tutorialGettingStartedTitle": "📱 அன்னதா ஆப்பை தொடங்குவது எப்படி",
+  "tutorialGettingStartedContent": "அன்னதா ஆப்பில் உள்ள அனைத்து விவசாய கருவிகளையும் பயன்படுத்த கற்றுக்கொள்ளுங்கள்.",
+
+  "tutorialCropDetectionTitle": "🌾 பயிர் அடையாளம் காணும் அம்சம்",
+  "tutorialCropDetectionContent": "பயிர் படத்தை பதிவேற்றி நோய் கண்டறிதல் மற்றும் சிகிச்சை ஆலோசனை பெறுங்கள்.",
+
+  "tutorialFertilizerTitle": "🧮 உர கணக்கீட்டான் பயன்பாடு",
+  "tutorialFertilizerContent": "பயிர், மண் வகை மற்றும் நில அளவை உள்ளிட்டு உர தேவையை கணக்கிடுங்கள்.",
+
+  "tutorialAssistantTitle": "🤖 அன்னதா உதவியாளருடன் உரையாடுங்கள்",
+  "tutorialAssistantContent": "விவசாயம் தொடர்பான கேள்விகளை கேட்டு உடனடி ஆலோசனை பெறுங்கள்.",
+
+  "tutorialMarketTitle": "🗺️ அருகிலுள்ள சந்தைகளை கண்டறிதல்",
+  "tutorialMarketContent": "உங்கள் பகுதியின் வேளாண் சந்தைகளை கண்டுபிடித்து வாங்குபவர்களுடன் இணைக.",
+
+  "tutorialOrganicTitle": "🌱 இயற்கை விவசாய முழுமையான வழிகாட்டி",
+  "tutorialOrganicContent": "இயற்கை உள்ளீடுகள், உரமிடல் மற்றும் பயிர் மாற்று முறைகள் பற்றி அறிக.",
+
+  "tutorialIrrigationTitle": "💧 ஸ்மார்ட் பாசன முறைகள்",
+  "tutorialIrrigationContent": "ட்ரிப் மற்றும் ஸ்பிரிங்களர் பாசன முறைகள் கற்றுக்கொள்ளுங்கள்.",
+
+  "tutorialIPMTitle": "🐛 ஒருங்கிணைந்த பூச்சி மேலாண்மை",
+  "tutorialIPMContent": "ரசாயனங்களுக்கு முன் உயிரியல் மற்றும் இயற்கை முறைகளை பயன்படுத்துங்கள்.",
+
+  "tutorialRotationTitle": "🌾 பயிர் மாற்று யுக்திகள்",
+  "tutorialRotationContent": "மண் ஆரோக்கியத்தை மேம்படுத்த ஆண்டுதோறும் பயிர் மாற்றுங்கள்.",
+
+  "tutorialSoilTitle": "🧪 மண் ஆரோக்கிய மேலாண்மை",
+  "tutorialSoilContent": "மண் பரிசோதனை செய்து ஊட்டச்சத்து சமநிலையை பராமரிக்கவும்.",
+
+  "tutorialFinanceTitle": "📊 விவசாய நிதி மேலாண்மை",
+  "tutorialFinanceContent": "செலவுகள் மற்றும் வருமானத்தை கண்காணித்து லாபத்தை அதிகரிக்கவும்.",
+
+  "tutorialMechanizationTitle": "🚜 விவசாய இயந்திர வழிகாட்டி",
+  "tutorialMechanizationContent": "பண்ணை அளவிற்கு ஏற்ப சரியான இயந்திரங்களை தேர்வு செய்யுங்கள்.",
+
+  "tutorialWeatherTitle": "🌤️ காலநிலை அடிப்படையிலான விவசாயம்",
+  "tutorialWeatherContent": "மழை மற்றும் காலநிலை முன்னறிவிப்பை அடிப்படையாக கொண்டு திட்டமிடுங்கள்.",
+
+  "tutorialWheatVideoTitle": "📽️ நவீன கோதுமை சாகுபடி முறைகள்",
+  "tutorialTomatoVideoTitle": "📽️ தக்காளி பராமரிப்பு மற்றும் வெட்டுதல்",
+  "tutorialRotationVideoTitle": "📽️ பயிர் மாற்று பயன்கள்",
+
+  "tutorialPestImageTitle": "📷 பூச்சி அடையாள அட்டவணை",
+  "tutorialSoilImageTitle": "📷 மண் வகைகள் மற்றும் தன்மைகள்",
+  "tutorialIrrigationImageTitle": "📷 பாசன முறை ஒப்பீடு",
+
+
+    "nearnessOfMarket": "சந்தையின் அருகாமை",
+    "nearbyMarkets": "அருகிலுள்ள சந்தைகள்",
+    "locateFertilizerShops": "உரக் கடைகளை கண்டறியவும்",
+    "searchNearbyMarket": "அருகிலுள்ள சந்தையை கண்டறியவும்",
+    "localRecyclingAgencies": "உள்ளூர் மறுசுழற்சி நிறுவனங்கள்",
+
+
+
+
+      "communityTitle": "அன்னதா சமூகத்தளம் 🌾",
+      "justNow": "இப்போது",
+      "minutesAgo": "{count} நிமிடம் முன்பு",
+      "@minutesAgo": { "placeholders": { "count": {} } },
+      "hoursAgo": "{count} மணி முன்பு",
+      "@hoursAgo": { "placeholders": { "count": {} } },
+      "daysAgo": "{count} நாள் முன்பு",
+      "@daysAgo": { "placeholders": { "count": {} } },
+
+      "whatsHappening": "உங்கள் வயலில் என்ன நடக்கிறது?",
+      "post": "பதிவு செய்",
+      "comments": "கருத்துகள்",
+      "noCommentsYet": "இன்னும் கருத்துகள் இல்லை 🌾",
+      "writeReply": "பதில் எழுதுங்கள்...",
+      "noPostsYet": "இன்னும் பதிவுகள் இல்லை 🌾",
+      "delete": "நீக்கு",
+      "farmer": "விவசாயி",
+      "createFarmerAccount": "உங்கள் விவசாயி கணக்கை உருவாக்குங்கள்",
+      "email": "மின்னஞ்சல்",
+      "emailRequired": "மின்னஞ்சல் அவசியம்",
+      "password": "கடவுச்சொல்",
+      "passwordMinLength": "கடவுச்சொல் குறைந்தது 6 எழுத்துகள் இருக்க வேண்டும்",
+      "register": "பதிவு செய்யவும்",
+      "empoweringFarmers": "🌾 AI மூலம் விவசாயிகளை வலுப்படுத்துகிறோம்",
+      "userRegisteredSuccess": "✅ பயனர் வெற்றிகரமாக பதிவு செய்யப்பட்டார்!",
+      "errorPrefix": "⚠️",
+
+      "todoTitle": "செய்ய வேண்டிய பட்டியல்",
+      "addNewTask": "புதிய பணியை சேர்க்கவும்...",
+      "noTasksYet": "இன்னும் பணிகள் இல்லை. உங்கள் முதல் பணியை சேர்க்கவும்.",
+      "upcomingTasks": "வரவிருக்கும் பணிகள்",
+      "completedTasks": "முடிக்கப்பட்ட பணிகள்",
+
+      "profileSaved": "சுயவிவரம் வெற்றிகரமாக சேமிக்கப்பட்டது!",
+      "yourProfile": "உங்கள் சுயவிவரம்",
+      "fullName": "முழு பெயர்",
+      "phoneNumber": "தொலைபேசி எண்",
+      "saveProfile": "சுயவிவரம் சேமிக்கவும்",
+      "logout": "வெளியேறு",
+      "annadaTagline": "🌾 அன்னதா - எதிர்கால அறுவடை",
+
+
+        "latestNews": "சமீபத்திய செய்திகள்",
+        "noNewsAvailable": "செய்திகள் இல்லை.",
+        "noDescriptionAvailable": "விளக்கம் இல்லை.",
+        "noTitle": "தலைப்பு இல்லை",
+        "noSubtitle": "துணைத் தலைப்பு இல்லை",
+        "noContentAvailable": "உள்ளடக்கம் இல்லை."
+
+
+
+
+
+
+
+
+
+
+}

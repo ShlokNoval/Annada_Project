@@ -1,0 +1,269 @@
+{
+  "appTitle": "اننادا",
+  "selectLanguage": "اپنی زبان منتخب کریں",
+  "continueButton": "جاری رکھیں",
+  "login": "لاگ ان",
+  "email": "ای میل",
+  "password": "پاس ورڈ",
+  "or": "یا",
+  "signInWithGoogle": "گوگل کے ذریعے سائن ان کریں",
+  "noAccountRegister": "اکاؤنٹ نہیں ہے؟ رجسٹر کریں",
+  "chatbot": "چیٹ بوٹ",
+  "fertilizerCalculator": "کھاد حسابگر",
+  "cropDetection": "فصل شناخت",
+  "weather": "موسم",
+  "yojna": "سرکاری اسکیمیں",
+  "tutorials": "رہنمائی",
+  "home": "ہوم",
+  "market": "بازار",
+  "community": "برادری",
+  "profile": "پروفائل",
+  "welcome": "خوش آمدید",
+  "weatherTitle": "موسم",
+  "logout": "لاگ آؤٹ",
+  "features": "خصوصیات",
+  "toDoList": "کرنے کے کام",
+  "updated": "تازہ کاری کی گئی",
+  "tapForecast": "5 دن کی پیشگوئی کے لیے ٹیپ کریں",
+  "forecastTitle": "5 دن کا موسم پیشگوئی",
+  "forecastSubtitle": "اننادا کسی بھی مقام کے لیے درست موسم کی پیشگوئی یقینی بناتا ہے۔",
+  "fetchingForecast": "پیشگوئی حاصل کی جا رہی ہے...",
+  "forecastUnavailable": "پیشگوئی دستیاب نہیں۔\nانٹرنیٹ یا مقام کی اجازت چیک کریں۔",
+  "permissionRequired": "اجازت درکار ہے",
+  "enableLocationWeather": "موسم کی معلومات کے لیے مقام فعال کریں",
+  "locationUnavailable": "دستیاب نہیں",
+  "weatherError": "موسم لوڈ نہیں ہو سکا",
+
+
+    "fertilizerCalculatorTitle": "کھاد کیلکولیٹر",
+    "landArea": "زمین کا رقبہ",
+    "enterArea": "رقبہ درج کریں",
+    "acre": "ایکڑ",
+    "hectare": "ہیکٹر",
+    "selectCropSoil": "فصل اور مٹی منتخب کریں",
+    "selectCrop": "فصل منتخب کریں",
+    "selectSoilType": "مٹی کی قسم منتخب کریں",
+    "growthStage": "نشوونما کا مرحلہ",
+    "calculateFertilizer": "کھاد کا حساب کریں",
+    "fertilizerRequirements": "کھاد کی ضرورت",
+    "cropType": "فصل کی قسم",
+    "soilType": "مٹی کی قسم",
+    "growthStageLabel": "نشوونما کا مرحلہ",
+    "nitrogenNeeded": "نائٹروجن کی ضرورت",
+    "phosphorusNeeded": "فاسفورس کی ضرورت",
+    "potassiumNeeded": "پوٹاشیم کی ضرورت",
+    "recommendedFertilizers": "تجویز کردہ کھادیں",
+    "noFertilizerNeeded": "اضافی کھاد کی ضرورت نہیں",
+
+    "crop_wheat": "گندم",
+    "crop_rice": "چاول",
+    "crop_corn": "مکئی",
+    "crop_soybean": "سویا بین",
+    "crop_tomato": "ٹماٹر",
+    "crop_potato": "آلو",
+    "crop_carrot": "گاجر",
+    "crop_onion": "پیاز",
+    "crop_cabbage": "بند گوبھی",
+    "crop_chili": "مرچ",
+    "crop_banana": "کیلا",
+    "crop_apple": "سیب",
+
+    "soil_sandy": "ریتلی مٹی",
+    "soil_clay": "چکنی مٹی",
+    "soil_loam": "دوآبہ مٹی",
+    "soil_silty": "گاد والی مٹی",
+    "soil_peaty": "پیٹ مٹی",
+    "soil_chalky": "چاک مٹی",
+    "soil_saline": "نمکین مٹی",
+    "soil_red": "سرخ مٹی",
+    "soil_black": "کالی مٹی",
+
+    "stage_seedling": "پودا مرحلہ",
+    "stage_vegetative": "پتے کا مرحلہ",
+    "stage_flowering": "پھول کا مرحلہ",
+    "stage_fruiting": "پھل کا مرحلہ",
+    "stage_maturity": "پکنے کا مرحلہ",
+    "stage_harvesting": "کٹائی",
+
+
+      "cropDetectionTitle": "فصل کی شناخت",
+      "tapToSelectImage": "تصویر منتخب کرنے کے لیے ٹیپ کریں",
+      "uploadImage": "تصویر اپ لوڈ کریں",
+      "takePhoto": "تصویر لیں",
+      "enterCropType": "فصل کی قسم درج کریں",
+      "uploadAndAnalyze": "اپ لوڈ کریں اور تجزیہ کریں",
+      "analyzing": "تجزیہ ہو رہا ہے...",
+      "noImageSelected": "کوئی تصویر منتخب نہیں کی گئی۔",
+      "analysisError": "تصویر کے تجزیہ میں خرابی",
+
+
+        "annadaAssistance": "انّدا معاونت",
+        "farmerFaqs": "💬 کسانوں کے عام سوالات:",
+        "faq1": "ٹماٹر کے لیے بہترین کھاد کون سی ہے؟",
+        "faq2": "فصلوں پر کیڑوں کے حملے کو کیسے روکا جائے؟",
+        "faq3": "گرمیوں کے موسم کے لیے کون سی فصلیں موزوں ہیں؟",
+        "faq4": "کاشتکاری میں پانی کیسے محفوظ کریں؟",
+        "faq5": "چاول کی کاشت کے لیے مثالی مٹی کا pH کیا ہونا چاہیے؟",
+        "analyzingImage": "تصویر کا تجزیہ ہو رہا ہے...",
+        "thinking": "سوچ رہا ہے...",
+        "noResponseReceived": "⚠️ کوئی جواب موصول نہیں ہوا۔",
+        "errorFetchingResponse": "⚠️ جواب حاصل کرنے میں خرابی۔",
+        "failedToLoadImage": "تصویر لوڈ کرنے میں ناکامی",
+        "uploading": "اپ لوڈ ہو رہا ہے",
+
+
+          "governmentSchemesTitle": "سرکاری اسکیمیں",
+          "applyNow": "ابھی درخواست دیں",
+
+          "pmKisanName": "پردھان منتری کسان سمان ندھی (PM-KISAN)",
+          "pmKisanDesc": "چھوٹے کسانوں کو سالانہ ₹6,000 دیے جاتے ہیں۔",
+
+          "pmfbName": "پردھان منتری فصل بیمہ یوجنا (PMFBY)",
+          "pmfbDesc": "قدرتی آفات سے فصل کے نقصان کا بیمہ فراہم کرتی ہے۔",
+
+          "kccName": "کسان کریڈٹ کارڈ اسکیم",
+          "kccDesc": "زرعی اخراجات کے لیے کم سود پر قرض فراہم کرتی ہے۔",
+
+          "soilHealthName": "مٹی صحت کارڈ اسکیم",
+          "soilHealthDesc": "مٹی کی جانچ کے لیے مفت سہولت۔",
+
+          "pmksyName": "پردھان منتری کرشی سنچائی یوجنا (PMKSY)",
+          "pmksyDesc": "آبپاشی کی سہولت فراہم کرتی ہے۔",
+
+          "enamName": "ای-نام (قومی زرعی منڈی)",
+          "enamDesc": "ڈیجیٹل پلیٹ فارم۔",
+
+          "rkvyName": "راشٹریہ کرشی وکاس یوجنا (RKVY)",
+          "rkvyDesc": "زرعی منصوبوں کے لیے مالی مدد۔",
+
+          "pkvyName": "پرمپراگت کرشی وکاس یوجنا (PKVY)",
+          "pkvyDesc": "نامیاتی کھیتی کو فروغ دیتی ہے۔",
+
+          "dedsName": "ڈیری انٹرپرینیورشپ ڈیولپمنٹ اسکیم (DEDS)",
+          "dedsDesc": "ڈیری فارم کے قیام کے لیے سبسڈی۔",
+
+  "farmersGuideTitle": "کسان رہنمائی",
+  "allGuides": "تمام رہنمائیاں",
+  "appHelp": "ایپ مدد",
+  "farmingTips": "زرعی مشورے",
+  "searchTutorialHint": "زرعی رہنمائی تلاش کریں...",
+  "noTutorialsFound": "کوئی رہنمائی نہیں ملی",
+  "tryDifferentSearch": "دوسرے الفاظ آزمائیں",
+  "tapToWatchVideo": "ویڈیو دیکھنے کے لیے ٹیپ کریں",
+  "linkError": "لنک نہیں کھل سکا",
+
+  "tutorialGettingStartedTitle": "📱 انّدا ایپ کا آغاز",
+  "tutorialGettingStartedContent": "انّدا ایپ کے تمام زرعی ٹولز استعمال کرنا سیکھیں۔",
+
+  "tutorialCropDetectionTitle": "🌾 فصل کی شناخت کی سہولت",
+  "tutorialCropDetectionContent": "فصل کی تصویر اپلوڈ کریں اور بیماری کی تشخیص حاصل کریں۔",
+
+  "tutorialFertilizerTitle": "🧮 کھاد کیلکولیٹر کا استعمال",
+  "tutorialFertilizerContent": "فصل، مٹی اور زمین کا رقبہ درج کر کے کھاد کی ضرورت معلوم کریں۔",
+
+  "tutorialAssistantTitle": "🤖 انّدا معاون سے بات کریں",
+  "tutorialAssistantContent": "زرعی سوالات پوچھیں اور فوری رہنمائی حاصل کریں۔",
+
+  "tutorialMarketTitle": "🗺️ قریبی منڈی تلاش کریں",
+  "tutorialMarketContent": "اپنے علاقے کی زرعی منڈیوں کا پتہ لگائیں۔",
+
+  "tutorialOrganicTitle": "🌱 نامیاتی کاشتکاری کی مکمل رہنمائی",
+  "tutorialOrganicContent": "کیمیائی مادوں کے بغیر قدرتی کاشتکاری کے طریقے سیکھیں۔",
+
+  "tutorialIrrigationTitle": "💧 اسمارٹ آبپاشی کے طریقے",
+  "tutorialIrrigationContent": "ڈرپ اور اسپرنکلر آبپاشی کے نظام سیکھیں۔",
+
+  "tutorialIPMTitle": "🐛 مربوط کیڑوں کا انتظام",
+  "tutorialIPMContent": "کیمیائی ادویات سے پہلے حیاتیاتی طریقے استعمال کریں۔",
+
+  "tutorialRotationTitle": "🌾 فصلوں کی گردش کی حکمت عملی",
+  "tutorialRotationContent": "زمین کی صحت بہتر بنانے کے لیے ہر سال فصل تبدیل کریں۔",
+
+  "tutorialSoilTitle": "🧪 مٹی کی صحت کا انتظام",
+  "tutorialSoilContent": "مٹی کا ٹیسٹ کریں اور غذائیت کا توازن برقرار رکھیں۔",
+
+  "tutorialFinanceTitle": "📊 زرعی مالیاتی انتظام",
+  "tutorialFinanceContent": "اخراجات اور آمدنی کا حساب رکھیں۔",
+
+  "tutorialMechanizationTitle": "🚜 زرعی مشینی رہنمائی",
+  "tutorialMechanizationContent": "فارم کے سائز کے مطابق مشینری منتخب کریں۔",
+
+  "tutorialWeatherTitle": "🌤️ موسم کی بنیاد پر کاشتکاری",
+  "tutorialWeatherContent": "موسمی پیشگوئی کے مطابق کاشتکاری کی منصوبہ بندی کریں۔",
+
+  "tutorialWheatVideoTitle": "📽️ جدید گندم کی کاشت کے طریقے",
+  "tutorialTomatoVideoTitle": "📽️ ٹماٹر کی دیکھ بھال",
+  "tutorialRotationVideoTitle": "📽️ فصلوں کی گردش کے فوائد",
+
+  "tutorialPestImageTitle": "📷 کیڑوں کی شناخت کا چارٹ",
+  "tutorialSoilImageTitle": "📷 مٹی کی اقسام اور خصوصیات",
+  "tutorialIrrigationImageTitle": "📷 آبپاشی کے نظام کا موازنہ",
+
+
+    "nearnessOfMarket": "مارکیٹ کی قربت",
+    "nearbyMarkets": "قریبی مارکیٹس",
+    "locateFertilizerShops": "کھاد کی دکانیں تلاش کریں",
+    "searchNearbyMarket": "قریبی مارکیٹ تلاش کریں",
+    "localRecyclingAgencies": "مقامی ری سائیکلنگ ایجنسیاں",
+
+
+
+
+      "communityTitle": "اننداتا کمیونٹی 🌾",
+      "justNow": "ابھی ابھی",
+      "minutesAgo": "{count} منٹ پہلے",
+      "@minutesAgo": { "placeholders": { "count": {} } },
+      "hoursAgo": "{count} گھنٹے پہلے",
+      "@hoursAgo": { "placeholders": { "count": {} } },
+      "daysAgo": "{count} دن پہلے",
+      "@daysAgo": { "placeholders": { "count": {} } },
+
+      "whatsHappening": "آپ کے کھیت میں کیا ہو رہا ہے؟",
+      "post": "پوسٹ کریں",
+      "comments": "تبصرے",
+      "noCommentsYet": "ابھی تک کوئی تبصرہ نہیں 🌾",
+      "writeReply": "جواب لکھیں...",
+      "noPostsYet": "ابھی تک کوئی پوسٹ نہیں 🌾",
+      "delete": "حذف کریں",
+      "farmer": "کسان",
+
+      "createFarmerAccount": "اپنا کسان اکاؤنٹ بنائیں",
+      "email": "ای میل",
+      "emailRequired": "ای میل ضروری ہے",
+      "password": "پاس ورڈ",
+      "passwordMinLength": "پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے",
+      "register": "رجسٹر کریں",
+      "empoweringFarmers": "🌾 AI کے ذریعے کسانوں کو بااختیار بنانا",
+      "userRegisteredSuccess": "✅ صارف کامیابی سے رجسٹر ہو گیا!",
+      "errorPrefix": "⚠️",
+
+      "todoTitle": "کاموں کی فہرست",
+      "addNewTask": "نیا کام شامل کریں...",
+      "noTasksYet": "ابھی تک کوئی کام نہیں۔ اپنا پہلا کام شامل کریں۔",
+      "upcomingTasks": "آنے والے کام",
+      "completedTasks": "مکمل شدہ کام",
+
+      "profileSaved": "پروفائل کامیابی سے محفوظ ہو گئی!",
+      "yourProfile": "آپ کی پروفائل",
+      "fullName": "پورا نام",
+      "phoneNumber": "فون نمبر",
+      "saveProfile": "پروفائل محفوظ کریں",
+      "logout": "لاگ آؤٹ",
+      "annadaTagline": "🌾 اننداتا - مستقبل کی فصل",
+
+
+        "latestNews": "تازہ خبریں",
+        "noNewsAvailable": "کوئی خبر دستیاب نہیں ہے۔",
+        "noDescriptionAvailable": "کوئی وضاحت دستیاب نہیں ہے۔",
+        "noTitle": "کوئی عنوان نہیں",
+        "noSubtitle": "کوئی ذیلی عنوان نہیں",
+        "noContentAvailable": "کوئی مواد دستیاب نہیں ہے۔"
+
+
+
+
+
+
+
+
+}

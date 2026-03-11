@@ -1,0 +1,273 @@
+{
+  "appTitle": "Annada",
+  "selectLanguage": "Select Your Language",
+  "continueButton": "Continue",
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "or": "OR",
+  "signInWithGoogle": "Sign in with Google",
+  "noAccountRegister": "Don't have an account? Register",
+  "chatbot": "Chatbot",
+  "fertilizerCalculator": "Fertilizer Calculator",
+  "cropDetection": "Crop Detection",
+  "weather": "Weather",
+  "yojna": "Government Schemes",
+  "tutorials": "Tutorials",
+  "home": "Home",
+  "market": "Market",
+  "community": "Community",
+  "profile": "Profile",
+  "welcome": "Welcome",
+  "weatherTitle": "Weather",
+  "logout": "Logout",
+  "features": "Features",
+  "toDoList": "To-Do List",
+  "updated": "Updated",
+  "tapForecast": "Tap for 5-day forecast",
+  "forecastTitle": "5-Day Weather Forecast",
+  "forecastSubtitle": "Annada ensures error-free weather forecasts for any location.",
+  "fetchingForecast": "Fetching forecast...",
+  "forecastUnavailable": "Forecast unavailable.\nCheck internet or location access.",
+  "permissionRequired": "Permission Required",
+  "enableLocationWeather": "Enable location to get weather info",
+  "locationUnavailable": "Unavailable",
+  "weatherError": "Could not load weather",
+
+  "fertilizerCalculatorTitle": "Fertilizer Calculator",
+  "landArea": "Land Area",
+  "enterArea": "Enter Area",
+  "acre": "Acre",
+  "hectare": "Hectare",
+  "selectCropSoil": "Select Crop & Soil",
+  "selectCrop": "Select Crop",
+  "selectSoilType": "Select Soil Type",
+  "growthStage": "Growth Stage",
+  "calculateFertilizer": "Calculate Fertilizer",
+  "fertilizerRequirements": "Fertilizer Requirements",
+  "cropType": "Crop Type",
+  "soilType": "Soil Type",
+  "growthStageLabel": "Growth Stage",
+  "nitrogenNeeded": "Nitrogen Needed",
+  "phosphorusNeeded": "Phosphorus Needed",
+  "potassiumNeeded": "Potassium Needed",
+  "recommendedFertilizers": "Recommended Fertilizers",
+  "noFertilizerNeeded": "No additional fertilizer needed.",
+
+  "crop_wheat": "Wheat",
+  "crop_rice": "Rice",
+  "crop_corn": "Corn",
+  "crop_soybean": "Soybean",
+  "crop_tomato": "Tomato",
+  "crop_potato": "Potato",
+  "crop_carrot": "Carrot",
+  "crop_onion": "Onion",
+  "crop_cabbage": "Cabbage",
+  "crop_chili": "Chili",
+  "crop_banana": "Banana",
+  "crop_apple": "Apple",
+
+  "soil_sandy": "Sandy",
+  "soil_clay": "Clay",
+  "soil_loam": "Loam",
+  "soil_silty": "Silty",
+  "soil_peaty": "Peaty",
+  "soil_chalky": "Chalky",
+  "soil_saline": "Saline",
+  "soil_red": "Red Soil",
+  "soil_black": "Black Soil",
+
+  "stage_seedling": "Seedling",
+  "stage_vegetative": "Vegetative",
+  "stage_flowering": "Flowering",
+  "stage_fruiting": "Fruiting",
+  "stage_maturity": "Maturity",
+  "stage_harvesting": "Harvesting",
+
+  "cropDetectionTitle": "Crop Detection",
+  "tapToSelectImage": "Tap to select image",
+  "uploadImage": "Upload Image",
+  "takePhoto": "Take Photo",
+  "enterCropType": "Enter crop type",
+  "uploadAndAnalyze": "Upload & Analyze",
+  "analyzing": "Analyzing...",
+  "noImageSelected": "No image selected.",
+  "analysisError": "Error analyzing image",
+
+
+    "annadaAssistance": "Annada Assistance",
+    "farmerFaqs": "💬 Farmer FAQs:",
+    "faq1": "What is the best fertilizer for tomatoes?",
+    "faq2": "How to prevent pest attacks on crops?",
+    "faq3": "What crops are suitable for summer season?",
+    "faq4": "How to conserve water in farming?",
+    "faq5": "What is the ideal soil pH for rice cultivation?",
+    "analyzingImage": "Analyzing image...",
+    "thinking": "Thinking...",
+    "noResponseReceived": "⚠️ No response received.",
+    "errorFetchingResponse": "⚠️ Error fetching response.",
+    "failedToLoadImage": "Failed to load image",
+    "uploading": "Uploading",
+
+
+      "governmentSchemesTitle": "Government Schemes",
+      "applyNow": "Apply Now",
+
+      "pmKisanName": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+      "pmKisanDesc": "Provides ₹6,000 per year in three installments to small and marginal farmers to support their financial needs.",
+
+      "pmfbName": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "pmfbDesc": "Offers crop insurance to protect farmers against crop losses due to natural disasters, pests, and diseases.",
+
+      "kccName": "Kisan Credit Card (KCC) Scheme",
+      "kccDesc": "Provides short-term credit to farmers at low-interest rates to help them with agricultural expenses.",
+
+      "soilHealthName": "Soil Health Card Scheme",
+      "soilHealthDesc": "Offers free soil testing services to farmers to determine the nutrient content and health of their soil.",
+
+      "pmksyName": "PM Krishi Sinchayee Yojana (PMKSY)",
+      "pmksyDesc": "Aims to provide water access for irrigation through better water conservation and management techniques.",
+
+      "enamName": "e-NAM (National Agriculture Market)",
+      "enamDesc": "A digital platform that helps farmers sell their produce directly to buyers across India at competitive prices.",
+
+      "rkvyName": "Rashtriya Krishi Vikas Yojana (RKVY)",
+      "rkvyDesc": "Provides financial aid to farmers for agricultural projects including infrastructure and market development.",
+
+      "pkvyName": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "pkvyDesc": "Encourages organic farming by providing training, financial assistance, and market access.",
+
+      "dedsName": "Dairy Entrepreneurship Development Scheme (DEDS)",
+      "dedsDesc": "Provides subsidies and financial support for setting up dairy farms and milk processing units.",
+
+
+        "farmersGuideTitle": "Farmer's Guide",
+        "allGuides": "All Guides",
+        "appHelp": "App Help",
+        "farmingTips": "Farming Tips",
+        "searchTutorialHint": "Search farming guides, app help, tips...",
+        "noTutorialsFound": "No tutorials found",
+        "tryDifferentSearch": "Try different search terms",
+        "tapToWatchVideo": "Tap to watch video tutorial",
+        "linkError": "Could not launch link",
+
+        "tutorialGettingStartedTitle": "📱 Getting Started with Annada App",
+        "tutorialGettingStartedContent": "Welcome to Annada! Learn how to use all farming tools inside the app effectively.",
+
+        "tutorialCropDetectionTitle": "🌾 How to Use Crop Detection Feature",
+        "tutorialCropDetectionContent": "Upload crop images and get AI-powered disease detection and treatment suggestions.",
+
+        "tutorialFertilizerTitle": "🧮 Using Fertilizer Calculator",
+        "tutorialFertilizerContent": "Enter crop type, soil type and land area to calculate exact fertilizer requirement.",
+
+        "tutorialAssistantTitle": "🤖 Chat with Annada Assistant",
+        "tutorialAssistantContent": "Ask farming-related questions and receive instant AI guidance.",
+
+        "tutorialMarketTitle": "🗺️ Finding Nearby Markets",
+        "tutorialMarketContent": "Locate agricultural markets near your area and connect with buyers.",
+
+        "tutorialOrganicTitle": "🌱 Complete Guide to Organic Farming",
+        "tutorialOrganicContent": "Organic farming uses natural inputs, composting, crop rotation and avoids chemicals.",
+
+        "tutorialIrrigationTitle": "💧 Smart Irrigation Techniques",
+        "tutorialIrrigationContent": "Learn drip irrigation, sprinkler systems and water conservation methods.",
+
+        "tutorialIPMTitle": "🐛 Integrated Pest Management (IPM)",
+        "tutorialIPMContent": "Use biological, cultural and mechanical pest control before chemicals.",
+
+        "tutorialRotationTitle": "🌾 Crop Rotation Strategies",
+        "tutorialRotationContent": "Rotate crops yearly to improve soil health and reduce pest cycles.",
+
+        "tutorialSoilTitle": "🧪 Soil Health Management",
+        "tutorialSoilContent": "Maintain soil fertility through testing, compost and balanced nutrients.",
+
+        "tutorialFinanceTitle": "📊 Farm Financial Management",
+        "tutorialFinanceContent": "Track expenses, revenue and maximize farm profitability.",
+
+        "tutorialMechanizationTitle": "🚜 Farm Mechanization Guide",
+        "tutorialMechanizationContent": "Choose appropriate machinery based on farm size and crop type.",
+
+        "tutorialWeatherTitle": "🌤️ Weather-Based Farming",
+        "tutorialWeatherContent": "Plan crops based on seasonal weather forecasts and rainfall patterns.",
+
+        "tutorialWheatVideoTitle": "📽️ Modern Wheat Cultivation Techniques",
+        "tutorialTomatoVideoTitle": "📽️ Tomato Plant Care and Pruning",
+        "tutorialRotationVideoTitle": "📽️ Understanding Crop Rotation Benefits",
+
+        "tutorialPestImageTitle": "📷 Pest Identification Chart",
+        "tutorialSoilImageTitle": "📷 Soil Types and Characteristics",
+        "tutorialIrrigationImageTitle": "📷 Irrigation Systems Comparison",
+
+
+          "nearnessOfMarket": "Nearness Of Market",
+          "nearbyMarkets": "Nearby Markets",
+          "locateFertilizerShops": "Locate Fertilizers Shops",
+          "searchNearbyMarket": "Search nearby Market",
+          "localRecyclingAgencies": "Local recycling agencies",
+
+
+
+
+            "communityTitle": "Annada Community 🌾",
+            "justNow": "Just now",
+            "minutesAgo": "{count} min ago",
+            "@minutesAgo": {
+              "placeholders": { "count": {} }
+            },
+            "hoursAgo": "{count} hr ago",
+            "@hoursAgo": {
+              "placeholders": { "count": {} }
+            },
+            "daysAgo": "{count} days ago",
+            "@daysAgo": {
+              "placeholders": { "count": {} }
+            },
+
+            "whatsHappening": "What's happening in your farm?",
+            "post": "Post",
+            "comments": "Comments",
+            "noCommentsYet": "No comments yet 🌾",
+            "writeReply": "Write a reply...",
+            "noPostsYet": "No posts yet 🌾",
+            "delete": "Delete",
+            "farmer": "Farmer",
+            "createFarmerAccount": "Create Your Farmer Account",
+            "email": "Email",
+            "emailRequired": "Email required",
+            "password": "Password",
+            "passwordMinLength": "Password must be at least 6 characters",
+            "register": "Register",
+            "empoweringFarmers": "🌾 Empowering Farmers with AI",
+            "userRegisteredSuccess": "✅ User registered successfully!",
+            "errorPrefix": "⚠️",
+
+            "todoTitle": "To-Do List",
+            "addNewTask": "Add a new task...",
+            "noTasksYet": "No tasks yet. Add your first task.",
+            "upcomingTasks": "Upcoming Tasks",
+            "completedTasks": "Completed Tasks",
+
+            "profileSaved": "Profile saved successfully!",
+            "yourProfile": "Your Profile",
+            "fullName": "Full Name",
+            "phoneNumber": "Phone Number",
+            "saveProfile": "Save Profile",
+            "logout": "Logout",
+            "annadaTagline": "🌾 Annada - Harvesting the Future",
+
+            "latestNews": "Latest News",
+            "noNewsAvailable": "No news available.",
+            "noDescriptionAvailable": "No description available.",
+            "noTitle": "No title",
+            "noSubtitle": "No subtitle",
+            "noContentAvailable": "No content available."
+
+
+
+
+
+
+
+
+
+}

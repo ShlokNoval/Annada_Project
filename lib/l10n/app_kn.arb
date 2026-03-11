@@ -1,0 +1,270 @@
+{
+  "appTitle": "ಅನ್ನದಾ",
+  "selectLanguage": "ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "continueButton": "ಮುಂದುವರಿಸಿ",
+  "login": "ಲಾಗಿನ್",
+  "email": "ಇಮೇಲ್",
+  "password": "ಗುಪ್ತಪದ",
+  "or": "ಅಥವಾ",
+  "signInWithGoogle": "ಗೂಗಲ್ ಮೂಲಕ ಸೈನ್ ಇನ್ ಮಾಡಿ",
+  "noAccountRegister": "ಖಾತೆ ಇಲ್ಲವೇ? ನೋಂದಣಿ ಮಾಡಿ",
+  "chatbot": "ಚಾಟ್‌ಬಾಟ್",
+  "fertilizerCalculator": "ರಸಗೊಬ್ಬರ ಗಣಕ",
+  "cropDetection": "ಬೆಳೆ ಗುರುತು",
+  "weather": "ಹವಾಮಾನ",
+  "yojna": "ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+  "tutorials": "ಪಾಠಗಳು",
+  "home": "ಮುಖ್ಯಪುಟ",
+  "market": "ಮಾರುಕಟ್ಟೆ",
+  "community": "ಸಮುದಾಯ",
+  "profile": "ಪ್ರೊಫೈಲ್",
+  "welcome": "ಸ್ವಾಗತ",
+  "weatherTitle": "ಹವಾಮಾನ",
+  "logout": "ಲಾಗ್‌ಔಟ್",
+  "features": "ವೈಶಿಷ್ಟ್ಯಗಳು",
+  "toDoList": "ಮಾಡಬೇಕಾದ ಕಾರ್ಯಗಳು",
+  "updated": "ನವೀಕರಿಸಲಾಗಿದೆ",
+  "tapForecast": "5 ದಿನಗಳ ಮುನ್ಸೂಚನೆಗೆ ಟ್ಯಾಪ್ ಮಾಡಿ",
+  "forecastTitle": "5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆ",
+  "forecastSubtitle": "ಅನ್ನದಾ ಯಾವುದೇ ಸ್ಥಳಕ್ಕೆ ನಿಖರವಾದ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ.",
+  "fetchingForecast": "ಮುನ್ಸೂಚನೆ ಪಡೆಯುತ್ತಿದೆ...",
+  "forecastUnavailable": "ಮುನ್ಸೂಚನೆ ಲಭ್ಯವಿಲ್ಲ.\nಇಂಟರ್ನೆಟ್ ಅಥವಾ ಸ್ಥಳ ಅನುಮತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ.",
+  "permissionRequired": "ಅನುಮತಿ ಅಗತ್ಯ",
+  "enableLocationWeather": "ಹವಾಮಾನ ಮಾಹಿತಿಗಾಗಿ ಸ್ಥಳವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+  "locationUnavailable": "ಲಭ್ಯವಿಲ್ಲ",
+  "weatherError": "ಹವಾಮಾನ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ",
+
+
+    "fertilizerCalculatorTitle": "ರಸಗೊಬ್ಬರ ಗಣಕ",
+    "landArea": "ಭೂಮಿ ವಿಸ್ತೀರ್ಣ",
+    "enterArea": "ವಿಸ್ತೀರ್ಣ ನಮೂದಿಸಿ",
+    "acre": "ಎಕರೆ",
+    "hectare": "ಹೆಕ್ಟೇರ್",
+    "selectCropSoil": "ಬೆಳೆ ಮತ್ತು ಮಣ್ಣು ಆಯ್ಕೆ",
+    "selectCrop": "ಬೆಳೆ ಆಯ್ಕೆಮಾಡಿ",
+    "selectSoilType": "ಮಣ್ಣಿನ ಪ್ರಕಾರ ಆಯ್ಕೆಮಾಡಿ",
+    "growthStage": "ಬೆಳೆ ಹಂತ",
+    "calculateFertilizer": "ರಸಗೊಬ್ಬರ ಲೆಕ್ಕಿಸಿ",
+    "fertilizerRequirements": "ರಸಗೊಬ್ಬರ ಅವಶ್ಯಕತೆ",
+    "cropType": "ಬೆಳೆ ಪ್ರಕಾರ",
+    "soilType": "ಮಣ್ಣಿನ ಪ್ರಕಾರ",
+    "growthStageLabel": "ಬೆಳೆ ಹಂತ",
+    "nitrogenNeeded": "ನೈಟ್ರೋಜನ್ ಅಗತ್ಯ",
+    "phosphorusNeeded": "ಫಾಸ್ಫರಸ್ ಅಗತ್ಯ",
+    "potassiumNeeded": "ಪೊಟ್ಯಾಸಿಯಂ ಅಗತ್ಯ",
+    "recommendedFertilizers": "ಶಿಫಾರಸು ಮಾಡಿದ ರಸಗೊಬ್ಬರಗಳು",
+    "noFertilizerNeeded": "ಹೆಚ್ಚುವರಿ ರಸಗೊಬ್ಬರ ಅಗತ್ಯವಿಲ್ಲ",
+
+    "crop_wheat": "ಗೋಧಿ",
+    "crop_rice": "ಅಕ್ಕಿ",
+    "crop_corn": "ಮಕ್ಕಜೋಳ",
+    "crop_soybean": "ಸೋಯಾಬೀನ್",
+    "crop_tomato": "ಟೊಮಾಟೊ",
+    "crop_potato": "ಆಲೂಗಡ್ಡೆ",
+    "crop_carrot": "ಗಜ್ಜರಿ",
+    "crop_onion": "ಈರುಳ್ಳಿ",
+    "crop_cabbage": "ಕೋಸು",
+    "crop_chili": "ಮೆಣಸಿನಕಾಯಿ",
+    "crop_banana": "ಬಾಳೆಹಣ್ಣು",
+    "crop_apple": "ಸೇಬು",
+
+    "soil_sandy": "ಮರಳು ಮಣ್ಣು",
+    "soil_clay": "ಚಿಕ್ಕಣಿ ಮಣ್ಣು",
+    "soil_loam": "ದೋಮಟ ಮಣ್ಣು",
+    "soil_silty": "ಗಡ್ಡೆ ಮಣ್ಣು",
+    "soil_peaty": "ಪೀಟ್ ಮಣ್ಣು",
+    "soil_chalky": "ಚಾಕ್ ಮಣ್ಣು",
+    "soil_saline": "ಉಪ್ಪು ಮಣ್ಣು",
+    "soil_red": "ಕೆಂಪು ಮಣ್ಣು",
+    "soil_black": "ಕಪ್ಪು ಮಣ್ಣು",
+
+    "stage_seedling": "ಮುದ್ದೆ ಹಂತ",
+    "stage_vegetative": "ಎಲೆ ಬೆಳವಣಿಗೆ",
+    "stage_flowering": "ಹೂವಿನ ಹಂತ",
+    "stage_fruiting": "ಹಣ್ಣು ಹಂತ",
+    "stage_maturity": "ಪಕ್ವತೆ",
+    "stage_harvesting": "ಕೊಯ್ಲು",
+
+
+      "cropDetectionTitle": "ಬೆಳೆ ಗುರುತಿಸುವಿಕೆ",
+      "tapToSelectImage": "ಚಿತ್ರ ಆಯ್ಕೆ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ",
+      "uploadImage": "ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+      "takePhoto": "ಫೋಟೋ ತೆಗೆಯಿರಿ",
+      "enterCropType": "ಬೆಳೆ ಪ್ರಕಾರ ನಮೂದಿಸಿ",
+      "uploadAndAnalyze": "ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ವಿಶ್ಲೇಷಿಸಿ",
+      "analyzing": "ವಿಶ್ಲೇಷಣೆ ನಡೆಯುತ್ತಿದೆ...",
+      "noImageSelected": "ಯಾವುದೇ ಚಿತ್ರ ಆಯ್ಕೆ ಮಾಡಲಾಗಿಲ್ಲ.",
+      "analysisError": "ಚಿತ್ರ ವಿಶ್ಲೇಷಣೆಯಲ್ಲಿ ದೋಷ",
+
+
+        "annadaAssistance": "ಅನ್ನದಾ ಸಹಾಯ",
+        "farmerFaqs": "💬 ರೈತರ ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು:",
+        "faq1": "ಟೊಮ್ಯಾಟೊಗೆ ಉತ್ತಮ ಗೊಬ್ಬರ ಯಾವುದು?",
+        "faq2": "ಬೆಳೆಗಳಲ್ಲಿ ಕೀಟ ಹಲ್ಲೆಯನ್ನು ಹೇಗೆ ತಡೆಯುವುದು?",
+        "faq3": "ಬೆಸಿಗೆ ಕಾಲಕ್ಕೆ ಸೂಕ್ತ ಬೆಳೆಗಳು ಯಾವುವು?",
+        "faq4": "ಕೃಷಿಯಲ್ಲಿ ನೀರನ್ನು ಹೇಗೆ ಸಂರಕ್ಷಿಸಬೇಕು?",
+        "faq5": "ಅಕ್ಕಿ ಬೆಳೆಗೆ ಸೂಕ್ತ ಮಣ್ಣಿನ pH ಎಷ್ಟು ಇರಬೇಕು?",
+        "analyzingImage": "ಚಿತ್ರ ವಿಶ್ಲೇಷಣೆ ನಡೆಯುತ್ತಿದೆ...",
+        "thinking": "ಆಲೋಚಿಸುತ್ತಿದೆ...",
+        "noResponseReceived": "⚠️ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆ ಸಿಕ್ಕಿಲ್ಲ.",
+        "errorFetchingResponse": "⚠️ ಪ್ರತಿಕ್ರಿಯೆ ಪಡೆಯುವಲ್ಲಿ ದೋಷ.",
+        "failedToLoadImage": "ಚಿತ್ರ ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ",
+        "uploading": "ಅಪ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ",
+
+        
+          "governmentSchemesTitle": "ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+          "applyNow": "ಈಗಲೇ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ",
+
+          "pmKisanName": "ಪ್ರಧಾನ ಮಂತ್ರಿ ಕಿಸಾನ್ ಸಮ್ಮಾನ್ ನಿಧಿ (PM-KISAN)",
+          "pmKisanDesc": "ಸಣ್ಣ ಮತ್ತು ಅಂಚಿನ ರೈತರಿಗೆ ವರ್ಷಕ್ಕೆ ₹6,000 ನೀಡಲಾಗುತ್ತದೆ.",
+
+          "pmfbName": "ಪ್ರಧಾನ ಮಂತ್ರಿ ಫಸಲ್ ಬಿಮಾ ಯೋಜನೆ (PMFBY)",
+          "pmfbDesc": "ಪ್ರಕೃತಿ ವಿಪತ್ತುಗಳಿಂದ ಬೆಳೆ ನಷ್ಟಕ್ಕೆ ವಿಮೆ ಒದಗಿಸುತ್ತದೆ.",
+
+          "kccName": "ಕಿಸಾನ್ ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ (KCC) ಯೋಜನೆ",
+          "kccDesc": "ಕೃಷಿ ವೆಚ್ಚಗಳಿಗೆ ಕಡಿಮೆ ಬಡ್ಡಿದರ ಸಾಲ ನೀಡುತ್ತದೆ.",
+
+          "soilHealthName": "ಮಣ್ಣು ಆರೋಗ್ಯ ಕಾರ್ಡ್ ಯೋಜನೆ",
+          "soilHealthDesc": "ಮಣ್ಣಿನ ಪೋಷಕಾಂಶ ಪರೀಕ್ಷೆಗೆ ಉಚಿತ ಸೇವೆ ನೀಡುತ್ತದೆ.",
+
+          "pmksyName": "ಪ್ರಧಾನ ಮಂತ್ರಿ ಕೃಷಿ ಸಿಂಚಾಯಿ ಯೋಜನೆ (PMKSY)",
+          "pmksyDesc": "ನೀರಿನ ಸಂರಕ್ಷಣೆ ಮೂಲಕ ನೀರಾವರಿ ಸೌಲಭ್ಯ ಒದಗಿಸುತ್ತದೆ.",
+
+          "enamName": "ಇ-ನಾಮ್ (ರಾಷ್ಟ್ರೀಯ ಕೃಷಿ ಮಾರುಕಟ್ಟೆ)",
+          "enamDesc": "ರೈತರಿಗೆ ದೇಶವ್ಯాప్తంగా ಮಾರಾಟಕ್ಕೆ ಸಹಾಯಕ ಡಿಜಿಟಲ್ ವೇದಿಕೆ.",
+
+          "rkvyName": "ರಾಷ್ಟ್ರೀಯ ಕೃಷಿ ವಿಕಾಸ್ ಯೋಜನೆ (RKVY)",
+          "rkvyDesc": "ಕೃಷಿ ಯೋಜನೆಗಳಿಗೆ ಆರ್ಥಿಕ ನೆರವು ಒದಗಿಸುತ್ತದೆ.",
+
+          "pkvyName": "ಪರಂಪರಾಗತ ಕೃಷಿ ವಿಕಾಸ್ ಯೋಜನೆ (PKVY)",
+          "pkvyDesc": "ಸೇಂದ್ರಿಯ ಕೃಷಿಯನ್ನು ಉತ್ತೇಜಿಸುತ್ತದೆ.",
+
+          "dedsName": "ಡೈರಿ ಉದ್ಯಮ ಅಭಿವೃದ್ಧಿ ಯೋಜನೆ (DEDS)",
+          "dedsDesc": "ಡೈರಿ ಫಾರ್ಮ್ ಸ್ಥಾಪನೆಗೆ ಸಹಾಯಧನ ನೀಡುತ್ತದೆ.",
+
+
+            "farmersGuideTitle": "రైతు మార్గదర్శిని",
+            "allGuides": "అన్ని మార్గదర్శకాలు",
+            "appHelp": "యాప్ సహాయం",
+            "farmingTips": "వ్యవసాయ చిట్కాలు",
+            "searchTutorialHint": "వ్యవసాయ మార్గదర్శకాలను వెతకండి...",
+            "noTutorialsFound": "ఏ మార్గదర్శకం లభించలేదు",
+            "tryDifferentSearch": "ఇతర పదాలు ప్రయత్నించండి",
+            "tapToWatchVideo": "వీడియో చూడటానికి ట్యాప్ చేయండి",
+            "linkError": "లింక్ తెరవలేకపోయాము",
+
+            "tutorialGettingStartedTitle": "📱 అన్నదా యాప్ ప్రారంభం",
+            "tutorialGettingStartedContent": "అన్నదా యాప్‌లోని అన్ని వ్యవసాయ సాధనాలను ఉపయోగించడం నేర్చుకోండి.",
+
+            "tutorialCropDetectionTitle": "🌾 పంట గుర్తింపు ఫీచర్",
+            "tutorialCropDetectionContent": "పంట ఫోటో అప్లోడ్ చేసి వ్యాధి నిర్ధారణ పొందండి.",
+
+            "tutorialFertilizerTitle": "🧮 ఎరువు కాల్క్యులేటర్ ఉపయోగం",
+            "tutorialFertilizerContent": "పంట, నేల మరియు భూభాగాన్ని నమోదు చేసి ఎరువు అవసరం తెలుసుకోండి.",
+
+            "tutorialAssistantTitle": "🤖 అన్నదా సహాయకుడితో చాట్ చేయండి",
+            "tutorialAssistantContent": "వ్యవసాయ ప్రశ్నలు అడిగి తక్షణ సలహా పొందండి.",
+
+            "tutorialMarketTitle": "🗺️ సమీప మార్కెట్లను కనుగొనండి",
+            "tutorialMarketContent": "మీ ప్రాంతంలోని వ్యవసాయ మార్కెట్లను కనుగొనండి.",
+
+            "tutorialOrganicTitle": "🌱 సేంద్రియ వ్యవసాయ మార్గదర్శిని",
+            "tutorialOrganicContent": "రసాయన రహిత సహజ వ్యవసాయం గురించి తెలుసుకోండి.",
+
+            "tutorialIrrigationTitle": "💧 స్మార్ట్ నీటిపారుదల పద్ధతులు",
+            "tutorialIrrigationContent": "డ్రిప్ మరియు స్ప్రింక్లర్ పద్ధతులు నేర్చుకోండి.",
+
+            "tutorialIPMTitle": "🐛 సమగ్ర కీటక నిర్వహణ",
+            "tutorialIPMContent": "రసాయనాల కంటే ముందు సహజ పద్ధతులు ఉపయోగించండి.",
+
+            "tutorialRotationTitle": "🌾 పంటల మార్పిడి వ్యూహాలు",
+            "tutorialRotationContent": "నేల ఆరోగ్యం కోసం ప్రతి సంవత్సరం పంట మార్చండి.",
+
+            "tutorialSoilTitle": "🧪 నేల ఆరోగ్య నిర్వహణ",
+            "tutorialSoilContent": "నేల పరీక్ష చేసి పోషక సమతుల్యతను కాపాడండి.",
+
+            "tutorialFinanceTitle": "📊 వ్యవసాయ ఆర్థిక నిర్వహణ",
+            "tutorialFinanceContent": "ఖర్చులు మరియు ఆదాయాన్ని ట్రాక్ చేయండి.",
+
+            "tutorialMechanizationTitle": "🚜 వ్యవసాయ యాంత్రీకరణ మార్గదర్శిని",
+            "tutorialMechanizationContent": "ఫార్మ్ పరిమాణానికి అనుగుణంగా యంత్రాలు ఎంచుకోండి.",
+
+            "tutorialWeatherTitle": "🌤️ వాతావరణ ఆధారిత వ్యవసాయం",
+            "tutorialWeatherContent": "వాతావరణ అంచనాల ప్రకారం పంటలు ప్రణాళిక చేయండి.",
+
+            "tutorialWheatVideoTitle": "📽️ ఆధునిక గోధుమ సాగు పద్ధతులు",
+            "tutorialTomatoVideoTitle": "📽️ టమోటా సంరక్షణ మరియు కత్తిరింపు",
+            "tutorialRotationVideoTitle": "📽️ పంట మార్పిడి ప్రయోజనాలు",
+
+            "tutorialPestImageTitle": "📷 కీటక గుర్తింపు చార్ట్",
+            "tutorialSoilImageTitle": "📷 నేల రకాల లక్షణాలు",
+            "tutorialIrrigationImageTitle": "📷 నీటిపారుదల పద్ధతుల పోలిక",
+
+
+              "nearnessOfMarket": "ಮಾರುಕಟ್ಟೆಯ ಸಮೀಪತೆ",
+              "nearbyMarkets": "ಹತ್ತಿರದ ಮಾರುಕಟ್ಟೆಗಳು",
+              "locateFertilizerShops": "ಗೊಬ್ಬರ ಅಂಗಡಿಗಳನ್ನು ಹುಡುಕಿ",
+              "searchNearbyMarket": "ಹತ್ತಿರದ ಮಾರುಕಟ್ಟೆ ಹುಡುಕಿ",
+              "localRecyclingAgencies": "ಸ್ಥಳೀಯ ಮರುಬಳಕೆ ಸಂಸ್ಥೆಗಳು",
+
+
+
+
+                "communityTitle": "ಅನ್ನದಾತ ಸಮುದಾಯ 🌾",
+                "justNow": "ಈಗಷ್ಟೇ",
+                "minutesAgo": "{count} ನಿಮಿಷಗಳ ಹಿಂದೆ",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} ಗಂಟೆಗಳ ಹಿಂದೆ",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} ದಿನಗಳ ಹಿಂದೆ",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "ನಿಮ್ಮ ಹೊಲದಲ್ಲಿ ಏನು ನಡೆಯುತ್ತಿದೆ?",
+                "post": "ಪೋಸ್ಟ್ ಮಾಡಿ",
+                "comments": "ಕಾಮೆಂಟ್‌ಗಳು",
+                "noCommentsYet": "ಇನ್ನೂ ಕಾಮೆಂಟ್ ಇಲ್ಲ 🌾",
+                "writeReply": "ಉತ್ತರ ಬರೆಯಿರಿ...",
+                "noPostsYet": "ಇನ್ನೂ ಪೋಸ್ಟ್ ಇಲ್ಲ 🌾",
+                "delete": "ಅಳಿಸಿ",
+                "farmer": "ರೈತ",
+
+                "createFarmerAccount": "ನಿಮ್ಮ ರೈತ ಖಾತೆಯನ್ನು ರಚಿಸಿ",
+                "email": "ಇಮೇಲ್",
+                "emailRequired": "ಇಮೇಲ್ ಅಗತ್ಯವಿದೆ",
+                "password": "ಪಾಸ್ವರ್ಡ್",
+                "passwordMinLength": "ಪಾಸ್ವರ್ಡ್ ಕನಿಷ್ಠ 6 ಅಕ್ಷರಗಳಿರಬೇಕು",
+                "register": "ನೋಂದಣಿ ಮಾಡಿ",
+                "empoweringFarmers": "🌾 AI ಮೂಲಕ ರೈತರನ್ನು ಶಕ್ತಿಗೊಳಿಸುತ್ತಿದ್ದೇವೆ",
+                "userRegisteredSuccess": "✅ ಬಳಕೆದಾರ ಯಶಸ್ವಿಯಾಗಿ ನೋಂದಾಯಿಸಲಾಗಿದೆ!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "ಮಾಡಬೇಕಾದ ಕೆಲಸಗಳ ಪಟ್ಟಿ",
+                "addNewTask": "ಹೊಸ ಕೆಲಸ ಸೇರಿಸಿ...",
+                "noTasksYet": "ಇನ್ನೂ ಕೆಲಸಗಳಿಲ್ಲ. ನಿಮ್ಮ ಮೊದಲ ಕೆಲಸ ಸೇರಿಸಿ.",
+                "upcomingTasks": "ಬಾಕಿ ಕೆಲಸಗಳು",
+                "completedTasks": "ಪೂರ್ಣಗೊಂಡ ಕೆಲಸಗಳು",
+
+                "profileSaved": "ಪ್ರೊಫೈಲ್ ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ!",
+                "yourProfile": "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್",
+                "fullName": "ಪೂರ್ಣ ಹೆಸರು",
+                "phoneNumber": "ಫೋನ್ ಸಂಖ್ಯೆ",
+                "saveProfile": "ಪ್ರೊಫೈಲ್ ಉಳಿಸಿ",
+                "logout": "ಲಾಗ್ ಔಟ್",
+                "annadaTagline": "🌾 ಅನ್ನದಾತ - ಭವಿಷ್ಯದ ಕೊಯ್ಲು",
+
+
+                  "latestNews": "ಇತ್ತೀಚಿನ ಸುದ್ದಿ",
+                  "noNewsAvailable": "ಯಾವುದೇ ಸುದ್ದಿ ಲಭ್ಯವಿಲ್ಲ.",
+                  "noDescriptionAvailable": "ವಿವರಣೆ ಲಭ್ಯವಿಲ್ಲ.",
+                  "noTitle": "ಶೀರ್ಷಿಕೆ ಇಲ್ಲ",
+                  "noSubtitle": "ಉಪಶೀರ್ಷಿಕೆ ಇಲ್ಲ",
+                  "noContentAvailable": "ವಿಷಯ ಲಭ್ಯವಿಲ್ಲ."
+
+
+
+
+
+
+
+
+}

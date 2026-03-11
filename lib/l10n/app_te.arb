@@ -1,0 +1,270 @@
+{
+  "appTitle": "అన్నదా",
+  "selectLanguage": "మీ భాషను ఎంచుకోండి",
+  "continueButton": "కొనసాగించండి",
+  "login": "లాగిన్",
+  "email": "ఇమెయిల్",
+  "password": "పాస్‌వర్డ్",
+  "or": "లేదా",
+  "signInWithGoogle": "గూగుల్‌తో సైన్ ఇన్ చేయండి",
+  "noAccountRegister": "ఖాతా లేదా? నమోదు చేయండి",
+  "chatbot": "చాట్‌బాట్",
+  "fertilizerCalculator": "ఎరువు గణకము",
+  "cropDetection": "పంట గుర్తింపు",
+  "weather": "వాతావరణం",
+  "yojna": "ప్రభుత్వ పథకాలు",
+  "tutorials": "పాఠాలు",
+  "home": "హోమ్",
+  "market": "మార్కెట్",
+  "community": "సమాజం",
+  "profile": "ప్రొఫైల్",
+  "welcome": "స్వాగతం",
+  "weatherTitle": "వాతావరణం",
+  "logout": "లాగౌట్",
+  "features": "లక్షణాలు",
+  "toDoList": "చేయవలసిన పనులు",
+  "updated": "నవీకరించబడింది",
+  "tapForecast": "5 రోజుల అంచనాకు ట్యాప్ చేయండి",
+  "forecastTitle": "5 రోజుల వాతావరణ అంచనా",
+  "forecastSubtitle": "అన్నదా ఏ ప్రదేశానికైనా ఖచ్చితమైన వాతావరణ అంచనాను అందిస్తుంది.",
+  "fetchingForecast": "అంచనా పొందుతోంది...",
+  "forecastUnavailable": "అంచనా అందుబాటులో లేదు.\nఇంటర్నెట్ లేదా స్థానం అనుమతి తనిఖీ చేయండి.",
+  "permissionRequired": "అనుమతి అవసరం",
+  "enableLocationWeather": "వాతావరణ సమాచారం కోసం స్థానం ప్రారంభించండి",
+  "locationUnavailable": "అందుబాటులో లేదు",
+  "weatherError": "వాతావరణాన్ని లోడ్ చేయలేకపోయింది",
+
+
+    "fertilizerCalculatorTitle": "ఎరువు గణకము",
+    "landArea": "భూమి విస్తీర్ణం",
+    "enterArea": "విస్తీర్ణం నమోదు చేయండి",
+    "acre": "ఎకరం",
+    "hectare": "హెక్టారు",
+    "selectCropSoil": "పంట మరియు మట్టి ఎంపిక",
+    "selectCrop": "పంటను ఎంచుకోండి",
+    "selectSoilType": "మట్టి రకం ఎంచుకోండి",
+    "growthStage": "వృద్ధి దశ",
+    "calculateFertilizer": "ఎరువు లెక్కించు",
+    "fertilizerRequirements": "ఎరువు అవసరాలు",
+    "cropType": "పంట రకం",
+    "soilType": "మట్టి రకం",
+    "growthStageLabel": "వృద్ధి దశ",
+    "nitrogenNeeded": "నైట్రోజన్ అవసరం",
+    "phosphorusNeeded": "ఫాస్ఫరస్ అవసరం",
+    "potassiumNeeded": "పొటాషియం అవసరం",
+    "recommendedFertilizers": "సిఫారసు చేసిన ఎరువులు",
+    "noFertilizerNeeded": "అదనపు ఎరువు అవసరం లేదు",
+
+    "crop_wheat": "గోధుమ",
+    "crop_rice": "బియ్యం",
+    "crop_corn": "మొక్కజొన్న",
+    "crop_soybean": "సోయాబీన్",
+    "crop_tomato": "టమోటా",
+    "crop_potato": "ఆలుగడ్డ",
+    "crop_carrot": "క్యారెట్",
+    "crop_onion": "ఉల్లిపాయ",
+    "crop_cabbage": "కాబేజీ",
+    "crop_chili": "మిరపకాయ",
+    "crop_banana": "అరటి",
+    "crop_apple": "ఆపిల్",
+
+    "soil_sandy": "ఇసుక మట్టి",
+    "soil_clay": "బంక మట్టి",
+    "soil_loam": "లోమ్ మట్టి",
+    "soil_silty": "సిల్ట్ మట్టి",
+    "soil_peaty": "పీట మట్టి",
+    "soil_chalky": "చాక్ మట్టి",
+    "soil_saline": "ఉప్పు మట్టి",
+    "soil_red": "ఎర్ర మట్టి",
+    "soil_black": "నల్ల మట్టి",
+
+    "stage_seedling": "మొక్క దశ",
+    "stage_vegetative": "ఆకు దశ",
+    "stage_flowering": "పువ్వు దశ",
+    "stage_fruiting": "ఫలం దశ",
+    "stage_maturity": "పక్వ దశ",
+    "stage_harvesting": "పంట కోత",
+
+
+      "cropDetectionTitle": "పంట గుర్తింపు",
+      "tapToSelectImage": "చిత్రాన్ని ఎంచుకోవడానికి ట్యాప్ చేయండి",
+      "uploadImage": "చిత్రాన్ని అప్‌లోడ్ చేయండి",
+      "takePhoto": "ఫోటో తీయండి",
+      "enterCropType": "పంట రకం నమోదు చేయండి",
+      "uploadAndAnalyze": "అప్‌లోడ్ చేసి విశ్లేషించండి",
+      "analyzing": "విశ్లేషణ జరుగుతోంది...",
+      "noImageSelected": "ఏ చిత్రం ఎంపిక చేయలేదు.",
+      "analysisError": "చిత్ర విశ్లేషణలో లోపం",
+
+
+        "annadaAssistance": "అన్నదా సహాయం",
+        "farmerFaqs": "💬 రైతుల తరచుగా అడిగే ప్రశ్నలు:",
+        "faq1": "టమాటాకు ఉత్తమ ఎరువు ఏమిటి?",
+        "faq2": "పంటలపై పురుగుల దాడిని ఎలా నివారించాలి?",
+        "faq3": "వేసవికాలానికి అనుకూలమైన పంటలు ఏవి?",
+        "faq4": "వ్యవసాయంలో నీటిని ఎలా ఆదా చేయాలి?",
+        "faq5": "వరి సాగుకు సరైన మట్టి pH ఎంత ఉండాలి?",
+        "analyzingImage": "చిత్రం విశ్లేషించబడుతోంది...",
+        "thinking": "ఆలోచిస్తోంది...",
+        "noResponseReceived": "⚠️ స్పందన రాలేదు.",
+        "errorFetchingResponse": "⚠️ స్పందన పొందడంలో లోపం.",
+        "failedToLoadImage": "చిత్రాన్ని లోడ్ చేయడం విఫలమైంది",
+        "uploading": "అప్‌లోడ్ అవుతోంది",
+
+
+          "governmentSchemesTitle": "ప్రభుత్వ పథకాలు",
+          "applyNow": "ఇప్పుడే దరఖాస్తు చేయండి",
+
+          "pmKisanName": "ప్రధాన్ మంత్రి కిసాన్ సమ్మాన్ నిధి (PM-KISAN)",
+          "pmKisanDesc": "చిన్న మరియు సన్నకారు రైతులకు సంవత్సరానికి ₹6,000 మూడు విడతల్లో అందిస్తుంది.",
+
+          "pmfbName": "ప్రధాన్ మంత్రి ఫసల్ బీమా యోజన (PMFBY)",
+          "pmfbDesc": "ప్రకృతి విపత్తులు మరియు పురుగుల దాడి వల్ల పంట నష్టానికి బీమా అందిస్తుంది.",
+
+          "kccName": "కిసాన్ క్రెడిట్ కార్డ్ (KCC) పథకం",
+          "kccDesc": "వ్యవసాయ ఖర్చులకు తక్కువ వడ్డీ రుణం అందిస్తుంది.",
+
+          "soilHealthName": "మట్టి ఆరోగ్య కార్డు పథకం",
+          "soilHealthDesc": "మట్టిలో పోషక విలువలు తెలుసుకునేందుకు ఉచిత పరీక్ష అందిస్తుంది.",
+
+          "pmksyName": "ప్రధాన్ మంత్రి కృషి సించాయీ యోజన (PMKSY)",
+          "pmksyDesc": "నీటి సంరక్షణ ద్వారా సాగు నీరు అందిస్తుంది.",
+
+          "enamName": "ఈ-నామ్ (జాతీయ వ్యవసాయ మార్కెట్)",
+          "enamDesc": "రైతులు దేశవ్యాప్తంగా పంట అమ్మేందుకు సహాయపడే డిజిటల్ వేదిక.",
+
+          "rkvyName": "రాష్ట్రియ కృషి వికాస్ యోజన (RKVY)",
+          "rkvyDesc": "వ్యవసాయ ప్రాజెక్టులకు ఆర్థిక సహాయం అందిస్తుంది.",
+
+          "pkvyName": "పరంపరాగత కృషి వికాస్ యోజన (PKVY)",
+          "pkvyDesc": "సేంద్రియ వ్యవసాయాన్ని ప్రోత్సహిస్తుంది.",
+
+          "dedsName": "డెయిరీ ఎంటర్‌ప్రెన్యూర్షిప్ డెవలప్‌మెంట్ స్కీమ్ (DEDS)",
+          "dedsDesc": "పాలు ఉత్పత్తి యూనిట్ల స్థాపనకు సబ్సిడీ అందిస్తుంది.",
+
+
+            "farmersGuideTitle": "రైతు మార్గదర్శిని",
+            "allGuides": "అన్ని మార్గదర్శకాలు",
+            "appHelp": "యాప్ సహాయం",
+            "farmingTips": "వ్యవసాయ చిట్కాలు",
+            "searchTutorialHint": "వ్యవసాయ మార్గదర్శకాలను వెతకండి...",
+            "noTutorialsFound": "ఏ మార్గదర్శకం లభించలేదు",
+            "tryDifferentSearch": "ఇతర పదాలు ప్రయత్నించండి",
+            "tapToWatchVideo": "వీడియో చూడటానికి ట్యాప్ చేయండి",
+            "linkError": "లింక్ తెరవలేకపోయాము",
+
+            "tutorialGettingStartedTitle": "📱 అన్నదా యాప్ ప్రారంభం",
+            "tutorialGettingStartedContent": "అన్నదా యాప్‌లోని అన్ని వ్యవసాయ సాధనాలను ఉపయోగించడం నేర్చుకోండి.",
+
+            "tutorialCropDetectionTitle": "🌾 పంట గుర్తింపు ఫీచర్",
+            "tutorialCropDetectionContent": "పంట ఫోటో అప్లోడ్ చేసి వ్యాధి నిర్ధారణ పొందండి.",
+
+            "tutorialFertilizerTitle": "🧮 ఎరువు కాల్క్యులేటర్ ఉపయోగం",
+            "tutorialFertilizerContent": "పంట, నేల మరియు భూభాగాన్ని నమోదు చేసి ఎరువు అవసరం తెలుసుకోండి.",
+
+            "tutorialAssistantTitle": "🤖 అన్నదా సహాయకుడితో చాట్ చేయండి",
+            "tutorialAssistantContent": "వ్యవసాయ ప్రశ్నలు అడిగి తక్షణ సలహా పొందండి.",
+
+            "tutorialMarketTitle": "🗺️ సమీప మార్కెట్లను కనుగొనండి",
+            "tutorialMarketContent": "మీ ప్రాంతంలోని వ్యవసాయ మార్కెట్లను కనుగొనండి.",
+
+            "tutorialOrganicTitle": "🌱 సేంద్రియ వ్యవసాయ మార్గదర్శిని",
+            "tutorialOrganicContent": "రసాయన రహిత సహజ వ్యవసాయం గురించి తెలుసుకోండి.",
+
+            "tutorialIrrigationTitle": "💧 స్మార్ట్ నీటిపారుదల పద్ధతులు",
+            "tutorialIrrigationContent": "డ్రిప్ మరియు స్ప్రింక్లర్ పద్ధతులు నేర్చుకోండి.",
+
+            "tutorialIPMTitle": "🐛 సమగ్ర కీటక నిర్వహణ",
+            "tutorialIPMContent": "రసాయనాల కంటే ముందు సహజ పద్ధతులు ఉపయోగించండి.",
+
+            "tutorialRotationTitle": "🌾 పంటల మార్పిడి వ్యూహాలు",
+            "tutorialRotationContent": "నేల ఆరోగ్యం కోసం ప్రతి సంవత్సరం పంట మార్చండి.",
+
+            "tutorialSoilTitle": "🧪 నేల ఆరోగ్య నిర్వహణ",
+            "tutorialSoilContent": "నేల పరీక్ష చేసి పోషక సమతుల్యతను కాపాడండి.",
+
+            "tutorialFinanceTitle": "📊 వ్యవసాయ ఆర్థిక నిర్వహణ",
+            "tutorialFinanceContent": "ఖర్చులు మరియు ఆదాయాన్ని ట్రాక్ చేయండి.",
+
+            "tutorialMechanizationTitle": "🚜 వ్యవసాయ యాంత్రీకరణ మార్గదర్శిని",
+            "tutorialMechanizationContent": "ఫార్మ్ పరిమాణానికి అనుగుణంగా యంత్రాలు ఎంచుకోండి.",
+
+            "tutorialWeatherTitle": "🌤️ వాతావరణ ఆధారిత వ్యవసాయం",
+            "tutorialWeatherContent": "వాతావరణ అంచనాల ప్రకారం పంటలు ప్రణాళిక చేయండి.",
+
+            "tutorialWheatVideoTitle": "📽️ ఆధునిక గోధుమ సాగు పద్ధతులు",
+            "tutorialTomatoVideoTitle": "📽️ టమోటా సంరక్షణ మరియు కత్తిరింపు",
+            "tutorialRotationVideoTitle": "📽️ పంట మార్పిడి ప్రయోజనాలు",
+
+            "tutorialPestImageTitle": "📷 కీటక గుర్తింపు చార్ట్",
+            "tutorialSoilImageTitle": "📷 నేల రకాల లక్షణాలు",
+            "tutorialIrrigationImageTitle": "📷 నీటిపారుదల పద్ధతుల పోలిక",
+
+
+              "nearnessOfMarket": "మార్కెట్ సమీపం",
+              "nearbyMarkets": "సమీప మార్కెట్లు",
+              "locateFertilizerShops": "ఎరువుల దుకాణాలను కనుగొనండి",
+              "searchNearbyMarket": "సమీప మార్కెట్‌ను కనుగొనండి",
+              "localRecyclingAgencies": "స్థానిక రీసైక్లింగ్ సంస్థలు",
+
+
+
+
+                "communityTitle": "అన్నదాత సమూహం 🌾",
+                "justNow": "ఇప్పుడే",
+                "minutesAgo": "{count} నిమిషాల క్రితం",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} గంటల క్రితం",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} రోజుల క్రితం",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "మీ పొలంలో ఏమి జరుగుతోంది?",
+                "post": "పోస్ట్ చేయండి",
+                "comments": "వ్యాఖ్యలు",
+                "noCommentsYet": "ఇంకా వ్యాఖ్యలు లేవు 🌾",
+                "writeReply": "సమాధానం రాయండి...",
+                "noPostsYet": "ఇంకా పోస్టులు లేవు 🌾",
+                "delete": "తొలగించు",
+                "farmer": "రైతు",
+
+                "createFarmerAccount": "మీ రైతు ఖాతాను సృష్టించండి",
+                "email": "ఇమెయిల్",
+                "emailRequired": "ఇమెయిల్ అవసరం",
+                "password": "పాస్‌వర్డ్",
+                "passwordMinLength": "పాస్‌వర్డ్ కనీసం 6 అక్షరాలు ఉండాలి",
+                "register": "నమోదు చేయండి",
+                "empoweringFarmers": "🌾 AI తో రైతులను శక్తివంతం చేస్తున్నాము",
+                "userRegisteredSuccess": "✅ వినియోగదారు విజయవంతంగా నమోదు అయ్యారు!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "చేయవలసిన పనుల జాబితా",
+                "addNewTask": "కొత్త పనిని జోడించండి...",
+                "noTasksYet": "ఇంకా పనులు లేవు. మీ మొదటి పనిని జోడించండి.",
+                "upcomingTasks": "రాబోయే పనులు",
+                "completedTasks": "పూర్తైన పనులు",
+
+                "profileSaved": "ప్రొఫైల్ విజయవంతంగా సేవ్ చేయబడింది!",
+                "yourProfile": "మీ ప్రొఫైల్",
+                "fullName": "పూర్తి పేరు",
+                "phoneNumber": "ఫోన్ నంబర్",
+                "saveProfile": "ప్రొఫైల్ సేవ్ చేయండి",
+                "logout": "లాగ్ అవుట్",
+                "annadaTagline": "🌾 అన్నదాత - భవిష్యత్తు పంట",
+
+
+                  "latestNews": "తాజా వార్తలు",
+                  "noNewsAvailable": "వార్తలు అందుబాటులో లేవు.",
+                  "noDescriptionAvailable": "వివరణ అందుబాటులో లేదు.",
+                  "noTitle": "శీర్షిక లేదు",
+                  "noSubtitle": "ఉపశీర్షిక లేదు",
+                  "noContentAvailable": "కంటెంట్ అందుబాటులో లేదు."
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,269 @@
+{
+  "appTitle": "अन्नदा",
+  "selectLanguage": "अपनी भाषा चुनें",
+  "continueButton": "जारी रखें",
+  "login": "लॉगिन",
+  "email": "ईमेल",
+  "password": "पासवर्ड",
+  "or": "या",
+  "signInWithGoogle": "गूगल से साइन इन करें",
+  "noAccountRegister": "खाता नहीं है? पंजीकरण करें",
+  "chatbot": "चैटबॉट",
+  "fertilizerCalculator": "उर्वरक कैलकुलेटर",
+  "cropDetection": "फसल पहचान",
+  "weather": "मौसम",
+  "yojna": "सरकारी योजनाएँ",
+  "tutorials": "ट्यूटोरियल",
+  "home": "होम",
+  "market": "बाजार",
+  "community": "समुदाय",
+  "profile": "प्रोफाइल",
+  "welcome": "स्वागत है",
+  "weatherTitle": "मौसम",
+  "logout": "लॉगआउट",
+  "features": "विशेषताएँ",
+  "toDoList": "कार्य सूची",
+  "updated": "अपडेट किया गया",
+  "tapForecast": "5-दिवसीय पूर्वानुमान के लिए टैप करें",
+  "forecastTitle": "5-दिवसीय मौसम पूर्वानुमान",
+  "forecastSubtitle": "अन्नदा किसी भी स्थान के लिए त्रुटिरहित मौसम पूर्वानुमान सुनिश्चित करता है।",
+  "fetchingForecast": "पूर्वानुमान प्राप्त किया जा रहा है...",
+  "forecastUnavailable": "पूर्वानुमान उपलब्ध नहीं है।\nइंटरनेट या स्थान की अनुमति जांचें।",
+  "permissionRequired": "अनुमति आवश्यक",
+  "enableLocationWeather": "मौसम जानकारी के लिए स्थान सक्षम करें",
+  "locationUnavailable": "उपलब्ध नहीं",
+  "weatherError": "मौसम लोड नहीं हो सका",
+
+    "fertilizerCalculatorTitle": "उर्वरक कैलकुलेटर",
+    "landArea": "भूमि क्षेत्र",
+    "enterArea": "क्षेत्र दर्ज करें",
+    "acre": "एकड़",
+    "hectare": "हेक्टेयर",
+    "selectCropSoil": "फसल और मिट्टी चुनें",
+    "selectCrop": "फसल चुनें",
+    "selectSoilType": "मिट्टी का प्रकार चुनें",
+    "growthStage": "विकास चरण",
+    "calculateFertilizer": "उर्वरक की गणना करें",
+    "fertilizerRequirements": "उर्वरक आवश्यकताएँ",
+    "cropType": "फसल प्रकार",
+    "soilType": "मिट्टी का प्रकार",
+    "growthStageLabel": "विकास चरण",
+    "nitrogenNeeded": "नाइट्रोजन आवश्यक",
+    "phosphorusNeeded": "फॉस्फोरस आवश्यक",
+    "potassiumNeeded": "पोटेशियम आवश्यक",
+    "recommendedFertilizers": "अनुशंसित उर्वरक",
+    "noFertilizerNeeded": "अतिरिक्त उर्वरक की आवश्यकता नहीं है",
+
+    "crop_wheat": "गेहूं",
+    "crop_rice": "चावल",
+    "crop_corn": "मक्का",
+    "crop_soybean": "सोयाबीन",
+    "crop_tomato": "टमाटर",
+    "crop_potato": "आलू",
+    "crop_carrot": "गाजर",
+    "crop_onion": "प्याज",
+    "crop_cabbage": "पत्ता गोभी",
+    "crop_chili": "मिर्च",
+    "crop_banana": "केला",
+    "crop_apple": "सेब",
+
+    "soil_sandy": "रेतीली",
+    "soil_clay": "चिकनी",
+    "soil_loam": "दोमट",
+    "soil_silty": "गादयुक्त",
+    "soil_peaty": "पीटयुक्त",
+    "soil_chalky": "चूना युक्त",
+    "soil_saline": "लवणीय",
+    "soil_red": "लाल मिट्टी",
+    "soil_black": "काली मिट्टी",
+
+    "stage_seedling": "अंकुरण",
+    "stage_vegetative": "वनस्पतिक",
+    "stage_flowering": "फूल अवस्था",
+    "stage_fruiting": "फलन अवस्था",
+    "stage_maturity": "परिपक्वता",
+    "stage_harvesting": "कटाई",
+
+
+      "cropDetectionTitle": "फसल पहचान",
+      "tapToSelectImage": "छवि चुनने के लिए टैप करें",
+      "uploadImage": "छवि अपलोड करें",
+      "takePhoto": "फोटो लें",
+      "enterCropType": "फसल का प्रकार दर्ज करें",
+      "uploadAndAnalyze": "अपलोड करें और विश्लेषण करें",
+      "analyzing": "विश्लेषण हो रहा है...",
+      "noImageSelected": "कोई छवि चयनित नहीं है।",
+      "analysisError": "छवि विश्लेषण में त्रुटि",
+
+
+        "annadaAssistance": "अन्नदा सहायता",
+        "farmerFaqs": "💬 किसान अक्सर पूछे जाने वाले प्रश्न:",
+        "faq1": "टमाटर के लिए सबसे अच्छा उर्वरक कौन सा है?",
+        "faq2": "फसलों पर कीट हमलों को कैसे रोकें?",
+        "faq3": "गर्मी के मौसम में कौन सी फसलें उपयुक्त हैं?",
+        "faq4": "खेती में पानी कैसे बचाएं?",
+        "faq5": "धान की खेती के लिए आदर्श मिट्टी का pH क्या है?",
+        "analyzingImage": "छवि का विश्लेषण किया जा रहा है...",
+        "thinking": "सोच रहा है...",
+        "noResponseReceived": "⚠️ कोई उत्तर प्राप्त नहीं हुआ।",
+        "errorFetchingResponse": "⚠️ उत्तर प्राप्त करने में त्रुटि।",
+        "failedToLoadImage": "छवि लोड करने में विफल",
+        "uploading": "अपलोड हो रहा है",
+
+        
+          "governmentSchemesTitle": "सरकारी योजनाएं",
+          "applyNow": "अभी आवेदन करें",
+
+          "pmKisanName": "प्रधानमंत्री किसान सम्मान निधि (PM-KISAN)",
+          "pmKisanDesc": "छोटे और सीमांत किसानों को प्रति वर्ष ₹6,000 तीन किश्तों में प्रदान करती है।",
+
+          "pmfbName": "प्रधानमंत्री फसल बीमा योजना (PMFBY)",
+          "pmfbDesc": "प्राकृतिक आपदा, कीट और रोग से फसल नुकसान के लिए बीमा प्रदान करती है।",
+
+          "kccName": "किसान क्रेडिट कार्ड (KCC) योजना",
+          "kccDesc": "कृषि खर्चों के लिए कम ब्याज दर पर अल्पकालिक ऋण प्रदान करती है।",
+
+          "soilHealthName": "मृदा स्वास्थ्य कार्ड योजना",
+          "soilHealthDesc": "मिट्टी की गुणवत्ता और पोषक तत्वों की जांच के लिए निःशुल्क परीक्षण सुविधा देती है।",
+
+          "pmksyName": "प्रधानमंत्री कृषि सिंचाई योजना (PMKSY)",
+          "pmksyDesc": "बेहतर जल संरक्षण और प्रबंधन के माध्यम से सिंचाई सुविधा प्रदान करती है।",
+
+          "enamName": "ई-नाम (राष्ट्रीय कृषि बाजार)",
+          "enamDesc": "डिजिटल प्लेटफॉर्म जो किसानों को देशभर में अपनी उपज बेचने में मदद करता है।",
+
+          "rkvyName": "राष्ट्रीय कृषि विकास योजना (RKVY)",
+          "rkvyDesc": "कृषि परियोजनाओं के लिए वित्तीय सहायता प्रदान करती है।",
+
+          "pkvyName": "परंपरागत कृषि विकास योजना (PKVY)",
+          "pkvyDesc": "जैविक खेती को बढ़ावा देने के लिए प्रशिक्षण और वित्तीय सहायता प्रदान करती है।",
+
+          "dedsName": "डेयरी उद्यमिता विकास योजना (DEDS)",
+          "dedsDesc": "डेयरी फार्म और दुग्ध उत्पादन इकाइयों के लिए सब्सिडी प्रदान करती है।",
+
+
+            "farmersGuideTitle": "किसान मार्गदर्शिका",
+            "allGuides": "सभी मार्गदर्शिकाएँ",
+            "appHelp": "ऐप सहायता",
+            "farmingTips": "खेती सुझाव",
+            "searchTutorialHint": "खेती गाइड, ऐप सहायता खोजें...",
+            "noTutorialsFound": "कोई मार्गदर्शिका नहीं मिली",
+            "tryDifferentSearch": "अन्य शब्दों से खोजें",
+            "tapToWatchVideo": "वीडियो देखने के लिए टैप करें",
+            "linkError": "लिंक नहीं खुल सका",
+
+            "tutorialGettingStartedTitle": "📱 अन्नदा ऐप शुरू करने की गाइड",
+            "tutorialGettingStartedContent": "अन्नदा ऐप की सभी सुविधाओं का उपयोग करना सीखें।",
+
+            "tutorialCropDetectionTitle": "🌾 फसल पहचान सुविधा कैसे उपयोग करें",
+            "tutorialCropDetectionContent": "फसल की फोटो अपलोड करें और रोग पहचान प्राप्त करें।",
+
+            "tutorialFertilizerTitle": "🧮 उर्वरक कैलकुलेटर उपयोग",
+            "tutorialFertilizerContent": "फसल, मिट्टी और क्षेत्र दर्ज कर उर्वरक आवश्यकता जानें।",
+
+            "tutorialAssistantTitle": "🤖 अन्नदा सहायक से चैट करें",
+            "tutorialAssistantContent": "खेती से जुड़े प्रश्न पूछें और तुरंत सलाह पाएं।",
+
+            "tutorialMarketTitle": "🗺️ नजदीकी बाजार खोजें",
+            "tutorialMarketContent": "अपने क्षेत्र के कृषि बाजार खोजें।",
+
+            "tutorialOrganicTitle": "🌱 जैविक खेती की पूरी गाइड",
+            "tutorialOrganicContent": "रसायन मुक्त प्राकृतिक खेती के सिद्धांत सीखें।",
+
+            "tutorialIrrigationTitle": "💧 स्मार्ट सिंचाई तकनीक",
+            "tutorialIrrigationContent": "ड्रिप और स्प्रिंकलर सिंचाई के तरीके जानें।",
+
+            "tutorialIPMTitle": "🐛 एकीकृत कीट प्रबंधन",
+            "tutorialIPMContent": "रासायनिक कीटनाशक से पहले प्राकृतिक उपाय अपनाएं।",
+
+            "tutorialRotationTitle": "🌾 फसल चक्र रणनीति",
+            "tutorialRotationContent": "मिट्टी की उर्वरता बढ़ाने हेतु फसल चक्र अपनाएं।",
+
+            "tutorialSoilTitle": "🧪 मिट्टी स्वास्थ्य प्रबंधन",
+            "tutorialSoilContent": "मिट्टी परीक्षण और पोषण संतुलन बनाए रखें।",
+
+            "tutorialFinanceTitle": "📊 कृषि वित्त प्रबंधन",
+            "tutorialFinanceContent": "खर्च और आय का सही प्रबंधन करें।",
+
+            "tutorialMechanizationTitle": "🚜 कृषि यंत्रीकरण गाइड",
+            "tutorialMechanizationContent": "फार्म के आकार अनुसार मशीनरी चुनें।",
+
+            "tutorialWeatherTitle": "🌤️ मौसम आधारित खेती",
+            "tutorialWeatherContent": "मौसम पूर्वानुमान के अनुसार खेती की योजना बनाएं।",
+
+            "tutorialWheatVideoTitle": "📽️ आधुनिक गेहूं खेती तकनीक",
+            "tutorialTomatoVideoTitle": "📽️ टमाटर देखभाल और छंटाई",
+            "tutorialRotationVideoTitle": "📽️ फसल चक्र के लाभ",
+
+            "tutorialPestImageTitle": "📷 कीट पहचान चार्ट",
+            "tutorialSoilImageTitle": "📷 मिट्टी के प्रकार",
+            "tutorialIrrigationImageTitle": "📷 सिंचाई प्रणाली तुलना",
+
+
+              "nearnessOfMarket": "बाजार की निकटता",
+              "nearbyMarkets": "नजदीकी बाजार",
+              "locateFertilizerShops": "उर्वरक की दुकान खोजें",
+              "searchNearbyMarket": "नजदीकी बाजार खोजें",
+              "localRecyclingAgencies": "स्थानीय रीसाइक्लिंग एजेंसियाँ",
+
+
+
+
+                "communityTitle": "अन्नदाता समुदाय 🌾",
+                "justNow": "अभी अभी",
+                "minutesAgo": "{count} मिनट पहले",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} घंटे पहले",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} दिन पहले",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "आपके खेत में क्या हो रहा है?",
+                "post": "पोस्ट करें",
+                "comments": "टिप्पणियाँ",
+                "noCommentsYet": "अभी तक कोई टिप्पणी नहीं 🌾",
+                "writeReply": "उत्तर लिखें...",
+                "noPostsYet": "अभी तक कोई पोस्ट नहीं 🌾",
+                "delete": "हटाएँ",
+                "farmer": "किसान",
+
+                "createFarmerAccount": "अपना किसान खाता बनाएं",
+                "email": "ईमेल",
+                "emailRequired": "ईमेल आवश्यक है",
+                "password": "पासवर्ड",
+                "passwordMinLength": "पासवर्ड कम से कम 6 अक्षरों का होना चाहिए",
+                "register": "पंजीकरण करें",
+                "empoweringFarmers": "🌾 एआई के साथ किसानों को सशक्त बनाना",
+                "userRegisteredSuccess": "✅ उपयोगकर्ता सफलतापूर्वक पंजीकृत हुआ!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "कार्य सूची",
+                "addNewTask": "नया कार्य जोड़ें...",
+                "noTasksYet": "अभी तक कोई कार्य नहीं है। अपना पहला कार्य जोड़ें।",
+                "upcomingTasks": "आगामी कार्य",
+                "completedTasks": "पूर्ण किए गए कार्य",
+
+                "profileSaved": "प्रोफ़ाइल सफलतापूर्वक सहेजी गई!",
+                "yourProfile": "आपकी प्रोफ़ाइल",
+                "fullName": "पूरा नाम",
+                "phoneNumber": "फ़ोन नंबर",
+                "saveProfile": "प्रोफ़ाइल सहेजें",
+                "logout": "लॉग आउट",
+                "annadaTagline": "🌾 अन्नदाता - भविष्य की खेती",
+
+
+                  "latestNews": "ताज़ा समाचार",
+                  "noNewsAvailable": "कोई समाचार उपलब्ध नहीं है।",
+                  "noDescriptionAvailable": "कोई विवरण उपलब्ध नहीं है।",
+                  "noTitle": "कोई शीर्षक नहीं",
+                  "noSubtitle": "कोई उपशीर्षक नहीं",
+                  "noContentAvailable": "कोई सामग्री उपलब्ध नहीं है।"
+
+
+
+
+
+
+
+
+}

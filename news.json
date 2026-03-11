@@ -1,0 +1,98 @@
+{
+  "Tomato": [
+    {
+      "title": "Tomato Prices Soar Across India",
+      "subtitle": "Supply shortages lead to rising costs.",
+      "content": "Due to excessive rainfall in major tomato-producing regions, supply has drastically fallen, causing retail prices to skyrocket across multiple states. Consumers are urged to switch to alternatives while the situation stabilizes."
+    },
+    {
+      "title": "Farmers Introduce Disease-Resistant Tomatoes",
+      "subtitle": "A breakthrough in crop protection.",
+      "content": "A new hybrid tomato variety developed by agricultural scientists shows promise in resisting common fungal infections, helping farmers reduce crop loss and chemical usage."
+    }
+  ],
+  "Potato": [
+    {
+      "title": "Cold Storage Boosts Potato Supply",
+      "subtitle": "Smart storage means better prices.",
+      "content": "With the expansion of cold storage infrastructure, farmers are able to store potatoes longer, allowing them to sell produce when prices are favorable rather than flooding the market at harvest time."
+    },
+    {
+      "title": "Innovative Techniques Improve Potato Yield",
+      "subtitle": "AI meets agriculture.",
+      "content": "Several startups are providing AI-powered solutions to farmers, offering soil health predictions and optimized watering schedules that have improved potato yields by up to 20%."
+    }
+  ],
+  "Wheat": [
+    {
+      "title": "Wheat Export Hits Record High",
+      "subtitle": "A global demand boom.",
+      "content": "Indian wheat exports reached an all-time high this season, driven by global shortages and favorable government policies, bringing significant profits to local farmers."
+    },
+    {
+      "title": "Climate Change Affects Wheat Production",
+      "subtitle": "Farmers adapt to shifting seasons.",
+      "content": "Rising temperatures and unpredictable rains have forced wheat farmers to alter sowing times and adopt drought-resistant seeds to maintain yields."
+    }
+  ],
+  "Mango": [
+    {
+      "title": "Mango Season Brings Cheer to Farmers",
+      "subtitle": "A sweet harvest in full swing.",
+      "content": "Popular varieties like Alphonso and Kesar have seen a bountiful harvest this year, allowing mango farmers to reap profits as demand soars in domestic and international markets."
+    },
+    {
+      "title": "Mango Exports to Middle East Rise",
+      "subtitle": "Global love for Indian mangoes grows.",
+      "content": "The Gulf countries remain top consumers of Indian mangoes, with this year seeing a 15% increase in exports from states like Maharashtra and Andhra Pradesh."
+    }
+  ],
+  "Rice": [
+    {
+      "title": "Bumper Rice Harvest Expected This Year",
+      "subtitle": "Good rains, better yield.",
+      "content": "Favorable monsoon patterns have helped ensure sufficient water for paddy fields, resulting in a projected record harvest that could stabilize rice prices nationwide."
+    },
+    {
+      "title": "Government Promotes Organic Rice Farming",
+      "subtitle": "Eco-friendly rice gains ground.",
+      "content": "Under the new agricultural initiative, farmers are receiving incentives to switch to organic rice farming, with the aim to improve soil health and reduce chemical residues in food."
+    }
+  ],
+  "Cabbage": [
+    {
+      "title": "Cabbage Prices Drop in Winter",
+      "subtitle": "Surplus harvest floods the market.",
+      "content": "An increase in acreage and a cold wave in northern India led to higher cabbage yields this winter, causing prices to fall sharply in both wholesale and retail markets."
+    },
+    {
+      "title": "Cabbage Farmers Adopt Drip Irrigation",
+      "subtitle": "Efficient water use for leafy crops.",
+      "content": "To tackle water scarcity, many farmers have installed drip irrigation systems in their cabbage fields, reducing water use by 40% and improving plant health."
+    }
+  ],
+  "Cauliflower": [
+    {
+      "title": "High Demand for Cauliflower in Urban Markets",
+      "subtitle": "Cauliflower goes gourmet.",
+      "content": "Urban demand for cauliflower has surged, especially among health-conscious consumers and restaurants experimenting with new plant-based dishes, leading to higher market prices."
+    },
+    {
+      "title": "Pest Attacks Reduce Cauliflower Yield",
+      "subtitle": "Insects threaten crop health.",
+      "content": "Several districts have reported pest outbreaks in cauliflower crops. Experts recommend adopting integrated pest management (IPM) practices to minimize losses."
+    }
+  ],
+  "Grapes": [
+    {
+      "title": "Maharashtra Leads in Grape Production",
+      "subtitle": "Nashik tops the charts again.",
+      "content": "With excellent weather conditions and modern farming techniques, Nashik has once again emerged as the leading grape-producing district, contributing to over 50% of the national output."
+    },
+    {
+      "title": "Grapes Used in Wine Production Surge",
+      "subtitle": "Wine industry boosts farmer income.",
+      "content": "More farmers are tying up with wineries to supply grapes for wine production, which provides them better prices and predictable contracts throughout the season."
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "appTitle": "অন্নদা",
+  "selectLanguage": "আপোনাৰ ভাষা বাছক",
+  "continueButton": "আগবাঢ়ক",
+  "login": "লগিন",
+  "email": "ইমেইল",
+  "password": "পাছৱৰ্ড",
+  "or": "অথবা",
+  "signInWithGoogle": "গুগলৰে সাইন ইন কৰক",
+  "noAccountRegister": "একাউণ্ট নাই? নিবন্ধন কৰক",
+  "chatbot": "চেটবট",
+  "fertilizerCalculator": "সাৰ গণক",
+  "cropDetection": "ফচল চিনাক্তকৰণ",
+  "weather": "বতৰ",
+  "yojna": "চৰকাৰী আঁচনি",
+  "tutorials": "পাঠসমূহ",
+  "home": "মুখ্য পৃষ্ঠা",
+  "market": "বজাৰ",
+  "community": "সম্প্ৰদায়",
+  "profile": "প্ৰফাইল",
+  "welcome": "স্বাগতম",
+  "weatherTitle": "বতৰ",
+  "logout": "লগআউট",
+  "features": "বিশেষত্বসমূহ",
+  "toDoList": "কৰিবলগীয়া কাম",
+  "updated": "আপডেট কৰা হৈছে",
+  "tapForecast": "৫ দিনৰ পূৰ্বানুমানৰ বাবে টেপ কৰক",
+  "forecastTitle": "৫ দিনৰ বতৰ পূৰ্বানুমান",
+  "forecastSubtitle": "অন্নদা যিকোনো ঠাইৰ বাবে সঠিক বতৰ পূৰ্বানুমান নিশ্চিত কৰে।",
+  "fetchingForecast": "পূৰ্বানুমান আনিছে...",
+  "forecastUnavailable": "পূৰ্বানুমান উপলব্ধ নহয়।\nইণ্টাৰনেট বা অৱস্থান অনুমতি পৰীক্ষা কৰক।",
+  "permissionRequired": "অনুমতি প্ৰয়োজন",
+  "enableLocationWeather": "বতৰ তথ্যৰ বাবে অৱস্থান সক্ৰিয় কৰক",
+  "locationUnavailable": "উপলব্ধ নহয়",
+  "weatherError": "বতৰ লোড কৰিব পৰা নগ'ল",
+
+
+    "fertilizerCalculatorTitle": "সাৰ গণক",
+    "landArea": "মাটিৰ পৰিমাণ",
+    "enterArea": "পৰিমাণ লিখক",
+    "acre": "একৰ",
+    "hectare": "হেক্টৰ",
+    "selectCropSoil": "শস্য আৰু মাটি বাছনি কৰক",
+    "selectCrop": "শস্য বাছনি কৰক",
+    "selectSoilType": "মাটিৰ ধৰণ বাছনি কৰক",
+    "growthStage": "বৃদ্ধি স্তৰ",
+    "calculateFertilizer": "সাৰ গণনা কৰক",
+    "fertilizerRequirements": "সাৰৰ প্ৰয়োজনীয়তা",
+    "cropType": "শস্যৰ ধৰণ",
+    "soilType": "মাটিৰ ধৰণ",
+    "growthStageLabel": "বৃদ্ধি স্তৰ",
+    "nitrogenNeeded": "নাইট্ৰজেন প্ৰয়োজন",
+    "phosphorusNeeded": "ফছফৰাছ প্ৰয়োজন",
+    "potassiumNeeded": "পটাছিয়াম প্ৰয়োজন",
+    "recommendedFertilizers": "প্ৰস্তাৱিত সাৰ",
+    "noFertilizerNeeded": "অতিৰিক্ত সাৰ প্ৰয়োজন নাই",
+
+    "crop_wheat": "গহুঁ",
+    "crop_rice": "চাউল",
+    "crop_corn": "মকাই",
+    "crop_soybean": "ছয়াবিন",
+    "crop_tomato": "টমেটো",
+    "crop_potato": "আলু",
+    "crop_carrot": "গাজৰ",
+    "crop_onion": "পিয়াঁজ",
+    "crop_cabbage": "বন্ধাকবি",
+    "crop_chili": "জলকীয়া",
+    "crop_banana": "কলা",
+    "crop_apple": "আপেল",
+
+    "soil_sandy": "বালুকাময় মাটি",
+    "soil_clay": "চিক্কণ মাটি",
+    "soil_loam": "দোআঁশ মাটি",
+    "soil_silty": "পলিমাটি",
+    "soil_peaty": "পিট মাটি",
+    "soil_chalky": "চক মাটি",
+    "soil_saline": "লবণীয় মাটি",
+    "soil_red": "ৰঙা মাটি",
+    "soil_black": "ক’লা মাটি",
+
+    "stage_seedling": "চারা অৱস্থা",
+    "stage_vegetative": "পাত বৃদ্ধি",
+    "stage_flowering": "ফুল অৱস্থা",
+    "stage_fruiting": "ফল অৱস্থা",
+    "stage_maturity": "পক্বতা",
+    "stage_harvesting": "কাটনি",
+
+
+      "cropDetectionTitle": "ফচল চিনাক্তকৰণ",
+      "tapToSelectImage": "ছবি বাছিবলৈ টেপ কৰক",
+      "uploadImage": "ছবি আপলোড কৰক",
+      "takePhoto": "ফটো লওক",
+      "enterCropType": "ফচলৰ ধৰণ লিখক",
+      "uploadAndAnalyze": "আপলোড কৰি বিশ্লেষণ কৰক",
+      "analyzing": "বিশ্লেষণ চলি আছে...",
+      "noImageSelected": "কোনো ছবি বাছনি কৰা হোৱা নাই।",
+      "analysisError": "ছবি বিশ্লেষণত ত্ৰুটি",
+
+        "annadaAssistance": "অন্নদা সহায়তা",
+        "farmerFaqs": "💬 কৃষকৰ সাধাৰণ প্ৰশ্নসমূহ:",
+        "faq1": "টমেটোৰ বাবে সৰ্বোত্তম সাৰ কোনটো?",
+        "faq2": "ফচলত কীট আক্রমণ কেনেকৈ ৰোধ কৰিব?",
+        "faq3": "গ্ৰীষ্মকালৰ বাবে উপযুক্ত ফচল কোনবোৰ?",
+        "faq4": "কৃষিত পানী কেনেকৈ সংৰক্ষণ কৰিব?",
+        "faq5": "ধান চাষৰ বাবে আদৰ্শ মাটিৰ pH কিমান?",
+        "analyzingImage": "ছবিৰ বিশ্লেষণ চলি আছে...",
+        "thinking": "চিন্তা কৰি আছে...",
+        "noResponseReceived": "⚠️ কোনো সঁহাৰি পোৱা নগ'ল।",
+        "errorFetchingResponse": "⚠️ সঁহাৰি লাভত ত্ৰুটি।",
+        "failedToLoadImage": "ছবি লোড কৰিব পৰা নগ'ল",
+        "uploading": "আপলোড হৈ আছে",
+
+
+          "governmentSchemesTitle": "চৰকাৰী আঁচনি",
+          "applyNow": "এতিয়াই আবেদন কৰক",
+
+          "pmKisanName": "প্ৰধানমন্ত্ৰী কিষাণ সন্মান নিধি (PM-KISAN)",
+          "pmKisanDesc": "সৰু আৰু সীমান্ত কৃষকক বছৰত ₹6,000 দিয়া হয়।",
+
+          "pmfbName": "প্ৰধানমন্ত্ৰী ফচল বিমা যোজনা (PMFBY)",
+          "pmfbDesc": "প্ৰাকৃতিক দুৰ্যোগৰ ফলত হোৱা ক্ষতিৰ বাবে বিমা।",
+
+          "kccName": "কিষাণ ক্ৰেডিট কাৰ্ড (KCC) আঁচনি",
+          "kccDesc": "কৃষি খৰচৰ বাবে কম সুদত ঋণ প্ৰদান।",
+
+          "soilHealthName": "মাটি স্বাস্থ্য কাৰ্ড আঁচনি",
+          "soilHealthDesc": "মাটিৰ পৰীক্ষাৰ বাবে বিনামূলীয়া সেৱা।",
+
+          "pmksyName": "প্ৰধানমন্ত্ৰী কৃষি সিঞ্চাই যোজনা (PMKSY)",
+          "pmksyDesc": "পানী সংৰক্ষণৰ জৰিয়তে সিঞ্চাই সুবিধা।",
+
+          "enamName": "ই-নাম (ৰাষ্ট্ৰীয় কৃষি বজাৰ)",
+          "enamDesc": "ডিজিটেল প্লেটফৰ্ম।",
+
+          "rkvyName": "ৰাষ্ট্ৰীয় কৃষি বিকাশ যোজনা (RKVY)",
+          "rkvyDesc": "কৃষি প্ৰকল্পৰ বাবে আৰ্থিক সহায়।",
+
+          "pkvyName": "পৰম্পৰাগত কৃষি বিকাশ যোজনা (PKVY)",
+          "pkvyDesc": "জৈৱিক কৃষিক উৎসাহিত কৰে।",
+
+          "dedsName": "ডেইৰি উদ্যোগ বিকাশ আঁচনি (DEDS)",
+          "dedsDesc": "ডেইৰি ফাৰ্ম স্থাপন সহায়।",
+
+
+            "farmersGuideTitle": "কৃষক নিৰ্দেশিকা",
+            "allGuides": "সকলো নিৰ্দেশিকা",
+            "appHelp": "এপ সহায়তা",
+            "farmingTips": "চাষৰ পৰামৰ্শ",
+            "searchTutorialHint": "চাষ সম্পৰ্কীয় নিৰ্দেশিকা বিচাৰক...",
+            "noTutorialsFound": "কোনো নিৰ্দেশিকা পোৱা নগ'ল",
+            "tryDifferentSearch": "আন শব্দ ব্যৱহাৰ কৰক",
+            "tapToWatchVideo": "ভিডিঅ' চাবলৈ টেপ কৰক",
+            "linkError": "লিংক খুলিব পৰা নগ'ল",
+
+            "tutorialGettingStartedTitle": "📱 অন্নদা এপ আৰম্ভ কৰক",
+            "tutorialGettingStartedContent": "অন্নদা এপত থকা সকলো কৃষি সঁজুলি ব্যৱহাৰ শিকক।",
+
+            "tutorialCropDetectionTitle": "🌾 শস্য চিনাক্তকৰণ সুবিধা",
+            "tutorialCropDetectionContent": "শস্যৰ ছবি আপলোড কৰি ৰোগ চিনাক্ত কৰক।",
+
+            "tutorialFertilizerTitle": "🧮 সাৰ গণনা ব্যৱস্থা",
+            "tutorialFertilizerContent": "শস্য, মাটি আৰু ভূমি দাঙৰতা দি সাৰ প্ৰয়োজন গণনা কৰক।",
+
+            "tutorialAssistantTitle": "🤖 অন্নদা সহায়কৰ সৈতে কথা পাতক",
+            "tutorialAssistantContent": "কৃষি সম্পৰ্কীয় প্ৰশ্ন সোধক।",
+
+            "tutorialMarketTitle": "🗺️ ওচৰৰ বজাৰ বিচাৰক",
+            "tutorialMarketContent": "আপোনাৰ অঞ্চলৰ কৃষি বজাৰ বিচাৰক।",
+
+            "tutorialOrganicTitle": "🌱 জৈৱ কৃষি নিৰ্দেশিকা",
+            "tutorialOrganicContent": "ৰাসায়নিকবিহীন প্ৰাকৃতিক কৃষি শিকক।",
+
+            "tutorialIrrigationTitle": "💧 স্মাৰ্ট জলসিঞ্চন পদ্ধতি",
+            "tutorialIrrigationContent": "ড্ৰিপ আৰু স্প্ৰিংকলাৰ পদ্ধতি শিকক।",
+
+            "tutorialIPMTitle": "🐛 সমন্বিত কীট নিয়ন্ত্ৰণ",
+            "tutorialIPMContent": "ৰাসায়নিকৰ আগতে প্ৰাকৃতিক উপায় ব্যৱহাৰ কৰক।",
+
+            "tutorialRotationTitle": "🌾 শস্য পৰিৱৰ্তন কৌশল",
+            "tutorialRotationContent": "মাটিৰ স্বাস্থ্যৰ বাবে শস্য সলনি কৰক।",
+
+            "tutorialSoilTitle": "🧪 মাটিৰ স্বাস্থ্য ব্যৱস্থাপনা",
+            "tutorialSoilContent": "মাটি পৰীক্ষা কৰি পুষ্টি সমতা ৰাখক।",
+
+            "tutorialFinanceTitle": "📊 কৃষি আৰ্থিক ব্যৱস্থাপনা",
+            "tutorialFinanceContent": "খৰচ আৰু আয় অনুসৰণ কৰক।",
+
+            "tutorialMechanizationTitle": "🚜 কৃষি যান্ত্ৰিক নিৰ্দেশিকা",
+            "tutorialMechanizationContent": "ফাৰ্মৰ আকাৰ অনুসৰি যন্ত্ৰ বাছক।",
+
+            "tutorialWeatherTitle": "🌤️ বতৰৰ ভিত্তিত কৃষি",
+            "tutorialWeatherContent": "ঋতু আৰু বৰষুণৰ ভিত্তিত পৰিকল্পনা কৰক।",
+
+            "tutorialWheatVideoTitle": "📽️ আধুনিক গহুঁ চাষ",
+            "tutorialTomatoVideoTitle": "📽️ টমেটো যত্ন",
+            "tutorialRotationVideoTitle": "📽️ শস্য পৰিৱৰ্তনৰ লাভ",
+
+            "tutorialPestImageTitle": "📷 কীট চিনাক্তকৰণ চাৰ্ট",
+            "tutorialSoilImageTitle": "📷 মাটিৰ প্ৰকাৰ",
+            "tutorialIrrigationImageTitle": "📷 জলসিঞ্চন ব্যৱস্থাৰ তুলনা",
+
+
+              "nearnessOfMarket": "বজাৰৰ ওচৰতা",
+              "nearbyMarkets": "ওচৰৰ বজাৰসমূহ",
+              "locateFertilizerShops": "সাৰৰ দোকান বিচাৰক",
+              "searchNearbyMarket": "ওচৰৰ বজাৰ বিচাৰক",
+              "localRecyclingAgencies": "স্থানীয় পুনৰ ব্যৱহাৰ সংস্থা",
+
+
+                "communityTitle": "অন্নদাতা সমাজ 🌾",
+                "justNow": "এইমাত্ৰ",
+                "minutesAgo": "{count} মিনিট আগতে",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} ঘণ্টা আগতে",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} দিন আগতে",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "আপোনাৰ খেতিত কি চলি আছে?",
+                "post": "পোষ্ট কৰক",
+                "comments": "মন্তব্য",
+                "noCommentsYet": "এতিয়ালৈকে কোনো মন্তব্য নাই 🌾",
+                "writeReply": "উত্তৰ লিখক...",
+                "noPostsYet": "এতিয়ালৈকে কোনো পোষ্ট নাই 🌾",
+                "delete": "মচি পেলাওক",
+                "farmer": "চাষী",
+
+                "createFarmerAccount": "আপোনাৰ চাষী একাউন্ট সৃষ্টি কৰক",
+                "email": "ইমেইল",
+                "emailRequired": "ইমেইল প্ৰয়োজন",
+                "password": "পাছৱৰ্ড",
+                "passwordMinLength": "পাছৱৰ্ড কমেও 6 আখৰৰ হ'ব লাগিব",
+                "register": "নিবন্ধন কৰক",
+                "empoweringFarmers": "🌾 AI ৰে চাষীক শক্তিশালী কৰা",
+                "userRegisteredSuccess": "✅ ব্যৱহাৰকাৰী সফলভাৱে নিবন্ধিত হ'ল!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "কৰিবলগীয়া কামৰ তালিকা",
+                "addNewTask": "নতুন কাম যোগ কৰক...",
+                "noTasksYet": "এতিয়ালৈকে কোনো কাম নাই। আপোনাৰ প্ৰথম কাম যোগ কৰক।",
+                "upcomingTasks": "আহিবলগীয়া কাম",
+                "completedTasks": "সম্পূৰ্ণ কৰা কাম",
+
+                "profileSaved": "প্ৰফাইল সফলভাৱে সংৰক্ষিত হ'ল!",
+                "yourProfile": "আপোনাৰ প্ৰফাইল",
+                "fullName": "সম্পূৰ্ণ নাম",
+                "phoneNumber": "ফোন নম্বৰ",
+                "saveProfile": "প্ৰফাইল সংৰক্ষণ কৰক",
+                "logout": "লগ আউট",
+                "annadaTagline": "🌾 অন্নদাতা - ভৱিষ্যতৰ শস্য",
+
+
+                  "latestNews": "সৰ্বশেষ বাতৰি",
+                  "noNewsAvailable": "কোনো বাতৰি উপলব্ধ নাই।",
+                  "noDescriptionAvailable": "কোনো বিৱৰণ উপলব্ধ নাই।",
+                  "noTitle": "শিৰোনাম নাই",
+                  "noSubtitle": "উপশিৰোনাম নাই",
+                  "noContentAvailable": "বিষয়বস্তু উপলব্ধ নাই।"
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,270 @@
+{
+  "appTitle": "അന്നദ",
+  "selectLanguage": "നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക",
+  "continueButton": "തുടരുക",
+  "login": "ലോഗിൻ",
+  "email": "ഇമെയിൽ",
+  "password": "രഹസ്യവാക്ക്",
+  "or": "അല്ലെങ്കിൽ",
+  "signInWithGoogle": "ഗൂഗിളിലൂടെ സൈൻ ഇൻ ചെയ്യുക",
+  "noAccountRegister": "അക്കൗണ്ട് ഇല്ലേ? രജിസ്റ്റർ ചെയ്യുക",
+  "chatbot": "ചാറ്റ്ബോട്ട്",
+  "fertilizerCalculator": "വളം കാൽക്കുലേറ്റർ",
+  "cropDetection": "വിള തിരിച്ചറിയൽ",
+  "weather": "കാലാവസ്ഥ",
+  "yojna": "സർക്കാർ പദ്ധതികൾ",
+  "tutorials": "പാഠങ്ങൾ",
+  "home": "ഹോം",
+  "market": "വിപണി",
+  "community": "സമൂഹം",
+  "profile": "പ്രൊഫൈൽ",
+  "welcome": "സ്വാഗതം",
+  "weatherTitle": "കാലാവസ്ഥ",
+  "logout": "ലോഗൗട്ട്",
+  "features": "സവിശേഷതകൾ",
+  "toDoList": "ചെയ്യേണ്ട കാര്യങ്ങൾ",
+  "updated": "പുതുക്കിയിരിക്കുന്നു",
+  "tapForecast": "5 ദിവസത്തെ പ്രവചനത്തിന് ടാപ്പ് ചെയ്യുക",
+  "forecastTitle": "5 ദിവസത്തെ കാലാവസ്ഥ പ്രവചനം",
+  "forecastSubtitle": "അന്നദ ഏതെങ്കിലും സ്ഥലത്തിനും കൃത്യമായ കാലാവസ്ഥ പ്രവചനം നൽകുന്നു.",
+  "fetchingForecast": "പ്രവചനം ലഭ്യമാക്കുന്നു...",
+  "forecastUnavailable": "പ്രവചനം ലഭ്യമല്ല.\nഇന്റർനെറ്റ് അല്ലെങ്കിൽ സ്ഥലം അനുമതി പരിശോധിക്കുക.",
+  "permissionRequired": "അനുമതി ആവശ്യമാണ്",
+  "enableLocationWeather": "കാലാവസ്ഥ വിവരങ്ങൾക്ക് സ്ഥലം പ്രവർത്തനക്ഷമമാക്കുക",
+  "locationUnavailable": "ലഭ്യമല്ല",
+  "weatherError": "കാലാവസ്ഥ ലോഡ് ചെയ്യാനായില്ല",
+
+
+    "fertilizerCalculatorTitle": "വളം കാൽക്കുലേറ്റർ",
+    "landArea": "ഭൂമിയുടെ വിസ്തൃതി",
+    "enterArea": "വിസ്തൃതി നൽകുക",
+    "acre": "ഏക്കർ",
+    "hectare": "ഹെക്ടയർ",
+    "selectCropSoil": "വിളയും മണ്ണും തിരഞ്ഞെടുക്കുക",
+    "selectCrop": "വിള തിരഞ്ഞെടുക്കുക",
+    "selectSoilType": "മണ്ണിന്റെ തരം തിരഞ്ഞെടുക്കുക",
+    "growthStage": "വളർച്ചാ ഘട്ടം",
+    "calculateFertilizer": "വളം കണക്കാക്കുക",
+    "fertilizerRequirements": "വളം ആവശ്യങ്ങൾ",
+    "cropType": "വിളയുടെ തരം",
+    "soilType": "മണ്ണിന്റെ തരം",
+    "growthStageLabel": "വളർച്ചാ ഘട്ടം",
+    "nitrogenNeeded": "നൈട്രജൻ ആവശ്യം",
+    "phosphorusNeeded": "ഫോസ്ഫറസ് ആവശ്യം",
+    "potassiumNeeded": "പൊട്ടാഷ്യം ആവശ്യം",
+    "recommendedFertilizers": "ശുപാർശ ചെയ്യുന്ന വളങ്ങൾ",
+    "noFertilizerNeeded": "കൂടുതൽ വളം ആവശ്യമില്ല",
+
+    "crop_wheat": "ഗോതമ്പ്",
+    "crop_rice": "അരി",
+    "crop_corn": "മക്കചോളം",
+    "crop_soybean": "സോയാബീൻ",
+    "crop_tomato": "തക്കാളി",
+    "crop_potato": "ഉരുളക്കിഴങ്ങ്",
+    "crop_carrot": "കാരറ്റ്",
+    "crop_onion": "സവാള",
+    "crop_cabbage": "മുട്ടകോസ്",
+    "crop_chili": "മുളക്",
+    "crop_banana": "വാഴപ്പഴം",
+    "crop_apple": "ആപ്പിൾ",
+
+    "soil_sandy": "മണൽ മണ്ണ്",
+    "soil_clay": "ചളിമണ്ണ്",
+    "soil_loam": "ലോം മണ്ണ്",
+    "soil_silty": "സിൽറ്റ് മണ്ണ്",
+    "soil_peaty": "പീറ്റ് മണ്ണ്",
+    "soil_chalky": "ചോക്ക് മണ്ണ്",
+    "soil_saline": "ഉപ്പ് മണ്ണ്",
+    "soil_red": "ചുവപ്പ് മണ്ണ്",
+    "soil_black": "കരിമണ്ണ്",
+
+    "stage_seedling": "മുളക്കൽ ഘട്ടം",
+    "stage_vegetative": "ഇല വളർച്ച",
+    "stage_flowering": "പൂക്കൽ",
+    "stage_fruiting": "ഫലധാരണം",
+    "stage_maturity": "പരിപക്വത",
+    "stage_harvesting": "വാരിക്കൽ",
+
+
+      "cropDetectionTitle": "വിള തിരിച്ചറിയൽ",
+      "tapToSelectImage": "ചിത്രം തിരഞ്ഞെടുക്കാൻ ടാപ്പ് ചെയ്യുക",
+      "uploadImage": "ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+      "takePhoto": "ഫോട്ടോ എടുക്കുക",
+      "enterCropType": "വിളയുടെ തരം നൽകുക",
+      "uploadAndAnalyze": "അപ്‌ലോഡ് ചെയ്ത് വിശകലനം ചെയ്യുക",
+      "analyzing": "വിശകലനം നടക്കുന്നു...",
+      "noImageSelected": "ഒരു ചിത്രവും തിരഞ്ഞെടുക്കപ്പെട്ടിട്ടില്ല.",
+      "analysisError": "ചിത്ര വിശകലനത്തിൽ പിശക്",
+
+
+        "annadaAssistance": "അന്നദാ സഹായം",
+        "farmerFaqs": "💬 കർഷകരുടെ പൊതുവായ ചോദ്യങ്ങൾ:",
+        "faq1": "തക്കാളിക്ക് മികച്ച വളം ഏതാണ്?",
+        "faq2": "വിളകളിൽ കീടാക്രമണം എങ്ങനെ തടയാം?",
+        "faq3": "വേനൽക്കാലത്തിന് അനുയോജ്യമായ വിളകൾ ഏവ?",
+        "faq4": "കൃഷിയിൽ വെള്ളം എങ്ങനെ സംരക്ഷിക്കാം?",
+        "faq5": "നെൽകൃഷിക്ക് അനുയോജ്യമായ മണ്ണിന്റെ pH എത്ര?",
+        "analyzingImage": "ചിത്രം വിശകലനം ചെയ്യുന്നു...",
+        "thinking": "ചിന്തിക്കുന്നു...",
+        "noResponseReceived": "⚠️ പ്രതികരണം ലഭിച്ചില്ല.",
+        "errorFetchingResponse": "⚠️ പ്രതികരണം ലഭിക്കുമ്പോൾ പിശക്.",
+        "failedToLoadImage": "ചിത്രം ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല",
+        "uploading": "അപ്‌ലോഡ് ചെയ്യുന്നു",
+
+
+          "governmentSchemesTitle": "സർക്കാർ പദ്ധതികൾ",
+          "applyNow": "ഇപ്പോൾ അപേക്ഷിക്കുക",
+
+          "pmKisanName": "പ്രധാനമന്ത്രി കിസാൻ സമ്മാൻ നിധി (PM-KISAN)",
+          "pmKisanDesc": "ചെറുകിട കർഷകർക്ക് വർഷം ₹6,000 നൽകുന്നു.",
+
+          "pmfbName": "പ്രധാനമന്ത്രി ഫസൽ ബീമാ യോജന (PMFBY)",
+          "pmfbDesc": "വിള നാശത്തിനുള്ള ഇൻഷുറൻസ് നൽകുന്നു.",
+
+          "kccName": "കിസാൻ ക്രെഡിറ്റ് കാർഡ് പദ്ധതി",
+          "kccDesc": "കൃഷി ചെലവുകൾക്ക് കുറഞ്ഞ പലിശ വായ്പ നൽകുന്നു.",
+
+          "soilHealthName": "മണ്ണ് ആരോഗ്യ കാർഡ് പദ്ധതി",
+          "soilHealthDesc": "മണ്ണ് പരിശോധന സൗജന്യമായി നടത്തുന്നു.",
+
+          "pmksyName": "പ്രധാനമന്ത്രി കൃഷി സിഞ്ചായി യോജന (PMKSY)",
+          "pmksyDesc": "ജലസംരക്ഷണത്തിലൂടെ ജലസേചനം നൽകുന്നു.",
+
+          "enamName": "ഇ-നാം (ദേശീയ കാർഷിക വിപണി)",
+          "enamDesc": "ഡിജിറ്റൽ മാർക്കറ്റ് പ്ലാറ്റ്ഫോം.",
+
+          "rkvyName": "റാഷ്‌ട്രിയ കൃഷി വികാസ് യോജന (RKVY)",
+          "rkvyDesc": "കൃഷി പദ്ധതികൾക്ക് ധനസഹായം.",
+
+          "pkvyName": "പരമ്പരാഗത കൃഷി വികാസ് യോജന (PKVY)",
+          "pkvyDesc": "സേന്ദ്രിയ കൃഷി പ്രോത്സാഹനം.",
+
+          "dedsName": "ഡെയറി സംരംഭ വികസന പദ്ധതി (DEDS)",
+          "dedsDesc": "പാൽ ഉൽപ്പാദന യൂണിറ്റുകൾക്ക് സബ്സിഡി.",
+
+
+            "farmersGuideTitle": "കർഷക മാർഗ്ഗദർശി",
+            "allGuides": "എല്ലാ മാർഗ്ഗദർശികൾ",
+            "appHelp": "ആപ്പ് സഹായം",
+            "farmingTips": "കൃഷി നിർദ്ദേശങ്ങൾ",
+            "searchTutorialHint": "കൃഷി മാർഗ്ഗദർശികൾ തിരയുക...",
+            "noTutorialsFound": "മാർഗ്ഗദർശി ഒന്നും കണ്ടെത്തിയില്ല",
+            "tryDifferentSearch": "മറ്റ് വാക്കുകൾ ശ്രമിക്കുക",
+            "tapToWatchVideo": "വീഡിയോ കാണാൻ ടാപ്പ് ചെയ്യുക",
+            "linkError": "ലിങ്ക് തുറക്കാൻ കഴിഞ്ഞില്ല",
+
+            "tutorialGettingStartedTitle": "📱 അന്നദ ആപ്പ് ആരംഭിക്കുക",
+            "tutorialGettingStartedContent": "അന്നദ ആപ്പിലെ എല്ലാ കൃഷി ഉപകരണങ്ങളും ഉപയോഗിക്കാൻ പഠിക്കുക.",
+
+            "tutorialCropDetectionTitle": "🌾 വിള തിരിച്ചറിയൽ സവിശേഷത",
+            "tutorialCropDetectionContent": "വിളയുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്ത് രോഗം കണ്ടെത്തുക.",
+
+            "tutorialFertilizerTitle": "🧮 വള കാൽക്കുലേറ്റർ ഉപയോഗം",
+            "tutorialFertilizerContent": "വിളയും മണ്ണും പ്രദേശവും നൽകി വള ആവശ്യം കണക്കാക്കുക.",
+
+            "tutorialAssistantTitle": "🤖 അന്നദ സഹായിയുമായി ചാറ്റ് ചെയ്യുക",
+            "tutorialAssistantContent": "കൃഷിയുമായി ബന്ധപ്പെട്ട ചോദ്യങ്ങൾ ചോദിക്കുക.",
+
+            "tutorialMarketTitle": "🗺️ സമീപത്തെ മാർക്കറ്റുകൾ കണ്ടെത്തുക",
+            "tutorialMarketContent": "നിങ്ങളുടെ പ്രദേശത്തെ കൃഷി മാർക്കറ്റുകൾ കണ്ടെത്തുക.",
+
+            "tutorialOrganicTitle": "🌱 ജൈവ കൃഷി മാർഗ്ഗദർശി",
+            "tutorialOrganicContent": "രാസവസ്തുക്കൾ ഒഴിവാക്കി പ്രകൃതിദത്ത കൃഷി രീതികൾ പഠിക്കുക.",
+
+            "tutorialIrrigationTitle": "💧 സ്മാർട്ട് ജലസേചന രീതികൾ",
+            "tutorialIrrigationContent": "ഡ്രിപ്പ്, സ്പ്രിങ്ക്ലർ സിസ്റ്റങ്ങൾ പഠിക്കുക.",
+
+            "tutorialIPMTitle": "🐛 ഏകീകൃത കീട നിയന്ത്രണം",
+            "tutorialIPMContent": "രാസവസ്തുക്കൾക്ക് മുമ്പ് പ്രകൃതിദത്ത മാർഗങ്ങൾ ഉപയോഗിക്കുക.",
+
+            "tutorialRotationTitle": "🌾 വിളമാറ്റം തന്ത്രങ്ങൾ",
+            "tutorialRotationContent": "മണ്ണിന്റെ ആരോഗ്യത്തിന് വിളമാറ്റം ചെയ്യുക.",
+
+            "tutorialSoilTitle": "🧪 മണ്ണ് ആരോഗ്യ നിയന്ത്രണം",
+            "tutorialSoilContent": "മണ്ണ് പരിശോധന നടത്തി പോഷകസംതുലനം നിലനിർത്തുക.",
+
+            "tutorialFinanceTitle": "📊 കൃഷി സാമ്പത്തിക നിയന്ത്രണം",
+            "tutorialFinanceContent": "ചെലവും വരുമാനവും നിരീക്ഷിക്കുക.",
+
+            "tutorialMechanizationTitle": "🚜 കൃഷി യാന്ത്രിക മാർഗ്ഗദർശി",
+            "tutorialMechanizationContent": "ഫാം വലുപ്പത്തിന് അനുയോജ്യമായ യന്ത്രങ്ങൾ തിരഞ്ഞെടുക്കുക.",
+
+            "tutorialWeatherTitle": "🌤️ കാലാവസ്ഥ അടിസ്ഥാന കൃഷി",
+            "tutorialWeatherContent": "മഴയും കാലാവസ്ഥയും അടിസ്ഥാനമാക്കി പദ്ധതിയിടുക.",
+
+            "tutorialWheatVideoTitle": "📽️ ആധുനിക ഗോതമ്പ് കൃഷി",
+            "tutorialTomatoVideoTitle": "📽️ തക്കാളി പരിപാലനം",
+            "tutorialRotationVideoTitle": "📽️ വിളമാറ്റത്തിന്റെ ഗുണങ്ങൾ",
+
+            "tutorialPestImageTitle": "📷 കീട തിരിച്ചറിയൽ ചാർട്ട്",
+            "tutorialSoilImageTitle": "📷 മണ്ണിന്റെ തരങ്ങൾ",
+            "tutorialIrrigationImageTitle": "📷 ജലസേചന സിസ്റ്റം താരതമ്യം",
+
+
+              "nearnessOfMarket": "മാർക്കറ്റിന്റെ സമീപ്യം",
+              "nearbyMarkets": "സമീപ മാർക്കറ്റുകൾ",
+              "locateFertilizerShops": "വളക്കടകൾ കണ്ടെത്തുക",
+              "searchNearbyMarket": "സമീപ മാർക്കറ്റ് കണ്ടെത്തുക",
+              "localRecyclingAgencies": "പ്രാദേശിക റീസൈക്ലിംഗ് ഏജൻസികൾ",
+
+
+
+
+                "communityTitle": "അന്നദാത കമ്മ്യൂണിറ്റി 🌾",
+                "justNow": "ഇപ്പോഴേ",
+                "minutesAgo": "{count} മിനിറ്റ് മുമ്പ്",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} മണിക്കൂർ മുമ്പ്",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} ദിവസം മുമ്പ്",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "നിങ്ങളുടെ വയലിൽ എന്താണ് നടക്കുന്നത്?",
+                "post": "പോസ്റ്റ് ചെയ്യുക",
+                "comments": "അഭിപ്രായങ്ങൾ",
+                "noCommentsYet": "ഇനിയും അഭിപ്രായങ്ങളില്ല 🌾",
+                "writeReply": "മറുപടി എഴുതുക...",
+                "noPostsYet": "ഇനിയും പോസ്റ്റുകളില്ല 🌾",
+                "delete": "ഇല്ലാതാക്കുക",
+                "farmer": "കർഷകൻ",
+
+                "createFarmerAccount": "നിങ്ങളുടെ കർഷക അക്കൗണ്ട് സൃഷ്ടിക്കുക",
+                "email": "ഇമെയിൽ",
+                "emailRequired": "ഇമെയിൽ ആവശ്യമാണ്",
+                "password": "പാസ്‌വേഡ്",
+                "passwordMinLength": "പാസ്‌വേഡ് കുറഞ്ഞത് 6 അക്ഷരങ്ങൾ ആയിരിക്കണം",
+                "register": "രജിസ്റ്റർ ചെയ്യുക",
+                "empoweringFarmers": "🌾 AI ഉപയോഗിച്ച് കർഷകരെ ശക്തിപ്പെടുത്തുന്നു",
+                "userRegisteredSuccess": "✅ ഉപയോക്താവ് വിജയകരമായി രജിസ്റ്റർ ചെയ്തു!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "ചെയ്യേണ്ട കാര്യങ്ങളുടെ പട്ടിക",
+                "addNewTask": "പുതിയ ജോലി ചേർക്കുക...",
+                "noTasksYet": "ഇനിയും ജോലികളില്ല. നിങ്ങളുടെ ആദ്യ ജോലി ചേർക്കുക.",
+                "upcomingTasks": "വരാനിരിക്കുന്ന ജോലികൾ",
+                "completedTasks": "പൂർത്തിയായ ജോലികൾ",
+
+                "profileSaved": "പ്രൊഫൈൽ വിജയകരമായി സംരക്ഷിച്ചു!",
+                "yourProfile": "നിങ്ങളുടെ പ്രൊഫൈൽ",
+                "fullName": "പൂർണ്ണ പേര്",
+                "phoneNumber": "ഫോൺ നമ്പർ",
+                "saveProfile": "പ്രൊഫൈൽ സംരക്ഷിക്കുക",
+                "logout": "ലോഗ് ഔട്ട്",
+                "annadaTagline": "🌾 അന്നദാത - ഭാവിയുടെ വിളവ്",
+
+
+                  "latestNews": "പുതിയ വാർത്തകൾ",
+                  "noNewsAvailable": "വാർത്തകൾ ലഭ്യമല്ല.",
+                  "noDescriptionAvailable": "വിവരണം ലഭ്യമല്ല.",
+                  "noTitle": "ശീർഷകം ലഭ്യമല്ല",
+                  "noSubtitle": "ഉപശീർഷകം ലഭ്യമല്ല",
+                  "noContentAvailable": "ഉള്ളടക്കം ലഭ്യമല്ല."
+
+
+
+
+
+
+
+
+}

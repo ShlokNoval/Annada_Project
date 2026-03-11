@@ -1,0 +1,269 @@
+{
+  "appTitle": "ଅନ୍ନଦା",
+  "selectLanguage": "ଆପଣଙ୍କ ଭାଷା ବାଛନ୍ତୁ",
+  "continueButton": "ଆଗକୁ ବଢନ୍ତୁ",
+  "login": "ଲଗଇନ",
+  "email": "ଇମେଲ",
+  "password": "ପାସୱାର୍ଡ",
+  "or": "କିମ୍ବା",
+  "signInWithGoogle": "ଗୁଗୁଲ୍ ଦ୍ୱାରା ସାଇନ୍ ଇନ୍ କରନ୍ତୁ",
+  "noAccountRegister": "ଖାତା ନାହିଁ? ନିବନ୍ଧନ କରନ୍ତୁ",
+  "chatbot": "ଚ୍ୟାଟବଟ",
+  "fertilizerCalculator": "ସାର ଗଣକ",
+  "cropDetection": "ଫସଲ ଚିହ୍ନଟ",
+  "weather": "ପାଣିପାଗ",
+  "yojna": "ସରକାରୀ ଯୋଜନା",
+  "tutorials": "ମାର୍ଗଦର୍ଶନ",
+  "home": "ମୁଖ୍ୟ ପୃଷ୍ଠା",
+  "market": "ବଜାର",
+  "community": "ସମୁଦାୟ",
+  "profile": "ପ୍ରୋଫାଇଲ",
+  "welcome": "ସ୍ୱାଗତ",
+  "weatherTitle": "ପାଣିପାଗ",
+  "logout": "ଲଗଆଉଟ",
+  "features": "ବୈଶିଷ୍ଟ୍ୟ",
+  "toDoList": "କରିବାକୁ ଥିବା କାମ",
+  "updated": "ଅଦ୍ୟତନ",
+  "tapForecast": "5 ଦିନର ପୂର୍ବାନୁମାନ ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ",
+  "forecastTitle": "5 ଦିନର ପାଣିପାଗ ପୂର୍ବାନୁମାନ",
+  "forecastSubtitle": "ଅନ୍ନଦା କୌଣସି ସ୍ଥାନ ପାଇଁ ସଠିକ୍ ପାଣିପାଗ ପୂର୍ବାନୁମାନ ଦେଇଥାଏ।",
+  "fetchingForecast": "ପୂର୍ବାନୁମାନ ଆଣାଯାଉଛି...",
+  "forecastUnavailable": "ପୂର୍ବାନୁମାନ ଉପଲବ୍ଧ ନୁହେଁ।\nଇଣ୍ଟରନେଟ୍ କିମ୍ବା ସ୍ଥାନ ଅନୁମତି ଯାଞ୍ଚ କରନ୍ତୁ।",
+  "permissionRequired": "ଅନୁମତି ଆବଶ୍ୟକ",
+  "enableLocationWeather": "ପାଣିପାଗ ସୂଚନା ପାଇଁ ସ୍ଥାନ ସକ୍ରିୟ କରନ୍ତୁ",
+  "locationUnavailable": "ଉପଲବ୍ଧ ନୁହେଁ",
+  "weatherError": "ପାଣିପାଗ ଲୋଡ୍ ହେଉନି",
+
+
+    "fertilizerCalculatorTitle": "ସାର ଗଣକ",
+    "landArea": "ଜମିର ପରିମାଣ",
+    "enterArea": "ପରିମାଣ ଲେଖନ୍ତୁ",
+    "acre": "ଏକର",
+    "hectare": "ହେକ୍ଟର",
+    "selectCropSoil": "ଫସଲ ଓ ମାଟି ବାଛନ୍ତୁ",
+    "selectCrop": "ଫସଲ ବାଛନ୍ତୁ",
+    "selectSoilType": "ମାଟିର ପ୍ରକାର ବାଛନ୍ତୁ",
+    "growthStage": "ବୃଦ୍ଧି ଅବସ୍ଥା",
+    "calculateFertilizer": "ସାର ଗଣନା କରନ୍ତୁ",
+    "fertilizerRequirements": "ସାର ଆବଶ୍ୟକତା",
+    "cropType": "ଫସଲ ପ୍ରକାର",
+    "soilType": "ମାଟି ପ୍ରକାର",
+    "growthStageLabel": "ବୃଦ୍ଧି ଅବସ୍ଥା",
+    "nitrogenNeeded": "ନାଇଟ୍ରୋଜେନ ଆବଶ୍ୟକ",
+    "phosphorusNeeded": "ଫସ୍ଫୋରସ ଆବଶ୍ୟକ",
+    "potassiumNeeded": "ପୋଟାସିଅମ ଆବଶ୍ୟକ",
+    "recommendedFertilizers": "ସୁପାରିଶିତ ସାର",
+    "noFertilizerNeeded": "ଅତିରିକ୍ତ ସାର ଆବଶ୍ୟକ ନାହିଁ",
+
+    "crop_wheat": "ଗହମ",
+    "crop_rice": "ଚାଉଳ",
+    "crop_corn": "ମକା",
+    "crop_soybean": "ସୋଯାବିନ",
+    "crop_tomato": "ଟମାଟୋ",
+    "crop_potato": "ଆଳୁ",
+    "crop_carrot": "ଗାଜର",
+    "crop_onion": "ପିଆଜ",
+    "crop_cabbage": "ବନ୍ଧାକୋବି",
+    "crop_chili": "ଲଙ୍କା",
+    "crop_banana": "କଦଳୀ",
+    "crop_apple": "ସେବ",
+
+    "soil_sandy": "ବାଲୁକାମୟ ମାଟି",
+    "soil_clay": "ଚିକ୍କଣ ମାଟି",
+    "soil_loam": "ଦୋଆଁଶ ମାଟି",
+    "soil_silty": "ପଲିମାଟି",
+    "soil_peaty": "ପିଟ୍ ମାଟି",
+    "soil_chalky": "ଚକ ମାଟି",
+    "soil_saline": "ଲବଣୀୟ ମାଟି",
+    "soil_red": "ଲାଲ ମାଟି",
+    "soil_black": "କଳା ମାଟି",
+
+    "stage_seedling": "ଚାରା ଅବସ୍ଥା",
+    "stage_vegetative": "ପତ୍ର ବୃଦ୍ଧି",
+    "stage_flowering": "ଫୁଲ ଅବସ୍ଥା",
+    "stage_fruiting": "ଫଳ ଅବସ୍ଥା",
+    "stage_maturity": "ପକ୍କତା",
+    "stage_harvesting": "କଟାଇ",
+
+
+      "cropDetectionTitle": "ଫସଲ ଚିହ୍ନଟ",
+      "tapToSelectImage": "ଛବି ବାଛିବା ପାଇଁ ଟ୍ୟାପ କରନ୍ତୁ",
+      "uploadImage": "ଛବି ଅପଲୋଡ କରନ୍ତୁ",
+      "takePhoto": "ଫଟୋ ନିଅନ୍ତୁ",
+      "enterCropType": "ଫସଲ ପ୍ରକାର ଲେଖନ୍ତୁ",
+      "uploadAndAnalyze": "ଅପଲୋଡ କରି ବିଶ୍ଳେଷଣ କରନ୍ତୁ",
+      "analyzing": "ବିଶ୍ଳେଷଣ ଚାଲିଛି...",
+      "noImageSelected": "କୌଣସି ଛବି ବାଛାଯାଇନି।",
+      "analysisError": "ଛବି ବିଶ୍ଳେଷଣରେ ତ୍ରୁଟି",
+
+
+        "annadaAssistance": "ଅନ୍ନଦା ସହାୟତା",
+        "farmerFaqs": "💬 ଚାଷୀମାନଙ୍କର ସାଧାରଣ ପ୍ରଶ୍ନ:",
+        "faq1": "ଟମାଟୋ ପାଇଁ ସର୍ବଶ୍ରେଷ୍ଠ ସାର କଉଣସି?",
+        "faq2": "ଫସଲରେ କୀଟ ଆକ୍ରମଣ କିପରି ରୋକିବେ?",
+        "faq3": "ଗ୍ରୀଷ୍ମକାଳ ପାଇଁ କେଉଁ ଫସଲ ଉପଯୁକ୍ତ?",
+        "faq4": "ଚାଷରେ ପାଣି କିପରି ସଂରକ୍ଷଣ କରିବେ?",
+        "faq5": "ଧାନ ଚାଷ ପାଇଁ ଆଦର୍ଶ ମାଟି pH କେତେ?",
+        "analyzingImage": "ଛବି ବିଶ୍ଳେଷଣ ହେଉଛି...",
+        "thinking": "ଭାବୁଛି...",
+        "noResponseReceived": "⚠️ କୌଣସି ପ୍ରତିକ୍ରିୟା ମିଳିଲା ନାହିଁ।",
+        "errorFetchingResponse": "⚠️ ପ୍ରତିକ୍ରିୟା ପାଇବାରେ ତ୍ରୁଟି।",
+        "failedToLoadImage": "ଛବି ଲୋଡ କରିବାରେ ବିଫଳ",
+        "uploading": "ଅପଲୋଡ ହେଉଛି",
+
+        
+          "governmentSchemesTitle": "ସରକାରୀ ଯୋଜନାମାନ",
+          "applyNow": "ଏବେ ଆବେଦନ କରନ୍ତୁ",
+
+          "pmKisanName": "ପ୍ରଧାନମନ୍ତ୍ରୀ କିସାନ ସମ୍ମାନ ନିଧି (PM-KISAN)",
+          "pmKisanDesc": "ଛୋଟ ଓ ସୀମାନ୍ତ ଚାଷୀମାନଙ୍କୁ ପ୍ରତିବର୍ଷ ₹6,000 ତିନି କିଷ୍ଟିରେ ଦିଆଯାଏ।",
+
+          "pmfbName": "ପ୍ରଧାନମନ୍ତ୍ରୀ ଫସଲ ବୀମା ଯୋଜନା (PMFBY)",
+          "pmfbDesc": "ପ୍ରାକୃତିକ ବିପଦ ଓ କୀଟପତଙ୍ଗ ଦ୍ୱାରା ହୋଇଥିବା କ୍ଷତି ପାଇଁ ବୀମା ଦିଆଯାଏ।",
+
+          "kccName": "କିସାନ କ୍ରେଡିଟ କାର୍ଡ (KCC) ଯୋଜନା",
+          "kccDesc": "କୃଷି ଖର୍ଚ୍ଚ ପାଇଁ କମ ସୁଧରେ ଋଣ ଦିଆଯାଏ।",
+
+          "soilHealthName": "ମାଟି ସ୍ୱାସ୍ଥ୍ୟ କାର୍ଡ ଯୋଜନା",
+          "soilHealthDesc": "ମାଟିର ପୋଷକ ତତ୍ତ୍ୱ ଯାଞ୍ଚ ପାଇଁ ମାଗଣା ସେବା ଦିଆଯାଏ।",
+
+          "pmksyName": "ପ୍ରଧାନମନ୍ତ୍ରୀ କୃଷି ସିଞ୍ଚାୟୀ ଯୋଜନା (PMKSY)",
+          "pmksyDesc": "ଜଳ ସଂରକ୍ଷଣ ମାଧ୍ୟମରେ ସିଚାଇ ସୁବିଧା ପ୍ରଦାନ କରାଯାଏ।",
+
+          "enamName": "ଇ-ନାମ (ଜାତୀୟ କୃଷି ବଜାର)",
+          "enamDesc": "ଚାଷୀମାନଙ୍କୁ ଦେଶବ୍ୟାପୀ ବିକ୍ରୟ ପାଇଁ ଡିଜିଟାଲ ମଞ୍ଚ।",
+
+          "rkvyName": "ରାଷ୍ଟ୍ରୀୟ କୃଷି ବିକାଶ ଯୋଜନା (RKVY)",
+          "rkvyDesc": "କୃଷି ପ୍ରକଳ୍ପ ପାଇଁ ଆର୍ଥିକ ସହାୟତା।",
+
+          "pkvyName": "ପରମ୍ପରାଗତ କୃଷି ବିକାଶ ଯୋଜନା (PKVY)",
+          "pkvyDesc": "ଜୈବିକ ଚାଷକୁ ପ୍ରୋତ୍ସାହନ।",
+
+          "dedsName": "ଡେୟରି ଉଦ୍ୟମିତା ବିକାଶ ଯୋଜନା (DEDS)",
+          "dedsDesc": "ଡେୟରି ଫାର୍ମ ସ୍ଥାପନ ପାଇଁ ସହାୟତା।",
+
+
+            "farmersGuideTitle": "കർഷക മാർഗ്ഗദർശി",
+            "allGuides": "എല്ലാ മാർഗ്ഗദർശികൾ",
+            "appHelp": "ആപ്പ് സഹായം",
+            "farmingTips": "കൃഷി നിർദ്ദേശങ്ങൾ",
+            "searchTutorialHint": "കൃഷി മാർഗ്ഗദർശികൾ തിരയുക...",
+            "noTutorialsFound": "മാർഗ്ഗദർശി ഒന്നും കണ്ടെത്തിയില്ല",
+            "tryDifferentSearch": "മറ്റ് വാക്കുകൾ ശ്രമിക്കുക",
+            "tapToWatchVideo": "വീഡിയോ കാണാൻ ടാപ്പ് ചെയ്യുക",
+            "linkError": "ലിങ്ക് തുറക്കാൻ കഴിഞ്ഞില്ല",
+
+            "tutorialGettingStartedTitle": "📱 അന്നദ ആപ്പ് ആരംഭിക്കുക",
+            "tutorialGettingStartedContent": "അന്നദ ആപ്പിലെ എല്ലാ കൃഷി ഉപകരണങ്ങളും ഉപയോഗിക്കാൻ പഠിക്കുക.",
+
+            "tutorialCropDetectionTitle": "🌾 വിള തിരിച്ചറിയൽ സവിശേഷത",
+            "tutorialCropDetectionContent": "വിളയുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്ത് രോഗം കണ്ടെത്തുക.",
+
+            "tutorialFertilizerTitle": "🧮 വള കാൽക്കുലേറ്റർ ഉപയോഗം",
+            "tutorialFertilizerContent": "വിളയും മണ്ണും പ്രദേശവും നൽകി വള ആവശ്യം കണക്കാക്കുക.",
+
+            "tutorialAssistantTitle": "🤖 അന്നദ സഹായിയുമായി ചാറ്റ് ചെയ്യുക",
+            "tutorialAssistantContent": "കൃഷിയുമായി ബന്ധപ്പെട്ട ചോദ്യങ്ങൾ ചോദിക്കുക.",
+
+            "tutorialMarketTitle": "🗺️ സമീപത്തെ മാർക്കറ്റുകൾ കണ്ടെത്തുക",
+            "tutorialMarketContent": "നിങ്ങളുടെ പ്രദേശത്തെ കൃഷി മാർക്കറ്റുകൾ കണ്ടെത്തുക.",
+
+            "tutorialOrganicTitle": "🌱 ജൈവ കൃഷി മാർഗ്ഗദർശി",
+            "tutorialOrganicContent": "രാസവസ്തുക്കൾ ഒഴിവാക്കി പ്രകൃതിദത്ത കൃഷി രീതികൾ പഠിക്കുക.",
+
+            "tutorialIrrigationTitle": "💧 സ്മാർട്ട് ജലസേചന രീതികൾ",
+            "tutorialIrrigationContent": "ഡ്രിപ്പ്, സ്പ്രിങ്ക്ലർ സിസ്റ്റങ്ങൾ പഠിക്കുക.",
+
+            "tutorialIPMTitle": "🐛 ഏകീകൃത കീട നിയന്ത്രണം",
+            "tutorialIPMContent": "രാസവസ്തുക്കൾക്ക് മുമ്പ് പ്രകൃതിദത്ത മാർഗങ്ങൾ ഉപയോഗിക്കുക.",
+
+            "tutorialRotationTitle": "🌾 വിളമാറ്റം തന്ത്രങ്ങൾ",
+            "tutorialRotationContent": "മണ്ണിന്റെ ആരോഗ്യത്തിന് വിളമാറ്റം ചെയ്യുക.",
+
+            "tutorialSoilTitle": "🧪 മണ്ണ് ആരോഗ്യ നിയന്ത്രണം",
+            "tutorialSoilContent": "മണ്ണ് പരിശോധന നടത്തി പോഷകസംതുലനം നിലനിർത്തുക.",
+
+            "tutorialFinanceTitle": "📊 കൃഷി സാമ്പത്തിക നിയന്ത്രണം",
+            "tutorialFinanceContent": "ചെലവും വരുമാനവും നിരീക്ഷിക്കുക.",
+
+            "tutorialMechanizationTitle": "🚜 കൃഷി യാന്ത്രിക മാർഗ്ഗദർശി",
+            "tutorialMechanizationContent": "ഫാം വലുപ്പത്തിന് അനുയോജ്യമായ യന്ത്രങ്ങൾ തിരഞ്ഞെടുക്കുക.",
+
+            "tutorialWeatherTitle": "🌤️ കാലാവസ്ഥ അടിസ്ഥാന കൃഷി",
+            "tutorialWeatherContent": "മഴയും കാലാവസ്ഥയും അടിസ്ഥാനമാക്കി പദ്ധതിയിടുക.",
+
+            "tutorialWheatVideoTitle": "📽️ ആധുനിക ഗോതമ്പ് കൃഷി",
+            "tutorialTomatoVideoTitle": "📽️ തക്കാളി പരിപാലനം",
+            "tutorialRotationVideoTitle": "📽️ വിളമാറ്റത്തിന്റെ ഗുണങ്ങൾ",
+
+            "tutorialPestImageTitle": "📷 കീട തിരിച്ചറിയൽ ചാർട്ട്",
+            "tutorialSoilImageTitle": "📷 മണ്ണിന്റെ തരങ്ങൾ",
+            "tutorialIrrigationImageTitle": "📷 ജലസേചന സിസ്റ്റം താരതമ്യം",
+
+
+              "nearnessOfMarket": "ବଜାରର ନିକଟତା",
+              "nearbyMarkets": "ନିକଟସ୍ଥ ବଜାର",
+              "locateFertilizerShops": "ସାର ଦୋକାନ ଖୋଜନ୍ତୁ",
+              "searchNearbyMarket": "ନିକଟସ୍ଥ ବଜାର ଖୋଜନ୍ତୁ",
+              "localRecyclingAgencies": "ସ୍ଥାନୀୟ ପୁନଃଚକ୍ରଣ ସଂସ୍ଥା",
+
+
+
+
+                "communityTitle": "ଅନ୍ନଦାତା ସମୁଦାୟ 🌾",
+                "justNow": "ଏମିତି ହେଲା",
+                "minutesAgo": "{count} ମିନିଟ୍ ପୂର୍ବରୁ",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} ଘଣ୍ଟା ପୂର୍ବରୁ",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} ଦିନ ପୂର୍ବରୁ",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "ଆପଣଙ୍କ ଖେତରେ କଣ ଘଟୁଛି?",
+                "post": "ପୋଷ୍ଟ କରନ୍ତୁ",
+                "comments": "ମତାମତ",
+                "noCommentsYet": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ମତାମତ ନାହିଁ 🌾",
+                "writeReply": "ଉତ୍ତର ଲେଖନ୍ତୁ...",
+                "noPostsYet": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ପୋଷ୍ଟ ନାହିଁ 🌾",
+                "delete": "ହଟାନ୍ତୁ",
+                "farmer": "ଚାଷୀ",
+                "createFarmerAccount": "ଆପଣଙ୍କ ଚାଷୀ ଖାତା ସୃଷ୍ଟି କରନ୍ତୁ",
+                "email": "ଇମେଲ୍",
+                "emailRequired": "ଇମେଲ୍ ଆବଶ୍ୟକ",
+                "password": "ପାସୱାର୍ଡ",
+                "passwordMinLength": "ପାସୱାର୍ଡ କମରେ କମ 6 ଅକ୍ଷର ହେବା ଉଚିତ",
+                "register": "ନିବନ୍ଧନ କରନ୍ତୁ",
+                "empoweringFarmers": "🌾 AI ସହିତ ଚାଷୀମାନଙ୍କୁ ସଶକ୍ତ କରୁଛୁ",
+                "userRegisteredSuccess": "✅ ବ୍ୟବହାରକାରୀ ସଫଳତାର ସହିତ ନିବନ୍ଧିତ ହେଲେ!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "କରିବାକୁ ଥିବା କାମର ତାଲିକା",
+                "addNewTask": "ନୂତନ କାମ ଯୋଡନ୍ତୁ...",
+                "noTasksYet": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି କାମ ନାହିଁ। ଆପଣଙ୍କ ପ୍ରଥମ କାମ ଯୋଡନ୍ତୁ।",
+                "upcomingTasks": "ଆସନ୍ତା କାମ",
+                "completedTasks": "ସମାପ୍ତ କାମ",
+
+                "profileSaved": "ପ୍ରୋଫାଇଲ୍ ସଫଳତାର ସହିତ ସେଭ୍ ହେଲା!",
+                "yourProfile": "ଆପଣଙ୍କ ପ୍ରୋଫାଇଲ୍",
+                "fullName": "ପୂର୍ଣ୍ଣ ନାମ",
+                "phoneNumber": "ଫୋନ୍ ନମ୍ବର",
+                "saveProfile": "ପ୍ରୋଫାଇଲ୍ ସେଭ୍ କରନ୍ତୁ",
+                "logout": "ଲଗ୍ ଆଉଟ୍",
+                "annadaTagline": "🌾 ଅନ୍ନଦାତା - ଭବିଷ୍ୟତର ଚାଷ",
+
+
+                  "latestNews": "ସମ୍ପ୍ରତିକ ଖବର",
+                  "noNewsAvailable": "କୌଣସି ଖବର ଉପଲବ୍ଧ ନାହିଁ।",
+                  "noDescriptionAvailable": "ବିବରଣୀ ଉପଲବ୍ଧ ନାହିଁ।",
+                  "noTitle": "ଶୀର୍ଷକ ନାହିଁ",
+                  "noSubtitle": "ଉପଶୀର୍ଷକ ନାହିଁ",
+                  "noContentAvailable": "ବିଷୟବସ୍ତୁ ଉପଲବ୍ଧ ନାହିଁ।"
+
+
+
+
+
+
+
+
+}

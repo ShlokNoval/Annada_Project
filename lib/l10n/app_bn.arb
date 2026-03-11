@@ -1,0 +1,270 @@
+{
+  "appTitle": "অন্নদা",
+  "selectLanguage": "আপনার ভাষা নির্বাচন করুন",
+  "continueButton": "চালিয়ে যান",
+  "login": "লগইন",
+  "email": "ইমেইল",
+  "password": "পাসওয়ার্ড",
+  "or": "অথবা",
+  "signInWithGoogle": "গুগলের মাধ্যমে সাইন ইন করুন",
+  "noAccountRegister": "অ্যাকাউন্ট নেই? নিবন্ধন করুন",
+  "chatbot": "চ্যাটবট",
+  "fertilizerCalculator": "সার গণক",
+  "cropDetection": "ফসল সনাক্তকরণ",
+  "weather": "আবহাওয়া",
+  "yojna": "সরকারি প্রকল্প",
+  "tutorials": "পাঠ্য",
+  "home": "হোম",
+  "market": "বাজার",
+  "community": "সম্প্রদায়",
+  "profile": "প্রোফাইল",
+  "welcome": "স্বাগতম",
+  "weatherTitle": "আবহাওয়া",
+  "logout": "লগআউট",
+  "features": "বৈশিষ্ট্যসমূহ",
+  "toDoList": "করণীয় তালিকা",
+  "updated": "হালনাগাদ করা হয়েছে",
+  "tapForecast": "৫ দিনের পূর্বাভাসের জন্য ট্যাপ করুন",
+  "forecastTitle": "৫ দিনের আবহাওয়ার পূর্বাভাস",
+  "forecastSubtitle": "অন্নদা যেকোনো স্থানের জন্য নির্ভুল আবহাওয়ার পূর্বাভাস নিশ্চিত করে।",
+  "fetchingForecast": "পূর্বাভাস আনা হচ্ছে...",
+  "forecastUnavailable": "পূর্বাভাস উপলভ্য নয়।\nইন্টারনেট বা অবস্থান অনুমতি পরীক্ষা করুন।",
+  "permissionRequired": "অনুমতি প্রয়োজন",
+  "enableLocationWeather": "আবহাওয়ার তথ্যের জন্য অবস্থান চালু করুন",
+  "locationUnavailable": "উপলভ্য নয়",
+  "weatherError": "আবহাওয়া লোড করা যায়নি",
+
+
+    "fertilizerCalculatorTitle": "সার গণক",
+    "landArea": "জমির পরিমাণ",
+    "enterArea": "পরিমাণ লিখুন",
+    "acre": "একর",
+    "hectare": "হেক্টর",
+    "selectCropSoil": "ফসল ও মাটি নির্বাচন করুন",
+    "selectCrop": "ফসল নির্বাচন করুন",
+    "selectSoilType": "মাটির ধরন নির্বাচন করুন",
+    "growthStage": "বৃদ্ধির ধাপ",
+    "calculateFertilizer": "সার হিসাব করুন",
+    "fertilizerRequirements": "সারের প্রয়োজনীয়তা",
+    "cropType": "ফসলের ধরন",
+    "soilType": "মাটির ধরন",
+    "growthStageLabel": "বৃদ্ধির ধাপ",
+    "nitrogenNeeded": "নাইট্রোজেন প্রয়োজন",
+    "phosphorusNeeded": "ফসফরাস প্রয়োজন",
+    "potassiumNeeded": "পটাশিয়াম প্রয়োজন",
+    "recommendedFertilizers": "প্রস্তাবিত সার",
+    "noFertilizerNeeded": "অতিরিক্ত সার প্রয়োজন নেই",
+
+    "crop_wheat": "গম",
+    "crop_rice": "চাল",
+    "crop_corn": "ভুট্টা",
+    "crop_soybean": "সয়াবিন",
+    "crop_tomato": "টমেটো",
+    "crop_potato": "আলু",
+    "crop_carrot": "গাজর",
+    "crop_onion": "পেঁয়াজ",
+    "crop_cabbage": "বাঁধাকপি",
+    "crop_chili": "মরিচ",
+    "crop_banana": "কলা",
+    "crop_apple": "আপেল",
+
+    "soil_sandy": "বালুকাময় মাটি",
+    "soil_clay": "এঁটেল মাটি",
+    "soil_loam": "দোঁআশ মাটি",
+    "soil_silty": "পলিমাটি",
+    "soil_peaty": "পিট মাটি",
+    "soil_chalky": "চক মাটি",
+    "soil_saline": "লবণাক্ত মাটি",
+    "soil_red": "লাল মাটি",
+    "soil_black": "কালো মাটি",
+
+    "stage_seedling": "চারা অবস্থা",
+    "stage_vegetative": "পাতা বৃদ্ধি",
+    "stage_flowering": "ফুল অবস্থা",
+    "stage_fruiting": "ফল ধাপ",
+    "stage_maturity": "পরিপক্বতা",
+    "stage_harvesting": "ফসল কাটা",
+
+
+      "cropDetectionTitle": "ফসল সনাক্তকরণ",
+      "tapToSelectImage": "ছবি নির্বাচন করতে ট্যাপ করুন",
+      "uploadImage": "ছবি আপলোড করুন",
+      "takePhoto": "ছবি তুলুন",
+      "enterCropType": "ফসলের ধরন লিখুন",
+      "uploadAndAnalyze": "আপলোড করুন ও বিশ্লেষণ করুন",
+      "analyzing": "বিশ্লেষণ চলছে...",
+      "noImageSelected": "কোনো ছবি নির্বাচন করা হয়নি।",
+      "analysisError": "ছবি বিশ্লেষণে ত্রুটি",
+
+
+        "annadaAssistance": "অন্নদা সহায়তা",
+        "farmerFaqs": "💬 কৃষকদের সাধারণ প্রশ্ন:",
+        "faq1": "টমেটোর জন্য সেরা সার কোনটি?",
+        "faq2": "ফসলে পোকামাকড় আক্রমণ কীভাবে প্রতিরোধ করবেন?",
+        "faq3": "গ্রীষ্মকালে কোন ফসল উপযুক্ত?",
+        "faq4": "চাষাবাদে পানি কীভাবে সংরক্ষণ করবেন?",
+        "faq5": "ধান চাষের জন্য আদর্শ মাটির pH কত হওয়া উচিত?",
+        "analyzingImage": "ছবির বিশ্লেষণ চলছে...",
+        "thinking": "ভাবছে...",
+        "noResponseReceived": "⚠️ কোনো উত্তর পাওয়া যায়নি।",
+        "errorFetchingResponse": "⚠️ উত্তর আনতে ত্রুটি।",
+        "failedToLoadImage": "ছবি লোড করতে ব্যর্থ",
+        "uploading": "আপলোড হচ্ছে",
+
+
+          "governmentSchemesTitle": "সরকারি প্রকল্পসমূহ",
+          "applyNow": "এখনই আবেদন করুন",
+
+          "pmKisanName": "প্রধানমন্ত্রী কিষাণ সম্মান নিধি (PM-KISAN)",
+          "pmKisanDesc": "ছোট ও প্রান্তিক কৃষকদের বছরে ₹6,000 তিন কিস্তিতে প্রদান করা হয়।",
+
+          "pmfbName": "প্রধানমন্ত্রী ফসল বীমা যোজনা (PMFBY)",
+          "pmfbDesc": "প্রাকৃতিক দুর্যোগ ও পোকামাকড়ের ক্ষতির বিরুদ্ধে বীমা প্রদান করে।",
+
+          "kccName": "কিষাণ ক্রেডিট কার্ড (KCC) প্রকল্প",
+          "kccDesc": "কৃষি খরচের জন্য স্বল্প সুদে ঋণ প্রদান করে।",
+
+          "soilHealthName": "মাটি স্বাস্থ্য কার্ড প্রকল্প",
+          "soilHealthDesc": "মাটির পুষ্টি পরীক্ষার জন্য বিনামূল্যে সেবা দেয়।",
+
+          "pmksyName": "প্রধানমন্ত্রী কৃষি সেচ যোজনা (PMKSY)",
+          "pmksyDesc": "জল সংরক্ষণ ও সেচ সুবিধা উন্নত করে।",
+
+          "enamName": "ই-নাম (জাতীয় কৃষি বাজার)",
+          "enamDesc": "ডিজিটাল প্ল্যাটফর্ম যা কৃষকদের দেশজুড়ে বিক্রিতে সহায়তা করে।",
+
+          "rkvyName": "রাষ্ট্রীয় কৃষি বিকাশ যোজনা (RKVY)",
+          "rkvyDesc": "কৃষি প্রকল্পের জন্য আর্থিক সহায়তা প্রদান করে।",
+
+          "pkvyName": "পরম্পরাগত কৃষি বিকাশ যোজনা (PKVY)",
+          "pkvyDesc": "জৈব কৃষিকে উৎসাহিত করে।",
+
+          "dedsName": "ডেইরি উদ্যোক্তা উন্নয়ন প্রকল্প (DEDS)",
+          "dedsDesc": "ডেইরি খামার স্থাপনের জন্য ভর্তুকি দেয়।",
+
+
+            "farmersGuideTitle": "কৃষক নির্দেশিকা",
+            "allGuides": "সব নির্দেশিকা",
+            "appHelp": "অ্যাপ সহায়তা",
+            "farmingTips": "চাষের টিপস",
+            "searchTutorialHint": "চাষের নির্দেশিকা খুঁজুন...",
+            "noTutorialsFound": "কোনো নির্দেশিকা পাওয়া যায়নি",
+            "tryDifferentSearch": "অন্য শব্দ চেষ্টা করুন",
+            "tapToWatchVideo": "ভিডিও দেখতে ট্যাপ করুন",
+            "linkError": "লিঙ্ক খোলা যায়নি",
+
+            "tutorialGettingStartedTitle": "📱 অন্নদা অ্যাপ ব্যবহার শুরু",
+            "tutorialGettingStartedContent": "অ্যাপের সব কৃষি টুল কীভাবে ব্যবহার করবেন তা শিখুন।",
+
+            "tutorialCropDetectionTitle": "🌾 ফসল সনাক্তকরণ",
+            "tutorialCropDetectionContent": "ফসলের ছবি আপলোড করে রোগ নির্ণয় করুন।",
+
+            "tutorialFertilizerTitle": "🧮 সার ক্যালকুলেটর ব্যবহার",
+            "tutorialFertilizerContent": "ফসল ও জমির ভিত্তিতে সারের পরিমাণ নির্ধারণ করুন।",
+
+            "tutorialAssistantTitle": "🤖 অন্নদা সহায়কের সাথে কথা বলুন",
+            "tutorialAssistantContent": "কৃষি সম্পর্কিত প্রশ্ন জিজ্ঞাসা করুন।",
+
+            "tutorialMarketTitle": "🗺️ নিকটবর্তী বাজার খুঁজুন",
+            "tutorialMarketContent": "আপনার এলাকার কৃষি বাজার খুঁজে নিন।",
+
+            "tutorialOrganicTitle": "🌱 জৈব কৃষি গাইড",
+            "tutorialOrganicContent": "রাসায়নিক ছাড়া প্রাকৃতিক কৃষি শিখুন।",
+
+            "tutorialIrrigationTitle": "💧 স্মার্ট সেচ পদ্ধতি",
+            "tutorialIrrigationContent": "ড্রিপ ও স্প্রিংকলার সেচ শিখুন।",
+
+            "tutorialIPMTitle": "🐛 সমন্বিত পোকা ব্যবস্থাপনা",
+            "tutorialIPMContent": "রাসায়নিকের আগে প্রাকৃতিক পদ্ধতি ব্যবহার করুন।",
+
+            "tutorialRotationTitle": "🌾 ফসল পর্যায়ক্রম",
+            "tutorialRotationContent": "মাটির উর্বরতা বাড়াতে ফসল পরিবর্তন করুন।",
+
+            "tutorialSoilTitle": "🧪 মাটির স্বাস্থ্য",
+            "tutorialSoilContent": "মাটি পরীক্ষা ও পুষ্টি বজায় রাখুন।",
+
+            "tutorialFinanceTitle": "📊 কৃষি আর্থিক ব্যবস্থাপনা",
+            "tutorialFinanceContent": "খরচ ও আয় ট্র্যাক করুন।",
+
+            "tutorialMechanizationTitle": "🚜 কৃষি যান্ত্রিক গাইড",
+            "tutorialMechanizationContent": "ফার্মের আকার অনুযায়ী যন্ত্র বেছে নিন।",
+
+            "tutorialWeatherTitle": "🌤️ আবহাওয়া ভিত্তিক কৃষি",
+            "tutorialWeatherContent": "মৌসুম অনুযায়ী চাষ পরিকল্পনা করুন।",
+
+            "tutorialWheatVideoTitle": "📽️ আধুনিক গম চাষ",
+            "tutorialTomatoVideoTitle": "📽️ টমেটো পরিচর্যা",
+            "tutorialRotationVideoTitle": "📽️ ফসল পর্যায়ক্রমের উপকারিতা",
+
+            "tutorialPestImageTitle": "📷 পোকা সনাক্তকরণ চার্ট",
+            "tutorialSoilImageTitle": "📷 মাটির প্রকারভেদ",
+            "tutorialIrrigationImageTitle": "📷 সেচ পদ্ধতি তুলনা",
+
+
+              "nearnessOfMarket": "বাজারের নিকটতা",
+              "nearbyMarkets": "কাছাকাছি বাজার",
+              "locateFertilizerShops": "সারের দোকান খুঁজুন",
+              "searchNearbyMarket": "কাছের বাজার খুঁজুন",
+              "localRecyclingAgencies": "স্থানীয় পুনর্ব্যবহার সংস্থা",
+
+
+
+
+                "communityTitle": "অন্নদাতা কমিউনিটি 🌾",
+                "justNow": "এইমাত্র",
+                "minutesAgo": "{count} মিনিট আগে",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} ঘণ্টা আগে",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} দিন আগে",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "আপনার ক্ষেতে কী হচ্ছে?",
+                "post": "পোস্ট করুন",
+                "comments": "মন্তব্য",
+                "noCommentsYet": "এখনও কোনো মন্তব্য নেই 🌾",
+                "writeReply": "উত্তর লিখুন...",
+                "noPostsYet": "এখনও কোনো পোস্ট নেই 🌾",
+                "delete": "মুছুন",
+                "farmer": "কৃষক",
+
+                "createFarmerAccount": "আপনার কৃষক অ্যাকাউন্ট তৈরি করুন",
+                "email": "ইমেইল",
+                "emailRequired": "ইমেইল প্রয়োজন",
+                "password": "পাসওয়ার্ড",
+                "passwordMinLength": "পাসওয়ার্ড কমপক্ষে 6 অক্ষরের হতে হবে",
+                "register": "নিবন্ধন করুন",
+                "empoweringFarmers": "🌾 AI দিয়ে কৃষকদের শক্তিশালী করা",
+                "userRegisteredSuccess": "✅ ব্যবহারকারী সফলভাবে নিবন্ধিত হয়েছে!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "করণীয় তালিকা",
+                "addNewTask": "নতুন কাজ যোগ করুন...",
+                "noTasksYet": "এখনও কোনো কাজ নেই। আপনার প্রথম কাজ যোগ করুন।",
+                "upcomingTasks": "আসন্ন কাজ",
+                "completedTasks": "সম্পন্ন কাজ",
+
+                "profileSaved": "প্রোফাইল সফলভাবে সংরক্ষিত হয়েছে!",
+                "yourProfile": "আপনার প্রোফাইল",
+                "fullName": "পূর্ণ নাম",
+                "phoneNumber": "ফোন নম্বর",
+                "saveProfile": "প্রোফাইল সংরক্ষণ করুন",
+                "logout": "লগআউট",
+                "annadaTagline": "🌾 অন্নদাতা - ভবিষ্যতের ফসল",
+
+
+                  "latestNews": "সর্বশেষ খবর",
+                  "noNewsAvailable": "কোনো খবর উপলব্ধ নেই।",
+                  "noDescriptionAvailable": "কোনো বিবরণ উপলব্ধ নেই।",
+                  "noTitle": "কোনো শিরোনাম নেই",
+                  "noSubtitle": "কোনো উপশিরোনাম নেই",
+                  "noContentAvailable": "কোনো বিষয়বস্তু উপলব্ধ নেই।"
+
+
+
+
+
+
+
+
+}

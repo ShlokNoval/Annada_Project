@@ -1,0 +1,270 @@
+{
+  "appTitle": "અન્નદા",
+  "selectLanguage": "તમારી ભાષા પસંદ કરો",
+  "continueButton": "આગળ વધો",
+  "login": "લોગિન",
+  "email": "ઈમેલ",
+  "password": "પાસવર્ડ",
+  "or": "અથવા",
+  "signInWithGoogle": "ગૂગલ દ્વારા સાઇન ઇન કરો",
+  "noAccountRegister": "ખાતું નથી? નોંધણી કરો",
+  "chatbot": "ચેટબોટ",
+  "fertilizerCalculator": "ખાતર ગણક",
+  "cropDetection": "પાક ઓળખ",
+  "weather": "હવામાન",
+  "yojna": "સરકારી યોજનાઓ",
+  "tutorials": "માર્ગદર્શિકા",
+  "home": "મુખ્ય પૃષ્ઠ",
+  "market": "બજાર",
+  "community": "સમુદાય",
+  "profile": "પ્રોફાઇલ",
+  "welcome": "સ્વાગત છે",
+  "weatherTitle": "હવામાન",
+  "logout": "લોગઆઉટ",
+  "features": "વિશેષતાઓ",
+  "toDoList": "કાર્ય સૂચિ",
+  "updated": "અપડેટ થયેલ",
+  "tapForecast": "5 દિવસની આગાહી માટે ટૅપ કરો",
+  "forecastTitle": "5 દિવસની હવામાન આગાહી",
+  "forecastSubtitle": "અન્નદા કોઈપણ સ્થાન માટે ચોક્કસ હવામાન આગાહી સુનિશ્ચિત કરે છે.",
+  "fetchingForecast": "આગાહી મેળવી રહ્યું છે...",
+  "forecastUnavailable": "આગાહી ઉપલબ્ધ નથી.\nઇન્ટરનેટ અથવા સ્થાન પરવાનગી તપાસો.",
+  "permissionRequired": "પરવાનગી જરૂરી",
+  "enableLocationWeather": "હવામાન માહિતી માટે સ્થાન સક્રિય કરો",
+  "locationUnavailable": "ઉપલબ્ધ નથી",
+  "weatherError": "હવામાન લોડ કરી શકાયું નથી",
+
+
+    "fertilizerCalculatorTitle": "ખાતર ગણક",
+    "landArea": "જમીનનું ક્ષેત્રફળ",
+    "enterArea": "ક્ષેત્રફળ દાખલ કરો",
+    "acre": "એકર",
+    "hectare": "હેક્ટર",
+    "selectCropSoil": "પાક અને માટી પસંદ કરો",
+    "selectCrop": "પાક પસંદ કરો",
+    "selectSoilType": "માટીની જાત પસંદ કરો",
+    "growthStage": "વિકાસ અવસ્થા",
+    "calculateFertilizer": "ખાતરની ગણતરી કરો",
+    "fertilizerRequirements": "ખાતરની જરૂરિયાત",
+    "cropType": "પાકનો પ્રકાર",
+    "soilType": "માટીની જાત",
+    "growthStageLabel": "વિકાસ અવસ્થા",
+    "nitrogenNeeded": "નાઇટ્રોજન જરૂર",
+    "phosphorusNeeded": "ફોસ્ફરસ જરૂર",
+    "potassiumNeeded": "પોટેશિયમ જરૂર",
+    "recommendedFertilizers": "ભલામણ કરેલા ખાતરો",
+    "noFertilizerNeeded": "વધારાના ખાતરની જરૂર નથી",
+
+    "crop_wheat": "ઘઉં",
+    "crop_rice": "ચોખા",
+    "crop_corn": "મકાઈ",
+    "crop_soybean": "સોયાબીન",
+    "crop_tomato": "ટામેટા",
+    "crop_potato": "બટાકા",
+    "crop_carrot": "ગાજર",
+    "crop_onion": "ડુંગળી",
+    "crop_cabbage": "કોબી",
+    "crop_chili": "મરચાં",
+    "crop_banana": "કેળા",
+    "crop_apple": "સફરજન",
+
+    "soil_sandy": "રેતીલી માટી",
+    "soil_clay": "ચીકણી માટી",
+    "soil_loam": "દોમટ માટી",
+    "soil_silty": "ગાદવાળી માટી",
+    "soil_peaty": "પીટ માટી",
+    "soil_chalky": "ચોક માટી",
+    "soil_saline": "ખારી માટી",
+    "soil_red": "લાલ માટી",
+    "soil_black": "કાળી માટી",
+
+    "stage_seedling": "અંકુર અવસ્થા",
+    "stage_vegetative": "પાન અવસ્થા",
+    "stage_flowering": "ફૂલ અવસ્થા",
+    "stage_fruiting": "ફળ અવસ્થા",
+    "stage_maturity": "પક્વતા",
+    "stage_harvesting": "કાપણી",
+
+
+      "cropDetectionTitle": "પાક ઓળખ",
+      "tapToSelectImage": "છબી પસંદ કરવા માટે ટેપ કરો",
+      "uploadImage": "છબી અપલોડ કરો",
+      "takePhoto": "ફોટો લો",
+      "enterCropType": "પાકનો પ્રકાર દાખલ કરો",
+      "uploadAndAnalyze": "અપલોડ કરો અને વિશ્લેષણ કરો",
+      "analyzing": "વિશ્લેષણ થઈ રહ્યું છે...",
+      "noImageSelected": "કોઈ છબી પસંદ કરવામાં આવી નથી.",
+      "analysisError": "છબી વિશ્લેષણમાં ભૂલ",
+
+
+        "annadaAssistance": "અન્નદા સહાય",
+        "farmerFaqs": "💬 ખેડૂત સામાન્ય પ્રશ્નો:",
+        "faq1": "ટામેટાં માટે શ્રેષ્ઠ ખાતર કયું છે?",
+        "faq2": "પાક પર જીવાત હુમલો કેવી રીતે રોકવો?",
+        "faq3": "ઉનાળામાં કયા પાક યોગ્ય છે?",
+        "faq4": "ખેતીમાં પાણી કેવી રીતે બચાવવું?",
+        "faq5": "ચોખાની ખેતી માટે આદર્શ માટી pH કેટલું હોવું જોઈએ?",
+        "analyzingImage": "છબીનું વિશ્લેષણ થઈ રહ્યું છે...",
+        "thinking": "વિચાર કરી રહ્યું છે...",
+        "noResponseReceived": "⚠️ કોઈ જવાબ મળ્યો નથી.",
+        "errorFetchingResponse": "⚠️ જવાબ મેળવવામાં ભૂલ.",
+        "failedToLoadImage": "છબી લોડ કરવામાં નિષ્ફળ",
+        "uploading": "અપલોડ થઈ રહ્યું છે",
+
+        
+          "governmentSchemesTitle": "સરકારી યોજનાઓ",
+          "applyNow": "હવે અરજી કરો",
+
+          "pmKisanName": "પ્રધાનમંત્રી કિસાન સન્માન નિધિ (PM-KISAN)",
+          "pmKisanDesc": "નાના અને સીમાંત ખેડૂતોને વર્ષમાં ₹6,000 ત્રણ હપ્તામાં આપવામાં આવે છે.",
+
+          "pmfbName": "પ્રધાનમંત્રી ફસલ બીમા યોજના (PMFBY)",
+          "pmfbDesc": "પ્રાકૃતિક આફતો અને જીવાતોથી થયેલા પાક નુકસાન માટે વીમો આપે છે.",
+
+          "kccName": "કિસાન ક્રેડિટ કાર્ડ (KCC) યોજના",
+          "kccDesc": "ખેડૂતોને કૃષિ ખર્ચ માટે ઓછા વ્યાજદરે ટૂંકા ગાળાનું ધિરાણ આપે છે.",
+
+          "soilHealthName": "માટી આરોગ્ય કાર્ડ યોજના",
+          "soilHealthDesc": "માટીના પોષક તત્વોની તપાસ માટે મફત સેવા આપે છે.",
+
+          "pmksyName": "પ્રધાનમંત્રી કૃષિ સિંચાઈ યોજના (PMKSY)",
+          "pmksyDesc": "પાણી સંરક્ષણ અને વ્યવસ્થાપન દ્વારા સિંચાઈ સુવિધા આપે છે.",
+
+          "enamName": "ઈ-નામ (રાષ્ટ્રીય કૃષિ બજાર)",
+          "enamDesc": "ખેડૂતોને દેશભરમાં ઉત્પાદન વેચવામાં મદદરૂપ ડિજિટલ પ્લેટફોર્મ.",
+
+          "rkvyName": "રાષ્ટ્રીય કૃષિ વિકાસ યોજના (RKVY)",
+          "rkvyDesc": "કૃષિ પ્રોજેક્ટ માટે નાણાકીય સહાય આપે છે.",
+
+          "pkvyName": "પરંપરાગત કૃષિ વિકાસ યોજના (PKVY)",
+          "pkvyDesc": "જૈવિક ખેતી માટે તાલીમ અને નાણાકીય સહાય આપે છે.",
+
+          "dedsName": "ડેરી ઉદ્યોગ વિકાસ યોજના (DEDS)",
+          "dedsDesc": "ડેરી ફાર્મ સ્થાપવા માટે સબસિડી આપે છે.",
+
+
+            "farmersGuideTitle": "ખેડૂત માર્ગદર્શિકા",
+            "allGuides": "બધી માર્ગદર્શિકા",
+            "appHelp": "એપ મદદ",
+            "farmingTips": "ખેતી સૂચનો",
+            "searchTutorialHint": "ખેતી માર્ગદર્શિકા શોધો...",
+            "noTutorialsFound": "કોઈ માર્ગદર્શિકા મળી નથી",
+            "tryDifferentSearch": "અન્ય શબ્દોથી શોધો",
+            "tapToWatchVideo": "વિડિયો જોવા માટે ટેપ કરો",
+            "linkError": "લિંક ખોલી શકાઈ નહીં",
+
+            "tutorialGettingStartedTitle": "📱 અન્નદા એપ કેવી રીતે શરૂ કરવી",
+            "tutorialGettingStartedContent": "એપની તમામ સુવિધાઓ શીખો.",
+
+            "tutorialCropDetectionTitle": "🌾 પાક ઓળખ સુવિધા",
+            "tutorialCropDetectionContent": "પાકની તસવીર અપલોડ કરો અને રોગ જાણો.",
+
+            "tutorialFertilizerTitle": "🧮 ખાતર ગણક ઉપયોગ",
+            "tutorialFertilizerContent": "પાક અને જમીન પ્રમાણે ખાતર જાણો.",
+
+            "tutorialAssistantTitle": "🤖 અન્નદા સહાયક સાથે ચેટ કરો",
+            "tutorialAssistantContent": "ખેતી સંબંધિત પ્રશ્નો પૂછો.",
+
+            "tutorialMarketTitle": "🗺️ નજીકના બજાર શોધો",
+            "tutorialMarketContent": "તમારા વિસ્તારમાં કૃષિ બજાર શોધો.",
+
+            "tutorialOrganicTitle": "🌱 ઓર્ગેનિક ખેતી માર્ગદર્શિકા",
+            "tutorialOrganicContent": "રાસાયણ મુક્ત ખેતી શીખો.",
+
+            "tutorialIrrigationTitle": "💧 સ્માર્ટ સિંચાઈ પદ્ધતિ",
+            "tutorialIrrigationContent": "ડ્રિપ અને સ્પ્રિંકલર પદ્ધતિ શીખો.",
+
+            "tutorialIPMTitle": "🐛 એકીકૃત જીવાત નિયંત્રણ",
+            "tutorialIPMContent": "રાસાયણિક પહેલાં કુદરતી ઉપાય કરો.",
+
+            "tutorialRotationTitle": "🌾 પાક ફેરબદલી",
+            "tutorialRotationContent": "જમીન ફળદ્રુપતા માટે પાક ફેરવો.",
+
+            "tutorialSoilTitle": "🧪 જમીન આરોગ્ય",
+            "tutorialSoilContent": "જમીન પરીક્ષણ અને પોષણ સંતુલન રાખો.",
+
+            "tutorialFinanceTitle": "📊 ખેતી નાણાકીય વ્યવસ્થા",
+            "tutorialFinanceContent": "ખર્ચ અને આવકનું સંચાલન કરો.",
+
+            "tutorialMechanizationTitle": "🚜 ખેતી યાંત્રિક માર્ગદર્શિકા",
+            "tutorialMechanizationContent": "ફાર્મ સાઇઝ મુજબ મશીન પસંદ કરો.",
+
+            "tutorialWeatherTitle": "🌤️ હવામાન આધારિત ખેતી",
+            "tutorialWeatherContent": "હવામાન મુજબ ખેતી યોજના બનાવો.",
+
+            "tutorialWheatVideoTitle": "📽️ આધુનિક ગહું ખેતી",
+            "tutorialTomatoVideoTitle": "📽️ ટામેટા સંભાળ",
+            "tutorialRotationVideoTitle": "📽️ પાક ફેરફાર ફાયદા",
+
+            "tutorialPestImageTitle": "📷 જીવાત ઓળખ ચાર્ટ",
+            "tutorialSoilImageTitle": "📷 જમીન પ્રકાર",
+            "tutorialIrrigationImageTitle": "📷 સિંચાઈ સરખામણી",
+
+
+              "nearnessOfMarket": "બજારની નજીકતા",
+              "nearbyMarkets": "નજીકના બજારો",
+              "locateFertilizerShops": "ખાતરની દુકાનો શોધો",
+              "searchNearbyMarket": "નજીકનો બજાર શોધો",
+              "localRecyclingAgencies": "સ્થાનિક રિસાયક્લિંગ એજન્સીઓ",
+
+
+
+
+                "communityTitle": "અન્નદાતા સમુદાય 🌾",
+                "justNow": "હમણાં જ",
+                "minutesAgo": "{count} મિનિટ પહેલા",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} કલાક પહેલા",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} દિવસ પહેલા",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "તમારા ખેતરમાં શું ચાલી રહ્યું છે?",
+                "post": "પોસ્ટ કરો",
+                "comments": "ટિપ્પણીઓ",
+                "noCommentsYet": "હજુ સુધી કોઈ ટિપ્પણી નથી 🌾",
+                "writeReply": "જવાબ લખો...",
+                "noPostsYet": "હજુ સુધી કોઈ પોસ્ટ નથી 🌾",
+                "delete": "કાઢી નાખો",
+                "farmer": "ખેડૂત",
+
+                "createFarmerAccount": "તમારું ખેડૂત ખાતું બનાવો",
+                "email": "ઇમેઇલ",
+                "emailRequired": "ઇમેઇલ જરૂરી છે",
+                "password": "પાસવર્ડ",
+                "passwordMinLength": "પાસવર્ડ ઓછામાં ઓછા 6 અક્ષરનો હોવો જોઈએ",
+                "register": "નોંધણી કરો",
+                "empoweringFarmers": "🌾 AI સાથે ખેડૂતોને સશક્ત બનાવીએ છીએ",
+                "userRegisteredSuccess": "✅ વપરાશકર્તા સફળતાપૂર્વક નોંધાયો!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "કામોની યાદી",
+                "addNewTask": "નવું કામ ઉમેરો...",
+                "noTasksYet": "હજુ સુધી કોઈ કામ નથી. તમારું પ્રથમ કામ ઉમેરો.",
+                "upcomingTasks": "આગામી કામો",
+                "completedTasks": "પૂર્ણ થયેલા કામો",
+
+                "profileSaved": "પ્રોફાઇલ સફળતાપૂર્વક સાચવાઈ!",
+                "yourProfile": "તમારી પ્રોફાઇલ",
+                "fullName": "પૂર્ણ નામ",
+                "phoneNumber": "ફોન નંબર",
+                "saveProfile": "પ્રોફાઇલ સાચવો",
+                "logout": "લોગઆઉટ",
+                "annadaTagline": "🌾 અન્નદાતા - ભવિષ્યની ખેતી",
+
+
+                  "latestNews": "તાજા સમાચાર",
+                  "noNewsAvailable": "કોઈ સમાચાર ઉપલબ્ધ નથી.",
+                  "noDescriptionAvailable": "કોઈ વર્ણન ઉપલબ્ધ નથી.",
+                  "noTitle": "શીર્ષક ઉપલબ્ધ નથી",
+                  "noSubtitle": "ઉપશીર્ષક ઉપલબ્ધ નથી",
+                  "noContentAvailable": "સામગ્રી ઉપલબ્ધ નથી."
+
+
+
+
+
+
+
+
+}

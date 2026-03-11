@@ -1,0 +1,272 @@
+{
+  "appTitle": "ਅੰਨਦਾ",
+  "selectLanguage": "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
+  "continueButton": "ਜਾਰੀ ਰੱਖੋ",
+  "login": "ਲਾਗਿਨ",
+  "email": "ਈਮੇਲ",
+  "password": "ਪਾਸਵਰਡ",
+  "or": "ਜਾਂ",
+  "signInWithGoogle": "ਗੂਗਲ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ",
+  "noAccountRegister": "ਖਾਤਾ ਨਹੀਂ ਹੈ? ਰਜਿਸਟਰ ਕਰੋ",
+  "chatbot": "ਚੈਟਬੋਟ",
+  "fertilizerCalculator": "ਖਾਦ ਗਣਕ",
+  "cropDetection": "ਫਸਲ ਪਛਾਣ",
+  "weather": "ਮੌਸਮ",
+  "yojna": "ਸਰਕਾਰੀ ਯੋਜਨਾਵਾਂ",
+  "tutorials": "ਮਾਰਗਦਰਸ਼ਨ",
+  "home": "ਮੁੱਖ ਪੰਨਾ",
+  "market": "ਬਾਜ਼ਾਰ",
+  "community": "ਸਮੁਦਾਇ",
+  "profile": "ਪ੍ਰੋਫ਼ਾਈਲ",
+  "welcome": "ਸਵਾਗਤ ਹੈ",
+  "weatherTitle": "ਮੌਸਮ",
+  "logout": "ਲਾਗਆਉਟ",
+  "features": "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ",
+  "toDoList": "ਕਰਨ ਵਾਲੇ ਕੰਮ",
+  "updated": "ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ",
+  "tapForecast": "5 ਦਿਨਾਂ ਦੀ ਭਵਿੱਖਬਾਣੀ ਲਈ ਟੈਪ ਕਰੋ",
+  "forecastTitle": "5 ਦਿਨਾਂ ਦੀ ਮੌਸਮ ਭਵਿੱਖਬਾਣੀ",
+  "forecastSubtitle": "ਅੰਨਦਾ ਕਿਸੇ ਵੀ ਸਥਾਨ ਲਈ ਸਹੀ ਮੌਸਮ ਭਵਿੱਖਬਾਣੀ ਯਕੀਨੀ ਬਣਾਉਂਦਾ ਹੈ।",
+  "fetchingForecast": "ਭਵਿੱਖਬਾਣੀ ਲੈ ਰਹੇ ਹਾਂ...",
+  "forecastUnavailable": "ਭਵਿੱਖਬਾਣੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।\nਇੰਟਰਨੈਟ ਜਾਂ ਸਥਾਨ ਦੀ ਇਜਾਜ਼ਤ ਜਾਂਚੋ।",
+  "permissionRequired": "ਇਜਾਜ਼ਤ ਲੋੜੀਂਦੀ ਹੈ",
+  "enableLocationWeather": "ਮੌਸਮ ਜਾਣਕਾਰੀ ਲਈ ਸਥਾਨ ਚਾਲੂ ਕਰੋ",
+  "locationUnavailable": "ਉਪਲਬਧ ਨਹੀਂ",
+  "weatherError": "ਮੌਸਮ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ",
+
+
+    "fertilizerCalculatorTitle": "ਖਾਦ ਗਣਕ",
+    "landArea": "ਜ਼ਮੀਨ ਦਾ ਖੇਤਰਫਲ",
+    "enterArea": "ਖੇਤਰਫਲ ਦਰਜ ਕਰੋ",
+    "acre": "ਏਕੜ",
+    "hectare": "ਹੈਕਟੇਅਰ",
+    "selectCropSoil": "ਫਸਲ ਅਤੇ ਮਿੱਟੀ ਚੁਣੋ",
+    "selectCrop": "ਫਸਲ ਚੁਣੋ",
+    "selectSoilType": "ਮਿੱਟੀ ਦੀ ਕਿਸਮ ਚੁਣੋ",
+    "growthStage": "ਵਿਕਾਸ ਅਵਸਥਾ",
+    "calculateFertilizer": "ਖਾਦ ਦੀ ਗਿਣਤੀ ਕਰੋ",
+    "fertilizerRequirements": "ਖਾਦ ਦੀ ਲੋੜ",
+    "cropType": "ਫਸਲ ਦੀ ਕਿਸਮ",
+    "soilType": "ਮਿੱਟੀ ਦੀ ਕਿਸਮ",
+    "growthStageLabel": "ਵਿਕਾਸ ਅਵਸਥਾ",
+    "nitrogenNeeded": "ਨਾਈਟਰੋਜਨ ਦੀ ਲੋੜ",
+    "phosphorusNeeded": "ਫਾਸਫੋਰਸ ਦੀ ਲੋੜ",
+    "potassiumNeeded": "ਪੋਟਾਸ਼ੀਅਮ ਦੀ ਲੋੜ",
+    "recommendedFertilizers": "ਸਿਫਾਰਸ਼ੀ ਖਾਦਾਂ",
+    "noFertilizerNeeded": "ਵਧੀਕ ਖਾਦ ਦੀ ਲੋੜ ਨਹੀਂ",
+
+    "crop_wheat": "ਗੰਹੂ",
+    "crop_rice": "ਚੌਲ",
+    "crop_corn": "ਮੱਕੀ",
+    "crop_soybean": "ਸੋਯਾਬੀਨ",
+    "crop_tomato": "ਟਮਾਟਰ",
+    "crop_potato": "ਆਲੂ",
+    "crop_carrot": "ਗਾਜਰ",
+    "crop_onion": "ਪਿਆਜ਼",
+    "crop_cabbage": "ਬੰਦਗੋਭੀ",
+    "crop_chili": "ਮਿਰਚ",
+    "crop_banana": "ਕੇਲਾ",
+    "crop_apple": "ਸੇਬ",
+
+    "soil_sandy": "ਰੇਤੀਲੀ ਮਿੱਟੀ",
+    "soil_clay": "ਚਿਕਣੀ ਮਿੱਟੀ",
+    "soil_loam": "ਦੋਮਟ ਮਿੱਟੀ",
+    "soil_silty": "ਗਾਦੀ ਮਿੱਟੀ",
+    "soil_peaty": "ਪੀਟ ਮਿੱਟੀ",
+    "soil_chalky": "ਚਾਕ ਮਿੱਟੀ",
+    "soil_saline": "ਖਾਰੀ ਮਿੱਟੀ",
+    "soil_red": "ਲਾਲ ਮਿੱਟੀ",
+    "soil_black": "ਕਾਲੀ ਮਿੱਟੀ",
+
+    "stage_seedling": "ਅੰਕੁਰ ਅਵਸਥਾ",
+    "stage_vegetative": "ਪੱਤਾ ਅਵਸਥਾ",
+    "stage_flowering": "ਫੁੱਲ ਅਵਸਥਾ",
+    "stage_fruiting": "ਫਲ ਅਵਸਥਾ",
+    "stage_maturity": "ਪਕਵਤਾ",
+    "stage_harvesting": "ਕਟਾਈ",
+
+
+      "cropDetectionTitle": "ਫਸਲ ਪਛਾਣ",
+      "tapToSelectImage": "ਤਸਵੀਰ ਚੁਣਨ ਲਈ ਟੈਪ ਕਰੋ",
+      "uploadImage": "ਤਸਵੀਰ ਅਪਲੋਡ ਕਰੋ",
+      "takePhoto": "ਫੋਟੋ ਖਿੱਚੋ",
+      "enterCropType": "ਫਸਲ ਦੀ ਕਿਸਮ ਦਰਜ ਕਰੋ",
+      "uploadAndAnalyze": "ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ",
+      "analyzing": "ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
+      "noImageSelected": "ਕੋਈ ਤਸਵੀਰ ਚੁਣੀ ਨਹੀਂ ਗਈ।",
+      "analysisError": "ਤਸਵੀਰ ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਗਲਤੀ",
+
+
+        "annadaAssistance": "ਅੰਨਦਾ ਸਹਾਇਤਾ",
+        "farmerFaqs": "💬 ਕਿਸਾਨ ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ:",
+        "faq1": "ਟਮਾਟਰ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਖਾਦ ਕਿਹੜੀ ਹੈ?",
+        "faq2": "ਫਸਲਾਂ ਉੱਤੇ ਕੀੜੇ ਹਮਲੇ ਕਿਵੇਂ ਰੋਕੀਏ?",
+        "faq3": "ਗਰਮੀ ਦੇ ਮੌਸਮ ਲਈ ਕਿਹੜੀਆਂ ਫਸਲਾਂ ਢੁੱਕਵੀਆਂ ਹਨ?",
+        "faq4": "ਖੇਤੀ ਵਿੱਚ ਪਾਣੀ ਕਿਵੇਂ ਬਚਾਈਏ?",
+        "faq5": "ਚਾਵਲ ਦੀ ਖੇਤੀ ਲਈ ਆਦਰਸ਼ ਮਿੱਟੀ pH ਕੀ ਹੈ?",
+        "analyzingImage": "ਤਸਵੀਰ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
+        "thinking": "ਸੋਚ ਰਿਹਾ ਹੈ...",
+        "noResponseReceived": "⚠️ ਕੋਈ ਜਵਾਬ ਨਹੀਂ ਮਿਲਿਆ।",
+        "errorFetchingResponse": "⚠️ ਜਵਾਬ ਲੈਣ ਵਿੱਚ ਗਲਤੀ।",
+        "failedToLoadImage": "ਤਸਵੀਰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ",
+        "uploading": "ਅਪਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
+
+        
+          "governmentSchemesTitle": "ਸਰਕਾਰੀ ਯੋਜਨਾਵਾਂ",
+          "applyNow": "ਹੁਣ ਅਰਜ਼ੀ ਦਿਓ",
+
+          "pmKisanName": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਕਿਸਾਨ ਸਮਾਨ ਨਿਧਿ (PM-KISAN)",
+          "pmKisanDesc": "ਛੋਟੇ ਅਤੇ ਸੀਮਾਂਤ ਕਿਸਾਨਾਂ ਨੂੰ ਸਾਲਾਨਾ ₹6,000 ਤਿੰਨ ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਦਿੱਤੇ ਜਾਂਦੇ ਹਨ।",
+
+          "pmfbName": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਫਸਲ ਬੀਮਾ ਯੋਜਨਾ (PMFBY)",
+          "pmfbDesc": "ਕੁਦਰਤੀ ਆਫ਼ਤਾਂ ਅਤੇ ਕੀੜਿਆਂ ਤੋਂ ਫਸਲ ਨੁਕਸਾਨ ਲਈ ਬੀਮਾ ਦਿੰਦੀ ਹੈ।",
+
+          "kccName": "ਕਿਸਾਨ ਕਰੈਡਿਟ ਕਾਰਡ (KCC) ਯੋਜਨਾ",
+          "kccDesc": "ਕਿਸਾਨਾਂ ਨੂੰ ਖੇਤੀਬਾੜੀ ਖਰਚਾਂ ਲਈ ਘੱਟ ਵਿਆਜ ਦਰ 'ਤੇ ਕਰਜ਼ਾ ਦਿੰਦੀ ਹੈ।",
+
+          "soilHealthName": "ਮਿੱਟੀ ਸਿਹਤ ਕਾਰਡ ਯੋਜਨਾ",
+          "soilHealthDesc": "ਮਿੱਟੀ ਦੀ ਗੁਣਵੱਤਾ ਜਾਂਚ ਲਈ ਮੁਫ਼ਤ ਸੇਵਾ ਦਿੰਦੀ ਹੈ।",
+
+          "pmksyName": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਕ੍ਰਿਸ਼ੀ ਸਿੰਚਾਈ ਯੋਜਨਾ (PMKSY)",
+          "pmksyDesc": "ਪਾਣੀ ਸੰਰਕਸ਼ਣ ਰਾਹੀਂ ਸਿੰਚਾਈ ਸਹੂਲਤ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ।",
+
+          "enamName": "ਈ-ਨਾਮ (ਰਾਸ਼ਟਰੀ ਕ੍ਰਿਸ਼ੀ ਬਜ਼ਾਰ)",
+          "enamDesc": "ਡਿਜ਼ੀਟਲ ਪਲੇਟਫਾਰਮ ਜੋ ਕਿਸਾਨਾਂ ਨੂੰ ਦੇਸ਼ ਭਰ ਵਿੱਚ ਵੇਚਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+
+          "rkvyName": "ਰਾਸ਼ਟਰੀ ਕ੍ਰਿਸ਼ੀ ਵਿਕਾਸ ਯੋਜਨਾ (RKVY)",
+          "rkvyDesc": "ਕ੍ਰਿਸ਼ੀ ਪ੍ਰੋਜੈਕਟ ਲਈ ਵਿੱਤੀ ਸਹਾਇਤਾ ਦਿੰਦੀ ਹੈ।",
+
+          "pkvyName": "ਪਰੰਪਰਾਗਤ ਕ੍ਰਿਸ਼ੀ ਵਿਕਾਸ ਯੋਜਨਾ (PKVY)",
+          "pkvyDesc": "ਜੈਵਿਕ ਖੇਤੀ ਲਈ ਸਹਾਇਤਾ ਦਿੰਦੀ ਹੈ।",
+
+          "dedsName": "ਡੇਅਰੀ ਉਦਯਮਿਤਾ ਵਿਕਾਸ ਯੋਜਨਾ (DEDS)",
+          "dedsDesc": "ਡੇਅਰੀ ਫਾਰਮ ਸਥਾਪਨਾ ਲਈ ਸਬਸਿਡੀ ਦਿੰਦੀ ਹੈ।",
+
+
+            "farmersGuideTitle": "ਕਿਸਾਨ ਮਾਰਗਦਰਸ਼ਿਕਾ",
+            "allGuides": "ਸਾਰੇ ਗਾਈਡ",
+            "appHelp": "ਐਪ ਮਦਦ",
+            "farmingTips": "ਖੇਤੀ ਸੁਝਾਅ",
+            "searchTutorialHint": "ਖੇਤੀ ਗਾਈਡ ਖੋਜੋ...",
+            "noTutorialsFound": "ਕੋਈ ਗਾਈਡ ਨਹੀਂ ਮਿਲੀ",
+            "tryDifferentSearch": "ਹੋਰ ਸ਼ਬਦ ਵਰਤੋ",
+            "tapToWatchVideo": "ਵੀਡੀਓ ਦੇਖਣ ਲਈ ਟੈਪ ਕਰੋ",
+            "linkError": "ਲਿੰਕ ਨਹੀਂ ਖੁੱਲ ਸਕਿਆ",
+
+            "tutorialGettingStartedTitle": "📱 ਅੰਨਦਾ ਐਪ ਦੀ ਸ਼ੁਰੂਆਤ",
+            "tutorialGettingStartedContent": "ਅੰਨਦਾ ਐਪ ਦੀਆਂ ਸਾਰੀਆਂ ਖੇਤੀ ਸਹੂਲਤਾਂ ਵਰਤਣਾ ਸਿੱਖੋ।",
+
+            "tutorialCropDetectionTitle": "🌾 ਫਸਲ ਪਹਿਚਾਣ ਸੁਵਿਧਾ",
+            "tutorialCropDetectionContent": "ਫਸਲ ਦੀ ਤਸਵੀਰ ਅੱਪਲੋਡ ਕਰੋ ਅਤੇ ਬਿਮਾਰੀ ਦੀ ਪਛਾਣ ਕਰੋ।",
+
+            "tutorialFertilizerTitle": "🧮 ਖਾਦ ਕੈਲਕੂਲੇਟਰ ਦੀ ਵਰਤੋਂ",
+            "tutorialFertilizerContent": "ਫਸਲ ਅਤੇ ਜ਼ਮੀਨ ਦੇ ਅਨੁਸਾਰ ਖਾਦ ਦੀ ਲੋੜ ਜਾਣੋ।",
+
+            "tutorialAssistantTitle": "🤖 ਅੰਨਦਾ ਸਹਾਇਕ ਨਾਲ ਗੱਲਬਾਤ",
+            "tutorialAssistantContent": "ਖੇਤੀ ਨਾਲ ਸੰਬੰਧਤ ਸਵਾਲ ਪੁੱਛੋ ਅਤੇ ਤੁਰੰਤ ਸਲਾਹ ਲਵੋ।",
+
+            "tutorialMarketTitle": "🗺️ ਨੇੜਲੇ ਮਾਰਕੀਟ ਲੱਭੋ",
+            "tutorialMarketContent": "ਆਪਣੇ ਇਲਾਕੇ ਦੇ ਖੇਤੀ ਬਾਜ਼ਾਰ ਲੱਭੋ।",
+
+            "tutorialOrganicTitle": "🌱 ਜੈਵਿਕ ਖੇਤੀ ਮਾਰਗਦਰਸ਼ਨ",
+            "tutorialOrganicContent": "ਰਸਾਇਣ ਰਹਿਤ ਕੁਦਰਤੀ ਖੇਤੀ ਬਾਰੇ ਸਿੱਖੋ।",
+
+            "tutorialIrrigationTitle": "💧 ਸਮਾਰਟ ਸਿੰਚਾਈ ਤਕਨੀਕ",
+            "tutorialIrrigationContent": "ਡ੍ਰਿਪ ਅਤੇ ਸਪ੍ਰਿੰਕਲਰ ਸਿੰਚਾਈ ਬਾਰੇ ਜਾਣੋ।",
+
+            "tutorialIPMTitle": "🐛 ਇਕਰੂਪ ਕੀਟ ਪ੍ਰਬੰਧਨ",
+            "tutorialIPMContent": "ਰਸਾਇਣਕ ਦਵਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕੁਦਰਤੀ ਤਰੀਕੇ ਅਪਣਾਓ।",
+
+            "tutorialRotationTitle": "🌾 ਫਸਲ ਚੱਕਰ ਰਣਨੀਤੀ",
+            "tutorialRotationContent": "ਮਿੱਟੀ ਦੀ ਉਪਜਾਊਸ਼ਕਤੀ ਵਧਾਉਣ ਲਈ ਫਸਲ ਬਦਲੋ।",
+
+            "tutorialSoilTitle": "🧪 ਮਿੱਟੀ ਸਿਹਤ ਪ੍ਰਬੰਧਨ",
+            "tutorialSoilContent": "ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਤੇ ਪੋਸ਼ਣ ਸੰਤੁਲਨ ਬਣਾਈ ਰੱਖੋ।",
+
+            "tutorialFinanceTitle": "📊 ਖੇਤੀ ਆਰਥਿਕ ਪ੍ਰਬੰਧਨ",
+            "tutorialFinanceContent": "ਖਰਚੇ ਅਤੇ ਆਮਦਨ ਦਾ ਹਿਸਾਬ ਰੱਖੋ।",
+
+            "tutorialMechanizationTitle": "🚜 ਖੇਤੀ ਮਸ਼ੀਨੀਕਰਨ ਮਾਰਗਦਰਸ਼ਕ",
+            "tutorialMechanizationContent": "ਫਾਰਮ ਦੇ ਆਕਾਰ ਅਨੁਸਾਰ ਮਸ਼ੀਨਰੀ ਚੁਣੋ।",
+
+            "tutorialWeatherTitle": "🌤️ ਮੌਸਮ ਅਧਾਰਿਤ ਖੇਤੀ",
+            "tutorialWeatherContent": "ਮੌਸਮੀ ਅਨੁਮਾਨ ਦੇ ਅਧਾਰ 'ਤੇ ਖੇਤੀ ਦੀ ਯੋਜਨਾ ਬਣਾਓ।",
+
+            "tutorialWheatVideoTitle": "📽️ ਆਧੁਨਿਕ ਗੇਹੂੰ ਖੇਤੀ ਤਕਨੀਕ",
+            "tutorialTomatoVideoTitle": "📽️ ਟਮਾਟਰ ਸੰਭਾਲ ਅਤੇ ਕਟਾਈ",
+            "tutorialRotationVideoTitle": "📽️ ਫਸਲ ਚੱਕਰ ਦੇ ਫਾਇਦੇ",
+
+            "tutorialPestImageTitle": "📷 ਕੀਟ ਪਛਾਣ ਚਾਰਟ",
+            "tutorialSoilImageTitle": "📷 ਮਿੱਟੀ ਦੇ ਪ੍ਰਕਾਰ",
+            "tutorialIrrigationImageTitle": "📷 ਸਿੰਚਾਈ ਪ੍ਰਣਾਲੀ ਤੁਲਨਾ",
+
+
+              "nearnessOfMarket": "ਬਾਜ਼ਾਰ ਦੀ ਨੇੜਤਾ",
+              "nearbyMarkets": "ਨੇੜਲੇ ਬਾਜ਼ਾਰ",
+              "locateFertilizerShops": "ਖਾਦ ਦੀਆਂ ਦੁਕਾਨਾਂ ਲੱਭੋ",
+              "searchNearbyMarket": "ਨੇੜਲਾ ਬਾਜ਼ਾਰ ਲੱਭੋ",
+              "localRecyclingAgencies": "ਸਥਾਨਕ ਰੀਸਾਈਕਲਿੰਗ ਏਜੰਸੀਆਂ",
+
+
+
+
+                "communityTitle": "ਅੰਨਦਾਤਾ ਕਮਿਊਨਿਟੀ 🌾",
+                "justNow": "ਹੁਣੇ ਹੀ",
+                "minutesAgo": "{count} ਮਿੰਟ ਪਹਿਲਾਂ",
+                "@minutesAgo": { "placeholders": { "count": {} } },
+                "hoursAgo": "{count} ਘੰਟੇ ਪਹਿਲਾਂ",
+                "@hoursAgo": { "placeholders": { "count": {} } },
+                "daysAgo": "{count} ਦਿਨ ਪਹਿਲਾਂ",
+                "@daysAgo": { "placeholders": { "count": {} } },
+
+                "whatsHappening": "ਤੁਹਾਡੇ ਖੇਤ ਵਿੱਚ ਕੀ ਹੋ ਰਿਹਾ ਹੈ?",
+                "post": "ਪੋਸਟ ਕਰੋ",
+                "comments": "ਟਿੱਪਣੀਆਂ",
+                "noCommentsYet": "ਹਾਲੇ ਕੋਈ ਟਿੱਪਣੀ ਨਹੀਂ 🌾",
+                "writeReply": "ਜਵਾਬ ਲਿਖੋ...",
+                "noPostsYet": "ਹਾਲੇ ਕੋਈ ਪੋਸਟ ਨਹੀਂ 🌾",
+                "delete": "ਮਿਟਾਓ",
+                "farmer": "ਕਿਸਾਨ",
+
+                "createFarmerAccount": "ਆਪਣਾ ਕਿਸਾਨ ਖਾਤਾ ਬਣਾਓ",
+                "email": "ਈਮੇਲ",
+                "emailRequired": "ਈਮੇਲ ਲਾਜ਼ਮੀ ਹੈ",
+                "password": "ਪਾਸਵਰਡ",
+                "passwordMinLength": "ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+                "register": "ਰਜਿਸਟਰ ਕਰੋ",
+                "empoweringFarmers": "🌾 AI ਨਾਲ ਕਿਸਾਨਾਂ ਨੂੰ ਸਸ਼ਕਤ ਕਰਨਾ",
+                "userRegisteredSuccess": "✅ ਯੂਜ਼ਰ ਸਫਲਤਾਪੂਰਵਕ ਰਜਿਸਟਰ ਹੋ ਗਿਆ!",
+                "errorPrefix": "⚠️",
+
+                "todoTitle": "ਕੰਮਾਂ ਦੀ ਸੂਚੀ",
+                "addNewTask": "ਨਵਾਂ ਕੰਮ ਸ਼ਾਮਲ ਕਰੋ...",
+                "noTasksYet": "ਹਾਲੇ ਕੋਈ ਕੰਮ ਨਹੀਂ। ਆਪਣਾ ਪਹਿਲਾ ਕੰਮ ਸ਼ਾਮਲ ਕਰੋ।",
+                "upcomingTasks": "ਆਉਣ ਵਾਲੇ ਕੰਮ",
+                "completedTasks": "ਪੂਰੇ ਕੀਤੇ ਕੰਮ",
+
+                "profileSaved": "ਪ੍ਰੋਫਾਈਲ ਸਫਲਤਾਪੂਰਵਕ ਸੰਭਾਲੀ ਗਈ!",
+                "yourProfile": "ਤੁਹਾਡੀ ਪ੍ਰੋਫਾਈਲ",
+                "fullName": "ਪੂਰਾ ਨਾਮ",
+                "phoneNumber": "ਫੋਨ ਨੰਬਰ",
+                "saveProfile": "ਪ੍ਰੋਫਾਈਲ ਸੰਭਾਲੋ",
+                "logout": "ਲੌਗ ਆਉਟ",
+                "annadaTagline": "🌾 ਅੰਨਦਾਤਾ - ਭਵਿੱਖ ਦੀ ਕਟਾਈ",
+
+
+                  "latestNews": "ਤਾਜ਼ਾ ਖਬਰਾਂ",
+                  "noNewsAvailable": "ਕੋਈ ਖਬਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+                  "noDescriptionAvailable": "ਕੋਈ ਵੇਰਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+                  "noTitle": "ਕੋਈ ਸਿਰਲੇਖ ਨਹੀਂ",
+                  "noSubtitle": "ਕੋਈ ਉਪਸਿਰਲੇਖ ਨਹੀਂ",
+                  "noContentAvailable": "ਕੋਈ ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+
+
+
+
+
+
+
+
+
+
+}

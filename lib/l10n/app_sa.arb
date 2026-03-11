@@ -1,0 +1,252 @@
+{
+  "appTitle": "अन्नदा",
+  "selectLanguage": "भाषां चिनोतु",
+  "continueButton": "अग्रे गच्छतु",
+  "login": "प्रवेश",
+  "email": "विद्युत् पत्रम्",
+  "password": "गुप्तशब्दः",
+  "or": "वा",
+  "signInWithGoogle": "गूगलद्वारा प्रवेश",
+  "noAccountRegister": "लेखं नास्ति? पंजीकरणं कुरुत",
+  "chatbot": "संवादयन्त्र",
+  "fertilizerCalculator": "उर्वरक गणकः",
+  "cropDetection": "सस्य परिचयः",
+  "weather": "वातावरणम्",
+  "yojna": "शासकीय योजनाः",
+  "tutorials": "पाठाः",
+  "home": "गृहम्",
+  "market": "विपणिः",
+  "community": "समुदायः",
+  "profile": "प्रोफाइलम्",
+  "welcome": "स्वागतम्",
+  "weatherTitle": "वातावरणम्",
+  "logout": "निर्गमनम्",
+  "features": "विशेषताः",
+  "toDoList": "करणीय सूची",
+  "updated": "अद्यतनम्",
+  "tapForecast": "पञ्चदिनीय पूर्वानुमानाय स्पृशतु",
+  "forecastTitle": "पञ्चदिनीय वातावरण पूर्वानुमानम्",
+  "forecastSubtitle": "अन्नदा सर्वत्र शुद्धं वातावरण पूर्वानुमानं ददाति।",
+  "fetchingForecast": "पूर्वानुमानं आह्रियते...",
+  "forecastUnavailable": "पूर्वानुमानम् अनुपलब्धम्।\nअन्तर्जालं वा स्थानानुमतिं परीक्षताम्।",
+  "permissionRequired": "अनुमतिः आवश्यकः",
+  "enableLocationWeather": "वातावरणसूचनार्थं स्थानं सक्रियताम्",
+  "locationUnavailable": "अनुपलब्धम्",
+  "weatherError": "वातावरणं आरोपयितुं न शक्यते",
+
+
+    "fertilizerCalculatorTitle": "खाद गणकः",
+    "landArea": "भूमिक्षेत्रम्",
+    "enterArea": "क्षेत्रं प्रविशतु",
+    "acre": "एकरः",
+    "hectare": "हेक्टेयरः",
+    "selectCropSoil": "सस्यं च भूमिः चयनम्",
+    "selectCrop": "सस्यं चयनम्",
+    "selectSoilType": "भूमेः प्रकारः चयनम्",
+    "growthStage": "वृद्ध्यवस्था",
+    "calculateFertilizer": "खाद गणयतु",
+    "fertilizerRequirements": "खाद आवश्यकताः",
+    "cropType": "सस्यप्रकारः",
+    "soilType": "भूमेः प्रकारः",
+    "growthStageLabel": "वृद्ध्यवस्था",
+    "nitrogenNeeded": "नाइट्रोजन आवश्यकता",
+    "phosphorusNeeded": "फॉस्फोरस आवश्यकता",
+    "potassiumNeeded": "पोटैशियम आवश्यकता",
+    "recommendedFertilizers": "अनुशंसित खादाः",
+    "noFertilizerNeeded": "अधिकखादस्य आवश्यकता नास्ति",
+
+    "crop_wheat": "गोधूमः",
+    "crop_rice": "तण्डुलः",
+    "crop_corn": "मकई",
+    "crop_soybean": "सोयाबीन",
+    "crop_tomato": "रक्तफलम्",
+    "crop_potato": "आलुकम्",
+    "crop_carrot": "गाजरम्",
+    "crop_onion": "पलाण्डुः",
+    "crop_cabbage": "पत्रकोशः",
+    "crop_chili": "मरिचम्",
+    "crop_banana": "कदलीफलम्",
+    "crop_apple": "सेबफलम्",
+
+    "soil_sandy": "बालुकामृदा",
+    "soil_clay": "मृदुमृदा",
+    "soil_loam": "दोमटमृदा",
+    "soil_silty": "पलिमृदा",
+    "soil_peaty": "पीटमृदा",
+    "soil_chalky": "चूर्णमृदा",
+    "soil_saline": "लवणयुक्तमृदा",
+    "soil_red": "रक्तमृदा",
+    "soil_black": "कृष्णमृदा",
+
+    "stage_seedling": "अंकुरावस्था",
+    "stage_vegetative": "पत्रवृद्धिः",
+    "stage_flowering": "पुष्पावस्था",
+    "stage_fruiting": "फलावस्था",
+    "stage_maturity": "पक्वता",
+    "stage_harvesting": "लवणकालः",
+
+
+      "cropDetectionTitle": "शस्यपरिचयः",
+      "tapToSelectImage": "चित्रं चयनाय स्पृशतु",
+      "uploadImage": "चित्रं अपलोडयतु",
+      "takePhoto": "चित्रं गृह्णातु",
+      "enterCropType": "शस्यप्रकारं प्रविशतु",
+      "uploadAndAnalyze": "अपलोड्य विश्लेषणं कुरुत",
+      "analyzing": "विश्लेषणं प्रचलति...",
+      "noImageSelected": "न किञ्चित् चित्रं चयनितम्।",
+      "analysisError": "चित्रविश्लेषणे दोषः",
+
+
+        "annadaAssistance": "अन्नदा सहायता",
+        "farmerFaqs": "💬 कृषकानां सामान्यप्रश्नाः:",
+        "faq1": "टमाटरस्य कृते श्रेष्ठं उर्वरकं किम्?",
+        "faq2": "शस्येषु कीटाक्रमणं कथं निरोधयेत्?",
+        "faq3": "ग्रीष्मऋतौ योग्याः शस्याः काः?",
+        "faq4": "कृषौ जलं कथं संरक्षयेत्?",
+        "faq5": "धानकृषेः कृते आदर्श मृदः pH कियत्?",
+        "analyzingImage": "चित्रस्य विश्लेषणं क्रियते...",
+        "thinking": "चिन्तयति...",
+        "noResponseReceived": "⚠️ कश्चन उत्तरः न प्राप्तः।",
+        "errorFetchingResponse": "⚠️ उत्तरप्राप्तौ दोषः।",
+        "failedToLoadImage": "चित्रं लोड कर्तुं असफलम्",
+        "uploading": "अपलोड्यते",
+
+        
+          "governmentSchemesTitle": "शासकीय योजनाः",
+          "applyNow": "अधुना आवेदनं कुरुत",
+
+          "pmKisanName": "प्रधानमन्त्री किसान सम्मान निधिः (PM-KISAN)",
+          "pmKisanDesc": "लघु सीमांत कृषकानां प्रति वर्षं ₹6,000 दत्तम्।",
+
+          "pmfbName": "प्रधानमन्त्री फसल बीमा योजना (PMFBY)",
+          "pmfbDesc": "प्राकृतिक आपदां कारणेन फसल हानिः रक्षणाय।",
+
+          "kccName": "किसान क्रेडिट कार्ड योजना",
+          "kccDesc": "कृषि व्ययाय न्यून व्याजेन ऋणप्रदानम्।",
+
+          "soilHealthName": "मृदा स्वास्थ्य पत्र योजना",
+          "soilHealthDesc": "मृदा परीक्षण सेवा।",
+
+          "pmksyName": "प्रधानमन्त्री कृषि सिंचाय योजना (PMKSY)",
+          "pmksyDesc": "जल संरक्षणेन सिंचन सुविधा।",
+
+          "enamName": "ई-नाम (राष्ट्रीय कृषि बाजार)",
+          "enamDesc": "डिजिटल कृषक मंच।",
+
+          "rkvyName": "राष्ट्रीय कृषि विकास योजना (RKVY)",
+          "rkvyDesc": "कृषि परियोजनानां वित्तीय सहायता।",
+
+          "pkvyName": "परम्परागत कृषि विकास योजना (PKVY)",
+          "pkvyDesc": "सेंद्रिय कृषेः प्रोत्साहनम्।",
+
+          "dedsName": "डेयरी उद्यम विकास योजना (DEDS)",
+          "dedsDesc": "डेयरी स्थापनाय अनुदानम्।",
+
+
+  "farmersGuideTitle": "कृषकमार्गदर्शिका",
+  "allGuides": "सर्वाः मार्गदर्शिकाः",
+  "appHelp": "अनुप्रयोगसहायता",
+  "farmingTips": "कृषिसूचनाः",
+  "searchTutorialHint": "कृषिमार्गदर्शिकां अन्वेषयतु...",
+  "noTutorialsFound": "कोऽपि मार्गदर्शिका न प्राप्ता",
+  "tryDifferentSearch": "भिन्नं शब्दं प्रयतस्व",
+  "tapToWatchVideo": "दृश्यं द्रष्टुं स्पृशतु",
+  "linkError": "संबन्धः उद्घाटितुं न शक्यते",
+
+  "tutorialGettingStartedTitle": "📱 अन्नदा अनुप्रयोगस्य आरम्भः",
+  "tutorialGettingStartedContent": "अन्नदा अनुप्रयोगस्य सर्वाणि कृषियन्त्राणि उपयोक्तुं शिक्षस्व।",
+
+  "tutorialCropDetectionTitle": "🌾 सस्यपहचानसुविधा",
+  "tutorialCropDetectionContent": "सस्यस्य चित्रं आरोप्य रोगनिदानं प्राप्नुहि।",
+
+  "tutorialFertilizerTitle": "🧮 खादपरिकलनयन्त्रस्य उपयोगः",
+  "tutorialFertilizerContent": "सस्यं, मृदा, भूमेः परिमाणं च निवेश्य आवश्यकखादपरिमाणं ज्ञातुं शक्नोषि।",
+
+  "tutorialAssistantTitle": "🤖 अन्नदा सहायकेन सह संवादः",
+  "tutorialAssistantContent": "कृषिसम्बद्धान् प्रश्नान् पृच्छित्वा त्वरितमार्गदर्शनं लभस्व।",
+
+  "tutorialMarketTitle": "🗺️ समीपस्थं बाजारं अन्वेषयतु",
+  "tutorialMarketContent": "स्वप्रदेशस्य कृषिबाजारान् ज्ञातुं शक्नोषि।",
+
+  "tutorialOrganicTitle": "🌱 जैविककृषेः सम्पूर्णमार्गदर्शिका",
+  "tutorialOrganicContent": "रासायनिकद्रव्यविना प्राकृतिककृषेः विधीन् शिक्षस्व।",
+
+  "tutorialIrrigationTitle": "💧 बुद्धिमत्सिञ्चनविधयः",
+  "tutorialIrrigationContent": "ड्रिप् तथा स्प्रिङ्कलर् सिञ्चनप्रणाली शिक्षस्व।",
+
+  "tutorialIPMTitle": "🐛 समन्वितकीटनियन्त्रणम्",
+  "tutorialIPMContent": "रासायनिकऔषधात् पूर्वं जैविकविधीन् उपयुञ्जीत।",
+
+  "tutorialRotationTitle": "🌾 सस्यपरिवर्तनरणनीतिः",
+  "tutorialRotationContent": "भूमेः स्वास्थ्यवृद्धये प्रतिवर्षं सस्यपरिवर्तनं कुरु।",
+
+  "tutorialSoilTitle": "🧪 मृदास्वास्थ्यव्यवस्थापनम्",
+  "tutorialSoilContent": "मृदापरीक्षणं कृत्वा पोषणसन्तुलनं धारय।",
+
+  "tutorialFinanceTitle": "📊 कृषिवित्तव्यवस्थापनम्",
+  "tutorialFinanceContent": "व्ययम् आयं च लेखय।",
+
+  "tutorialMechanizationTitle": "🚜 कृषियान्त्रिकमार्गदर्शिका",
+  "tutorialMechanizationContent": "क्षेत्रपरिमाणानुसारं यन्त्राणि चिनुत।",
+
+  "tutorialWeatherTitle": "🌤️ मौसमाधारितकृषिः",
+  "tutorialWeatherContent": "मौसमपूर्वानुमानेन कृषियोजनां कुरु।",
+
+  "tutorialWheatVideoTitle": "📽️ आधुनिकगोधूमकृषिविधयः",
+  "tutorialTomatoVideoTitle": "📽️ वृन्ताकफलस्य पालनम्",
+  "tutorialRotationVideoTitle": "📽️ सस्यपरिवर्तनस्य लाभाः",
+
+  "tutorialPestImageTitle": "📷 कीटपहचानचित्रम्",
+  "tutorialSoilImageTitle": "📷 मृदाभेदाः तेषां गुणाः च",
+  "tutorialIrrigationImageTitle": "📷 सिञ्चनप्रणाली तुलनाचित्रम्",
+
+
+
+    "nearnessOfMarket": "बाजारस्य समीपता",
+    "nearbyMarkets": "समीपस्थाः बाजाराः",
+    "locateFertilizerShops": "खाद्यद्रव्यविक्रयदुकानानि अन्वेषयतु",
+    "searchNearbyMarket": "समीपस्थं बाजारम् अन्वेषयतु",
+    "localRecyclingAgencies": "स्थानीय पुनर्चक्रण संस्थाः",
+
+
+      "communityTitle": "অন্নদাতা সমাজ 🌾",
+      "justNow": "এইমাত্ৰ",
+      "minutesAgo": "{count} মিনিট আগতে",
+      "@minutesAgo": { "placeholders": { "count": {} } },
+      "hoursAgo": "{count} ঘণ্টা আগতে",
+      "@hoursAgo": { "placeholders": { "count": {} } },
+      "daysAgo": "{count} দিন আগতে",
+      "@daysAgo": { "placeholders": { "count": {} } },
+
+      "whatsHappening": "আপোনাৰ খেতিত কি চলি আছে?",
+      "post": "পোষ্ট কৰক",
+      "comments": "মন্তব্য",
+      "noCommentsYet": "এতিয়ালৈকে কোনো মন্তব্য নাই 🌾",
+      "writeReply": "উত্তৰ লিখক...",
+      "noPostsYet": "এতিয়ালৈকে কোনো পোষ্ট নাই 🌾",
+      "delete": "মচি পেলাওক",
+      "farmer": "চাষী",
+
+      "createFarmerAccount": "स्वस्य कृषक-खातं निर्मातुम्",
+      "email": "ईमेल्",
+      "emailRequired": "ईमेल् आवश्यकम्",
+      "password": "गुप्तशब्दः",
+      "passwordMinLength": "गुप्तशब्दः न्यूनातिन्यूनं 6 अक्षराणि भवेत्",
+      "register": "पंजीकरणं कुरुत",
+      "empoweringFarmers": "🌾 AI द्वारा कृषकान् सशक्तीकरोमि",
+      "userRegisteredSuccess": "✅ उपयोगकर्ता सफलतया पंजीकृतः!",
+      "errorPrefix": "⚠️",
+
+      "todoTitle": "कर्तव्यानां सूची",
+      "addNewTask": "नूतनं कार्यं योजयतु...",
+      "noTasksYet": "अद्यापि कार्यं नास्ति। स्वस्य प्रथमं कार्यं योजयतु।",
+      "upcomingTasks": "आगामि कार्याणि",
+      "completedTasks": "पूर्णीकृत कार्याणि"
+
+
+
+
+
+
+
+}
