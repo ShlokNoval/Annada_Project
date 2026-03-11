@@ -1,8 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
-
-const apiKey = "AIzaSyBV9uZ2WnLDR7z8zNghQs-NN-6pAmdpBZM";
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 const languages = {
   "hi": "Hindi",
@@ -21,6 +20,9 @@ const languages = {
 
 Future<Map<String, dynamic>> translateNewsItem(
     Map<String, dynamic> newsItem, String language) async {
+
+  final apiKey = dotenv.env['GEMINI_API_KEY']!;
+
   final url = Uri.parse(
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$apiKey");
 
@@ -66,13 +68,11 @@ Future<Map<String, dynamic>> translateNewsItem(
     throw Exception("Invalid Gemini response");
   }
 
-  // The model should return a JSON string
   final translatedJsonString =
   data["candidates"][0]["content"]["parts"][0]["text"];
 
   String cleaned = translatedJsonString.trim();
 
-// Remove ```json and ``` if present
   if (cleaned.startsWith("```")) {
     cleaned = cleaned.replaceAll(RegExp(r"```json"), "");
     cleaned = cleaned.replaceAll("```", "");
@@ -89,6 +89,9 @@ Future<Map<String, dynamic>> translateNewsItem(
 }
 
 Future<void> main() async {
+
+  await dotenv.load(fileName: ".env");
+
   final file = File("news.json");
 
   if (!await file.exists()) {
@@ -104,7 +107,6 @@ Future<void> main() async {
     stderr.writeln("➡ Translating crop: $crop");
     final List<dynamic> originalList = englishJson[crop];
 
-    // Initialize structure
     output[crop] = {"en": originalList};
 
     for (var langCode in languages.keys) {
@@ -121,10 +123,8 @@ Future<void> main() async {
 
   final finalJson = JsonEncoder.withIndent("  ").convert(output);
 
-  // Print final JSON
   stdout.writeln(finalJson);
 
-  // Save to new file optionally
   await File("news_multilingual.json").writeAsString(finalJson);
 
   stderr.writeln("✅ Translation complete! Output saved to news_multilingual.json");
