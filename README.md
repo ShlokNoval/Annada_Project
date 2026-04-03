@@ -1,4 +1,4 @@
-# 🌱 Annada – AI-Powered Farmer Assistance App
+# 🌱 Annada – AI-Powered Farmer Advisory App
 
 Annada is a Flutter-based mobile application designed to empower marginal and small-scale farmers using modern technology. The app integrates AI, real-time data, and government resources to help farmers make better agricultural decisions and improve productivity.
 
